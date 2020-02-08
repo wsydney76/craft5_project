@@ -1,0 +1,43 @@
+dateModified: 1581148720
+email:
+  fromEmail: '@EMAIL_ADDRESS'
+  fromName: '@EMAIL_SENDER'
+  replyToEmail: null
+  template: null
+  transportSettings:
+    encryptionMethod: tls
+    host: '@SMTP_HOST'
+    password: '@SMTP_PASSWORD'
+    port: '@SMTP_PORT'
+    timeout: '10'
+    useAuthentication: '1'
+    username: '@SMTP_USER'
+  transportType: craft\mail\transportadapters\Smtp
+fieldGroups:
+  bd76fb6e-8765-41d3-8e8a-02e37e127c80:
+    name: Common
+siteGroups:
+  3bb09a1c-cb36-438e-b8d5-0b35b0965f4e:
+    name: Project
+sites:
+  5b0c38db-9ab4-47d8-b4a7-913710c08ca6:
+    baseUrl: '@web'
+    handle: default
+    hasUrls: true
+    language: en-US
+    name: Project
+    primary: true
+    siteGroup: 3bb09a1c-cb36-438e-b8d5-0b35b0965f4e
+    sortOrder: 1
+system:
+  edition: solo
+  live: true
+  name: '@SYSTEM_NAME'
+  schemaVersion: 3.4.7
+  timeZone: Europe/Berlin
+users:
+  allowPublicRegistration: false
+  defaultGroup: null
+  photoSubpath: ''
+  photoVolumeUid: null
+  requireEmailVerification: true
