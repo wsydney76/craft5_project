@@ -17,5 +17,10 @@
     "platform": {
       "php": "7.2"
     }
+  },
+  "scripts": {
+    "post-install-cmd": [
+      "@php -r \"file_exists('project/Env.php') || copy('project/Env.php.example', 'project/Env.php');\""
+    ]
   }
 }
