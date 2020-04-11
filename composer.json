@@ -20,7 +20,7 @@
   },
   "scripts": {
     "post-install-cmd": [
-      "@php -r \"file_exists('project/Env.php') || copy('project/Env.php.example', 'project/Env.php');\""
+      "@php -r \"file_exists('modules/Env.php') || copy('modules/Env.php.example', 'modules/Env.php');\""
     ]
   }
 }
