@@ -4,4 +4,3 @@
 .DS_Store
 /modules/Env.php
 /web/cpresources
-/composer.lock
