@@ -1,10 +1,10 @@
 {
   "name": "wsydney76/craft_project",
-  "version": "1.0",
+  "version": "1.0.1",
   "description": "Custom project template for Craft CMS",
   "license": "Unlicense",
   "require": {
-    "craftcms/cms": "^3.4.0"
+    "craftcms/cms": "3.4.23"
   },
   "autoload": {
     "psr-4": {
@@ -17,5 +17,10 @@
     "platform": {
       "php": "7.2"
     }
+  },
+  "scripts": {
+    "post-install-cmd": [
+      "@php -r \"file_exists('modules/Env.php') || copy('modules/Env.php.example', 'modules/Env.php');\""
+    ]
   }
 }
