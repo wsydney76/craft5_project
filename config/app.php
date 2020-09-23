@@ -17,18 +17,13 @@
  * your config/ folder, alongside this one.
  */
 
+use config\Env;
 use modules\main\MainModule;
 
 return [
+    'id' => Env::APP_ID,
     'modules' => [
         'main' => MainModule::class,
     ],
     //'bootstrap' => ['main'],
-    'components' => [
-        'mutex' => function() {
-            $config = craft\helpers\App::mutexConfig();
-            $config['isWindows'] = true;
-            return Craft::createObject($config);
-        },
-    ],
 ];

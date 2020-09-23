@@ -1,26 +1,31 @@
 {
   "name": "wsydney76/craft_project",
-  "version": "1.0.1",
+  "version": "1.1.0",
   "description": "Custom project template for Craft CMS",
   "license": "Unlicense",
   "require": {
-    "craftcms/cms": "3.4.27"
+    "craftcms/cms": "3.5.11.1"
   },
   "autoload": {
     "psr-4": {
-      "modules\\": "modules/"
+      "modules\\": "modules/",
+      "config\\": "config/"
     }
   },
   "config": {
     "sort-packages": true,
     "optimize-autoloader": true,
     "platform": {
-      "php": "7.2"
+      "php": "7.4"
     }
   },
   "scripts": {
     "post-install-cmd": [
-      "@php -r \"file_exists('modules/Env.php') || copy('modules/Env.php.example', 'modules/Env.php');\""
+      "@php -r \"file_exists('config/Env.php') || copy('config/Env.php.example', 'config/Env.php');\""
+    ],
+    "post-update-cmd": [
+      "@php craft clear-caches/all",
+      "@php craft migrate/all"
     ]
   }
 }

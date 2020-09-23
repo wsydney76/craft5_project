@@ -8,7 +8,7 @@
  * @see \craft\config\GeneralConfig
  */
 
-use modules\Env;
+use config\Env;
 
 return [
     // Global settings
@@ -41,13 +41,17 @@ return [
         // Whether images transforms should be generated before page load.
         'generateTransformsBeforePageLoad' => true,
 
+        // Whether front end requests should respond with X-Robots-Tag: none HTTP headers
+        'disallowRobots' => true,
+
         'aliases' => [
             // Prevent the @web alias from being set automatically (cache poisoning vulnerability)
-            '@web' => Env::DEFAULT_SITE_URL,
+            '@web' => Env::BASE_URL,
+            // Base Url for sites
+            '@baseurl' => Env::BASE_URL,
             // Lets `./craft clear-caches all` clear CP resources cache
             '@webroot' => dirname(__DIR__) . '/web',
-            // Let craft cli commands find controllers
-            '@modules' => '@root/modules',
+
 
             // Variables
             '@SYSTEM_NAME' => Env::SYSTEM_NAME,
@@ -57,11 +61,7 @@ return [
             '@SMTP_PORT' => Env::SMTP_PORT,
             '@SMTP_USER' => Env::SMTP_USER,
             '@SMTP_PASSWORD' => Env::SMTP_PASSWORD
-        ],
-
-        // Whether to save the project config out to config/project.yaml
-        // (see https://docs.craftcms.com/v3/project-config.html)
-        'useProjectConfigFile' => true,
+        ]
     ],
 
     // Dev environment settings
@@ -89,6 +89,9 @@ return [
         // Whether to enable Craft's template {% cache %} tag on a global basis
         'enableTemplateCaching' => true,
         'cacheElementQueries' => true,
+
+        // Whether front end requests should respond with X-Robots-Tag: none HTTP headers
+        'disallowRobots' => false,
 
     ],
 ];

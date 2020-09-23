@@ -1,4 +1,4 @@
-dateModified: 1586591459
+dateModified: 1600858130
 email:
   fromEmail: '@EMAIL_ADDRESS'
   fromName: '@EMAIL_SENDER'
@@ -13,27 +13,15 @@ email:
     useAuthentication: '1'
     username: '@SMTP_USER'
   transportType: craft\mail\transportadapters\Smtp
-fieldGroups:
-  bd76fb6e-8765-41d3-8e8a-02e37e127c80:
-    name: Common
-siteGroups:
-  3bb09a1c-cb36-438e-b8d5-0b35b0965f4e:
-    name: Project
-sites:
-  5b0c38db-9ab4-47d8-b4a7-913710c08ca6:
-    baseUrl: '@web'
-    handle: default
-    hasUrls: true
-    language: en-US
-    name: Project
-    primary: true
-    siteGroup: 3bb09a1c-cb36-438e-b8d5-0b35b0965f4e
-    sortOrder: 1
+graphql:
+  publicToken:
+    enabled: false
+    expiryDate: null
 system:
   edition: solo
   live: true
   name: '@SYSTEM_NAME'
-  schemaVersion: 3.4.10
+  schemaVersion: 3.5.13
   timeZone: Europe/Berlin
 users:
   allowPublicRegistration: false
