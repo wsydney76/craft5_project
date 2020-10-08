@@ -4,3 +4,4 @@
 .DS_Store
 /config/Env.php
 /web/cpresources
+/node_modules
