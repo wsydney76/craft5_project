@@ -1,4 +1,4 @@
-dateModified: 1600858130
+dateModified: 1602145624
 email:
   fromEmail: '@EMAIL_ADDRESS'
   fromName: '@EMAIL_SENDER'
@@ -13,10 +13,6 @@ email:
     useAuthentication: '1'
     username: '@SMTP_USER'
   transportType: craft\mail\transportadapters\Smtp
-graphql:
-  publicToken:
-    enabled: false
-    expiryDate: null
 system:
   edition: solo
   live: true

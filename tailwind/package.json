@@ -1,0 +1,30 @@
+{
+  "name": "starter-theme",
+  "version": "1.0.0",
+  "description": "Tailwind Starter Theme",
+  "main": "index.js",
+  "directories": {
+    "test": "tests"
+  },
+  "scripts": {
+    "dev": "npm run development",
+    "dev": "cross-env NODE_ENV=development node_modules/webpack/bin/webpack.js --progress --hide-modules --config=node_modules/laravel-mix/setup/webpack.config.js",
+    "watch": "npm run development -- --watch",
+    "watch-poll": "npm run watch -- --watch-poll",
+    "hot": "cross-env NODE_ENV=development node_modules/webpack-dev-server/bin/webpack-dev-server.js --inline --hot --config=node_modules/laravel-mix/setup/webpack.config.js",
+    "build": "npm run production",
+    "production": "cross-env NODE_ENV=production node_modules/webpack/bin/webpack.js --no-progress --hide-modules --config=node_modules/laravel-mix/setup/webpack.config.js"
+  },
+  "keywords": [
+    "tailwind"
+  ],
+  "devDependencies": {
+    "sass": "^1.26.7",
+    "sass-loader": "^8.0.2",
+    "tailwindcss": "^1.4.6"
+  },
+  "dependencies": {
+    "cross-env": "^7.0.2",
+    "laravel-mix": "^5.0.4"
+  }
+}
