@@ -1,4 +1,4 @@
-dateModified: 1602145624
+dateModified: 1602150594
 email:
   fromEmail: '@EMAIL_ADDRESS'
   fromName: '@EMAIL_SENDER'
@@ -14,7 +14,7 @@ email:
     username: '@SMTP_USER'
   transportType: craft\mail\transportadapters\Smtp
 system:
-  edition: solo
+  edition: pro
   live: true
   name: '@SYSTEM_NAME'
   schemaVersion: 3.5.13

@@ -3,10 +3,7 @@
 @import 'custom';
 @tailwind utilities;
 
-h1 {
-    @apply font-bold leading-tight;
-}
-
+h1,
 h2,
 h3,
 h4,
@@ -16,7 +13,7 @@ h6 {
 }
 
 h1 {
-    @apply text-5xl tracking-wide;
+    @apply text-5xl tracking-wide font-bold leading-tight;
 }
 
 h2 {
@@ -65,7 +62,7 @@ ol[type=a] {
 p img {
     @apply block mx-auto;
 }
-m
+
 
 blockquote {
     @apply shadow-lg;
