@@ -10,6 +10,9 @@
 
 use config\Env;
 
+// Set Variables for use in CP
+Env::setCpVars();
+
 return [
     // Global settings
     '*' => [
@@ -51,16 +54,6 @@ return [
             '@baseurl' => Env::BASE_URL,
             // Lets `./craft clear-caches all` clear CP resources cache
             '@webroot' => dirname(__DIR__) . '/web',
-
-
-            // Variables
-            '@SYSTEM_NAME' => Env::SYSTEM_NAME,
-            '@EMAIL_ADDRESS' => Env::EMAIL_ADDRESS,
-            '@EMAIL_SENDER' => Env::EMAIL_SENDER,
-            '@SMTP_HOST' => Env::SMTP_HOST,
-            '@SMTP_PORT' => Env::SMTP_PORT,
-            '@SMTP_USER' => Env::SMTP_USER,
-            '@SMTP_PASSWORD' => Env::SMTP_PASSWORD
         ]
     ],
 

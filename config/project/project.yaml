@@ -1,4 +1,4 @@
-dateModified: 1602926443
+dateModified: 1602927677
 email:
   fromEmail: '@EMAIL_ADDRESS'
   fromName: '@EMAIL_SENDER'
@@ -16,7 +16,7 @@ email:
 system:
   edition: pro
   live: true
-  name: '@SYSTEM_NAME'
+  name: $SYSTEM_NAME
   retryDuration: 30
   schemaVersion: 3.5.13
   timeZone: Europe/Berlin
