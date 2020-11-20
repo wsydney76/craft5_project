@@ -7,7 +7,6 @@
     "test": "tests"
   },
   "scripts": {
-    "dev": "npm run development",
     "dev": "cross-env NODE_ENV=development node_modules/webpack/bin/webpack.js --progress --hide-modules --config=node_modules/laravel-mix/setup/webpack.config.js",
     "watch": "npm run development -- --watch",
     "watch-poll": "npm run watch -- --watch-poll",
@@ -21,10 +20,12 @@
   "devDependencies": {
     "sass": "^1.26.7",
     "sass-loader": "^8.0.2",
-    "tailwindcss": "^1.4.6"
+    "tailwindcss": "^2.0.1"
   },
   "dependencies": {
+    "autoprefixer": "^10.0.2",
     "cross-env": "^7.0.2",
-    "laravel-mix": "^5.0.4"
+    "laravel-mix": "^5.0.4",
+    "postcss": "^8.1.8"
   }
 }
