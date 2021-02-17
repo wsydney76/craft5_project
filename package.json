@@ -3,13 +3,13 @@
   "version": "1.0.0",
   "private": true,
   "dependencies": {
-    "autoprefixer": "^10.0.2",
+    "autoprefixer": "^10.2.4",
     "cssnano": "^4.1.10",
-    "postcss": "^8.1.8",
-    "postcss-cli": "^8.3.0",
+    "postcss": "^8.2.6",
+    "postcss-cli": "^8.3.1",
     "postcss-import": "^13.0.0",
-    "postcss-nested": "^5.0.1",
-    "tailwindcss": "^2.0.1"
+    "postcss-nested": "^5.0.3",
+    "tailwindcss": "^2.0.3"
   },
   "scripts": {
     "dev": "postcss src/styles/main.css --output web/assets/styles/main.css",

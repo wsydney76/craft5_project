@@ -20,6 +20,9 @@ return [
     'schema' => Env::DB_SCHEMA,
     'tablePrefix' => Env::DB_TABLEPREFIX,
 
+    'charset' => Env::DB_CHARSET,
+    'collation' => Env::DB_COLLATION,
+
     'user' => Env::DB_USER,
     'password' => Env::DB_PASSWORD,
 

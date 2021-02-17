@@ -4,7 +4,7 @@
   "description": "Custom project template for Craft CMS",
   "license": "Unlicense",
   "require": {
-    "craftcms/cms": "3.5.14"
+    "craftcms/cms": "3.6.6"
   },
   "autoload": {
     "psr-4": {
