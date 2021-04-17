@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="{{ craft.app.language[:2] }}">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>{{ systemName }}</title>
+    <link rel="stylesheet" href="{{ url('/assets/styles/main.css') }}">
+</head>
+
+<body>
+<div class="container mx-auto py-8">
+    <a class="text-4xl font-semibold" href="{{ url('/') }}">{{ systemName }}</a>
+</div>
+
+<div class="container mx-auto my-8">
+    <h1>{{ entry.title }}</h1>
+
+    {% block content %}
+        Your content goes here
+    {% endblock %}
+
+</div>
+
+</body>
+</html>

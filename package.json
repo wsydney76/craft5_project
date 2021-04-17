@@ -1,0 +1,20 @@
+{
+  "name": "tailwind",
+  "version": "1.0.0",
+  "private": true,
+  "dependencies": {
+    "autoprefixer": "^10.2.5",
+    "cross-env": "^7.0.3",
+    "cssnano": "^4.1.11",
+    "postcss": "^8.2.10",
+    "postcss-cli": "^8.3.1",
+    "postcss-import": "^13.0.0",
+    "postcss-nested": "^5.0.5",
+    "tailwindcss": "^2.1.1"
+  },
+  "scripts": {
+    "dev": "cross-env TAILWIND_MODE=build postcss src/styles/main.css --output web/assets/styles/main.css",
+    "watch": "cross-env postcss src/styles/main.css --output web/assets/styles/main.css --watch --verbose",
+    "build": "cross-env TAILWIND_MODE=build postcss src/styles/main.css --output web/assets/styles/main.css --env production"
+  }
+}

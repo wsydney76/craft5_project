@@ -2,5 +2,6 @@
 /.idea
 /vendor
 .DS_Store
-/modules/Env.php
+/config/Env.php
 /web/cpresources
+/node_modules
