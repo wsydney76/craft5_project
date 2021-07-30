@@ -1,4 +1,4 @@
-dateModified: 1618648197
+dateModified: 1627660713
 email:
   fromEmail: '@EMAIL_ADDRESS'
   fromName: '@EMAIL_SENDER'
@@ -13,12 +13,15 @@ email:
     useAuthentication: '1'
     username: '@SMTP_USER'
   transportType: craft\mail\transportadapters\Smtp
+meta:
+  __names__:
+    5b0c38db-9ab4-47d8-b4a7-913710c08ca6: Project # Project
 system:
   edition: pro
   live: true
   name: $SYSTEM_NAME
   retryDuration: 30
-  schemaVersion: 3.6.8
+  schemaVersion: 3.7.7
   timeZone: Europe/Berlin
 users:
   allowPublicRegistration: false

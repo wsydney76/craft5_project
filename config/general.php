@@ -9,6 +9,7 @@
  */
 
 use config\Env;
+use craft\helpers\App;
 
 // Set Variables for use in CP
 Env::setCpVars();
@@ -44,14 +45,15 @@ return [
         // Whether images transforms should be generated before page load.
         'generateTransformsBeforePageLoad' => true,
 
+        // Whether iFrame Resizer should be used for Live Preview.
+        'useIframeResizer' => true,
+
         // Whether front end requests should respond with X-Robots-Tag: none HTTP headers
         'disallowRobots' => true,
 
         'aliases' => [
             // Prevent the @web alias from being set automatically (cache poisoning vulnerability)
-            '@web' => Env::BASE_URL,
-            // Base Url for sites
-            '@baseurl' => Env::BASE_URL,
+            '@web' => App::env('PRIMARY_SITE_URL'),
             // Lets `./craft clear-caches all` clear CP resources cache
             '@webroot' => dirname(__DIR__) . '/web',
         ]
