@@ -15,7 +15,7 @@ previewTargets:
         - '1'
 propagationMethod: all
 siteSettings:
-  5b0c38db-9ab4-47d8-b4a7-913710c08ca6:
+  5b0c38db-9ab4-47d8-b4a7-913710c08ca6: # Project
     enabledByDefault: true
     hasUrls: true
     template: _sections/home
