@@ -1,21 +1,26 @@
-dateModified: 1627660713
+dateModified: 1629993933
 email:
-  fromEmail: '@EMAIL_ADDRESS'
-  fromName: '@EMAIL_SENDER'
+  fromEmail: $EMAIL_ADDRESS
+  fromName: $EMAIL_SENDER
   replyToEmail: null
-  template: null
+  template: ''
   transportSettings:
     encryptionMethod: tls
-    host: '@SMTP_HOST'
-    password: '@SMTP_PASSWORD'
-    port: '@SMTP_PORT'
+    host: $SMTP_HOST
+    password: $SMTP_PASSWORD
+    port: $SMTP_PORT
     timeout: '10'
     useAuthentication: '1'
-    username: '@SMTP_USER'
+    username: $SMTP_USER
   transportType: craft\mail\transportadapters\Smtp
 meta:
   __names__:
+    3bb09a1c-cb36-438e-b8d5-0b35b0965f4e: Project # Project
     5b0c38db-9ab4-47d8-b4a7-913710c08ca6: Project # Project
+    6856c92d-c593-4425-8886-27e609d74667: Home # Home
+    abefa0bd-6b36-4b4f-a9de-a4304e7b66a3: 'Public Schema' # Public Schema
+    bd76fb6e-8765-41d3-8e8a-02e37e127c80: Common # Common
+    c780bb7a-337c-46ba-95c4-c0dcbfcb457d: Home # Home
 system:
   edition: pro
   live: true

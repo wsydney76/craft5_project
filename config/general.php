@@ -45,6 +45,9 @@ return [
         // Whether images transforms should be generated before page load.
         'generateTransformsBeforePageLoad' => true,
 
+        // Whether asset URLs should be revved so browsers don’t load cached versions when they’re modified.
+        'revAssetUrls' => true,
+
         // Whether iFrame Resizer should be used for Live Preview.
         'useIframeResizer' => true,
 
