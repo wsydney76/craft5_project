@@ -1,6 +1,6 @@
 <?php
 
-namespace modules\main;
+namespace modules;
 
 class Env
 {
