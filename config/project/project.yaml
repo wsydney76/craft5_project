@@ -1,16 +1,16 @@
-dateModified: 1643362042
+dateModified: 1643362406
 email:
   fromEmail: $EMAIL_ADDRESS
   fromName: $EMAIL_SENDER
   replyToEmail: null
   template: ''
   transportSettings:
-    encryptionMethod: tls
+    encryptionMethod: $SMTP_ENCRYPTION_METHOD
     host: $SMTP_HOST
     password: $SMTP_PASSWORD
     port: $SMTP_PORT
     timeout: '10'
-    useAuthentication: '1'
+    useAuthentication: $SMTP_AUTHENTICATION
     username: $SMTP_USER
   transportType: craft\mail\transportadapters\Smtp
 meta:
@@ -27,7 +27,7 @@ system:
   name: $SYSTEM_NAME
   retryDuration: 30
   schemaVersion: 3.7.8
-  timeZone: Europe/Berlin
+  timeZone: $SYSTEM_TIMEZONE
 users:
   allowPublicRegistration: false
   defaultGroup: null

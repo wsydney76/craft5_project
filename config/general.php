@@ -29,6 +29,9 @@ return [
         // The secure key Craft will use for hashing and encrypting data
         'securityKey' => Env::SECURITY_KEY,
 
+        // Whether an X-Powered-By: Craft CMS header should be sent
+        'sendPoweredByHeader' => false,
+
         // Whether to enable Craft's template {% cache %} tag on a global basis
         'enableTemplateCaching' => false,
         'cacheElementQueries' => false,
@@ -38,6 +41,9 @@ return [
 
         // Whether uploaded filenames with non-ASCII characters should be converted to ASCII
         'convertFilenamesToAscii' => true,
+
+        // needs php.ini max upload size and max post size set accordingly
+        'maxUploadFileSize' => '32M',
 
         //Whether non-ASCII characters in auto-generated slugs should be converted to ASCII
         'limitAutoSlugsToAscii' => true,
