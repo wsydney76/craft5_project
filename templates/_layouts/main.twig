@@ -3,25 +3,27 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <title>{{ systemName }}</title>
+    <title>{{ siteInfo.siteName }}</title>
     <link rel="stylesheet" href="/assets/dist/styles/main.css">
 </head>
 
-<body>
+<body class="max-w-screen-lg mx-auto px-8">
 
+<header class="mb-8 border-b border-gray-400 py-8">
+    <a class="text-3xl font-semibold" href="{{ siteUrl }}">{{ siteInfo.siteName }}</a>
+</header>
 
-<div class="max-w-screen-lg mx-auto px-8 py-8">
-    <div class="py-4 border-b">
-        <a class="text-4xl font-semibold" href="{{ siteUrl }}">{{ systemName }}</a>
-    </div>
-
-    <h1 class="my-8 text-4xl font-semibold">{{ entry.title }}</h1>
+<main>
+    <h1 class="mb-8 text-4xl font-semibold">{{ entry.title }}</h1>
 
     {% block content %}
         Your content goes here
     {% endblock %}
+</main>
 
-</div>
+<footer class="mt-8 border-t border-gray-400 py-8">
+    &copy; {{ siteInfo.copyright }} {{ now|date('Y') }}
+</footer>
 
 </body>
 </html>

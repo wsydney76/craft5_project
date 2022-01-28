@@ -1,0 +1,28 @@
+fieldLayouts:
+  f4019294-72d3-498d-a196-72612042deb5:
+    tabs:
+      -
+        elements:
+          -
+            fieldUid: 3e35a043-a62e-4ede-acd6-44dfb92d6914 # Site Name
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            warning: null
+            width: 100
+          -
+            fieldUid: eb6b24cc-83d7-416f-be4b-d002c7688b58 # Copyright
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            warning: null
+            width: 100
+        name: Content
+        sortOrder: 1
+handle: siteInfo
+name: 'Site Info'
+sortOrder: 1

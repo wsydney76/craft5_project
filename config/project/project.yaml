@@ -1,4 +1,7 @@
-dateModified: 1643368764
+assets:
+  tempSubpath: temp
+  tempVolumeUid: 5a0be839-14a2-465e-a504-bb63dd0281e9 # Images
+dateModified: 1643370787
 email:
   fromEmail: $EMAIL_ADDRESS
   fromName: $EMAIL_SENDER
@@ -16,11 +19,18 @@ email:
 meta:
   __names__:
     3bb09a1c-cb36-438e-b8d5-0b35b0965f4e: $SYSTEM_NAME # $SYSTEM_NAME
+    3e35a043-a62e-4ede-acd6-44dfb92d6914: 'Site Name' # Site Name
+    5a0be839-14a2-465e-a504-bb63dd0281e9: Images # Images
     5b0c38db-9ab4-47d8-b4a7-913710c08ca6: $SYSTEM_NAME # $SYSTEM_NAME
+    169ccd00-9c12-4921-b187-8ef8ca2ad525: Assets # Assets
     6856c92d-c593-4425-8886-27e609d74667: Home # Home
     abefa0bd-6b36-4b4f-a9de-a4304e7b66a3: 'Public Schema' # Public Schema
     bd76fb6e-8765-41d3-8e8a-02e37e127c80: Common # Common
     c780bb7a-337c-46ba-95c4-c0dcbfcb457d: Home # Home
+    c752550e-4c4a-4004-8229-7473dcf75450: 'Site Info' # Site Info
+    d50026f3-a236-4ae2-b00a-af55076acd17: Site # Site
+    eb6b24cc-83d7-416f-be4b-d002c7688b58: Copyright # Copyright
+    fa87e999-f1d2-4145-af9f-117abe633bd0: 'Alt Text' # Alt Text
 system:
   edition: pro
   live: true

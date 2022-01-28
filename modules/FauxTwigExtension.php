@@ -30,6 +30,7 @@ namespace nystudio107\craft;
 use craft\elements\Asset;
 use craft\elements\Category;
 use craft\elements\Entry;
+use craft\elements\GlobalSet;
 use craft\elements\MatrixBlock;
 use craft\elements\Tag;
 use craft\elements\User;
@@ -59,6 +60,7 @@ class FauxTwigExtension extends AbstractExtension implements GlobalsInterface
             'entry' => new Entry(),
             'image' => new Asset(),
             'tag' => new Tag(),
+            'siteInfo' => new GlobalSet(),
 
             // Misc. Craft globals
             'currentUser' => new User(),
