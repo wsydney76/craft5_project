@@ -3,7 +3,7 @@ enabled: true
 handle: default
 hasUrls: true
 language: en-US
-name: Project
+name: $SYSTEM_NAME
 primary: true
-siteGroup: 3bb09a1c-cb36-438e-b8d5-0b35b0965f4e # Project
+siteGroup: 3bb09a1c-cb36-438e-b8d5-0b35b0965f4e # $SYSTEM_NAME
 sortOrder: 1
