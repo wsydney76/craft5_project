@@ -1,7 +1,7 @@
 assets:
   tempSubpath: temp
   tempVolumeUid: 5a0be839-14a2-465e-a504-bb63dd0281e9 # Images
-dateModified: 1643370787
+dateModified: 1646037180
 email:
   fromEmail: $EMAIL_ADDRESS
   fromName: $EMAIL_SENDER
@@ -36,7 +36,7 @@ system:
   live: true
   name: $SYSTEM_NAME
   retryDuration: 30
-  schemaVersion: 3.7.8
+  schemaVersion: 3.7.33
   timeZone: $SYSTEM_TIMEZONE
 users:
   allowPublicRegistration: false

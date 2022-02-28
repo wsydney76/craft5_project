@@ -34,7 +34,6 @@ return [
 
         // Whether to enable Craft's template {% cache %} tag on a global basis
         'enableTemplateCaching' => false,
-        'cacheElementQueries' => false,
 
         // Max No. of revisions
         'maxRevisions' => 10,
@@ -92,7 +91,6 @@ return [
 
         // Whether to enable Craft's template {% cache %} tag on a global basis
         'enableTemplateCaching' => true,
-        'cacheElementQueries' => true,
 
         // Whether front end requests should respond with X-Robots-Tag: none HTTP headers
         'disallowRobots' => false,
