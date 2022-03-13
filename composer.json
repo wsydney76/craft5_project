@@ -4,7 +4,7 @@
   "version": "2.0.0",
   "license": "Unlicense",
   "require": {
-    "craftcms/cms": "3.7.36"
+    "craftcms/cms": "4.0.0-beta.1"
   },
   "autoload": {
     "psr-4": {
@@ -16,7 +16,7 @@
     "sort-packages": true,
     "optimize-autoloader": true,
     "platform": {
-      "php": "7.4"
+      "php": "8.0.2"
     },
     "allow-plugins": {
       "yiisoft/yii2-composer": true,

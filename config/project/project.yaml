@@ -1,7 +1,7 @@
 assets:
   tempSubpath: temp
   tempVolumeUid: 5a0be839-14a2-465e-a504-bb63dd0281e9 # Images
-dateModified: 1647181901
+dateModified: 1647182756
 email:
   fromEmail: $EMAIL_ADDRESS
   fromName: $EMAIL_SENDER
@@ -16,6 +16,14 @@ email:
     useAuthentication: $SMTP_AUTHENTICATION
     username: $SMTP_USER
   transportType: craft\mail\transportadapters\Smtp
+fs:
+  images:
+    hasUrls: true
+    name: Images
+    settings:
+      path: '@webroot/images'
+    type: craft\fs\Local
+    url: '@web/images'
 meta:
   __names__:
     3bb09a1c-cb36-438e-b8d5-0b35b0965f4e: $SYSTEM_NAME # $SYSTEM_NAME
@@ -33,13 +41,14 @@ meta:
     fa87e999-f1d2-4145-af9f-117abe633bd0: 'Alt Text' # Alt Text
 system:
   edition: pro
-  live: true
+  live: false
   name: $SYSTEM_NAME
   retryDuration: 30
-  schemaVersion: 3.7.33
+  schemaVersion: 4.0.0.5
   timeZone: $SYSTEM_TIMEZONE
 users:
   allowPublicRegistration: false
+  deactivateByDefault: false
   defaultGroup: null
   photoSubpath: ''
   photoVolumeUid: null
