@@ -14,6 +14,17 @@
 </header>
 
 <main>
+
+    {% block featured %}
+        {% set image = entry.featuredImage.one %}
+        {% if image %}
+        	<div class="mb-8">
+                {{ image.img({width: 1024, height: 400, format: 'webp'}) }}
+            </div>
+        {% endif %}
+
+    {% endblock %}
+
     <h1 class="mb-8 text-4xl font-semibold">{{ entry.title }}</h1>
 
     {% block content %}

@@ -24,10 +24,21 @@ fieldLayouts:
             tip: null
             title: null
             type: craft\fieldlayoutelements\entries\EntryTitleField
+            uid: d9b8dacd-ca19-4b4d-89a7-5a0dc5587665
+            warning: null
+            width: 100
+          -
+            fieldUid: 7df417e8-1eea-46d8-85a7-2a20370a881e # Featured Image
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 73c4b57b-452b-4a9f-80d8-3bfda94d1366
             warning: null
             width: 100
         name: Content
-        sortOrder: 1
+        uid: 9bbb97bc-bb86-4feb-8333-b532e26b773c
 handle: home
 hasTitleField: true
 name: Home

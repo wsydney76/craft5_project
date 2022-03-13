@@ -1,7 +1,28 @@
 assets:
   tempSubpath: temp
   tempVolumeUid: 5a0be839-14a2-465e-a504-bb63dd0281e9 # Images
-dateModified: 1647182756
+dateModified: 1647183933
+elementSources:
+  craft\elements\Asset:
+    -
+      key: 'volume:5a0be839-14a2-465e-a504-bb63dd0281e9' # Images
+      tableAttributes:
+        - imageSize
+        - dateModified
+        - link
+      type: native
+  craft\elements\Entry:
+    -
+      key: '*'
+      tableAttributes:
+        - section
+        - postDate
+        - author
+        - link
+      type: native
+    -
+      key: singles
+      type: native
 email:
   fromEmail: $EMAIL_ADDRESS
   fromName: $EMAIL_SENDER
@@ -24,12 +45,20 @@ fs:
       path: '@webroot/images'
     type: craft\fs\Local
     url: '@web/images'
+  imagesTransforms:
+    hasUrls: true
+    name: 'Images Transforms'
+    settings:
+      path: '@webroot/transforms'
+    type: craft\fs\Local
+    url: '@web/transforms'
 meta:
   __names__:
     3bb09a1c-cb36-438e-b8d5-0b35b0965f4e: $SYSTEM_NAME # $SYSTEM_NAME
     3e35a043-a62e-4ede-acd6-44dfb92d6914: 'Site Name' # Site Name
     5a0be839-14a2-465e-a504-bb63dd0281e9: Images # Images
     5b0c38db-9ab4-47d8-b4a7-913710c08ca6: $SYSTEM_NAME # $SYSTEM_NAME
+    7df417e8-1eea-46d8-85a7-2a20370a881e: 'Featured Image' # Featured Image
     169ccd00-9c12-4921-b187-8ef8ca2ad525: Assets # Assets
     6856c92d-c593-4425-8886-27e609d74667: Home # Home
     abefa0bd-6b36-4b4f-a9de-a4304e7b66a3: 'Public Schema' # Public Schema
@@ -49,7 +78,8 @@ system:
 users:
   allowPublicRegistration: false
   deactivateByDefault: false
-  defaultGroup: null
-  photoSubpath: ''
-  photoVolumeUid: null
+  defaultGroup: ''
+  photoSubpath: user_photos
+  photoVolumeUid: 5a0be839-14a2-465e-a504-bb63dd0281e9 # Images
   requireEmailVerification: true
+  validateOnPublicRegistration: false
