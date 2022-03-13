@@ -16,19 +16,19 @@
 <main>
 
     {% block featured %}
-        {% set image = entry.featuredImage.one %}
-        {% if image %}
-        	<div class="mb-8">
-                {{ image.img({width: 1024, height: 400, format: 'webp'}) }}
-            </div>
-        {% endif %}
-
+        {% include '_partials/featured_image.twig' %}
     {% endblock %}
 
-    <h1 class="mb-8 text-4xl font-semibold">{{ entry.title }}</h1>
+    {% block title %}
+        <h1 class="mb-8 text-4xl font-semibold">{% block titleText %}{{ entry.title }}{% endblock %}</h1>
+    {% endblock %}
 
     {% block content %}
-        Your content goes here
+
+        {% include '_partials/blocks.twig' with {
+            query: entry.bodyContent
+        } only %}
+
     {% endblock %}
 </main>
 

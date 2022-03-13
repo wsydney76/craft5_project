@@ -37,6 +37,7 @@ use craft\elements\User;
 use craft\models\Site;
 use craft\web\twig\variables\CraftVariable;
 use craft\web\view;
+use Illuminate\Support\Collection;
 use Twig\Extension\AbstractExtension;
 use Twig\Extension\GlobalsInterface;
 
@@ -58,6 +59,7 @@ class FauxTwigExtension extends AbstractExtension implements GlobalsInterface
             'category' => new Category(),
             'element' => new Entry(),
             'entry' => new Entry(),
+            'entries' => new Collection(),
             'image' => new Asset(),
             'tag' => new Tag(),
             'siteInfo' => new GlobalSet(),

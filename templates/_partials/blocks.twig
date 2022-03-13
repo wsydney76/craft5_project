@@ -1,0 +1,12 @@
+{# @var blocks \Illuminate\Support\Collection #}
+
+{% set blocks = query.collect %}
+
+{% for block in blocks %}
+    <div class="my-8">
+        {% include "_blocks/#{block.type.handle}.twig" with {
+            block
+        } only %}
+    </div>
+{% endfor %}
+

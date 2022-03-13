@@ -7,7 +7,7 @@ use yii\base\Module;
 
 class MainModule extends Module
 {
-    public function init()
+    public function init(): void
     {
         Craft::setAlias('@modules/main', $this->getBasePath());
 

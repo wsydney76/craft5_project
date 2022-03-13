@@ -1,0 +1,4 @@
+{% set image = block.image.collect.first %}
+{% if image %}
+	{{ image.img({width: 1024, height: 500, format: 'webp'}) }}
+{% endif %}
