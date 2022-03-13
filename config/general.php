@@ -50,6 +50,9 @@ return [
         // Whether images transforms should be generated before page load.
         'generateTransformsBeforePageLoad' => true,
 
+        // Whether Craft should optimize images for reduced file sizes without noticeably reducing image quality.
+        'optimizeImageFilesize' => false,
+
         // Whether asset URLs should be revved so browsers don’t load cached versions when they’re modified.
         'revAssetUrls' => true,
 
@@ -61,7 +64,7 @@ return [
 
         'aliases' => [
             // Prevent the @web alias from being set automatically (cache poisoning vulnerability)
-            '@web' => App::env('PRIMARY_SITE_URL'),
+            '@web' => Env::DEFAULT_SITE_URL,
             // Lets `./craft clear-caches all` clear CP resources cache
             '@webroot' => dirname(__DIR__) . '/web',
         ]
