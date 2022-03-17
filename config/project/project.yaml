@@ -1,7 +1,7 @@
 assets:
   tempSubpath: temp
   tempVolumeUid: 5a0be839-14a2-465e-a504-bb63dd0281e9 # Images
-dateModified: 1647185570
+dateModified: 1647513808
 elementSources:
   craft\elements\Asset:
     -
@@ -10,6 +10,21 @@ elementSources:
         - imageSize
         - dateModified
         - link
+      type: native
+    -
+      heading: Internal
+      type: heading
+    -
+      key: 'volume:3b60e4f9-36bb-4456-bee5-67160b5a3108' # User Photos
+      tableAttributes:
+        - filename
+        - size
+        - dateModified
+        - uploader
+        - link
+      type: native
+    -
+      key: 'volume:ed627edd-73bd-4b75-8684-f410bf4e4b9d' # Temp Images
       type: native
   craft\elements\Entry:
     -
@@ -52,18 +67,33 @@ fs:
     hasUrls: true
     name: Images
     settings:
-      path: '@webroot/images'
+      path: '@webroot/files/images'
     type: craft\fs\Local
-    url: '@web/images'
+    url: '@web/files/images'
   imagesTransforms:
     hasUrls: true
     name: 'Images Transforms'
     settings:
-      path: '@webroot/transforms'
+      path: '@webroot/assets/transforms'
     type: craft\fs\Local
-    url: '@web/transforms'
+    url: '@web/assets/transforms'
+  tempimages:
+    hasUrls: true
+    name: 'Temp Images'
+    settings:
+      path: '@webroot/files/temp'
+    type: craft\fs\Local
+    url: '@web/files/temp'
+  userPhotos:
+    hasUrls: true
+    name: 'User Photos'
+    settings:
+      path: '@webroot/files/userphotos'
+    type: craft\fs\Local
+    url: '@web/files/userphotos'
 meta:
   __names__:
+    3b60e4f9-36bb-4456-bee5-67160b5a3108: 'User Photos' # User Photos
     3bb09a1c-cb36-438e-b8d5-0b35b0965f4e: $SYSTEM_NAME # $SYSTEM_NAME
     3e35a043-a62e-4ede-acd6-44dfb92d6914: 'Site Name' # Site Name
     4b050685-0425-4094-bde2-85e2eedd0e12: Text # Text
@@ -85,19 +115,20 @@ meta:
     c752550e-4c4a-4004-8229-7473dcf75450: 'Site Info' # Site Info
     d50026f3-a236-4ae2-b00a-af55076acd17: Site # Site
     eb6b24cc-83d7-416f-be4b-d002c7688b58: Copyright # Copyright
+    ed627edd-73bd-4b75-8684-f410bf4e4b9d: 'Temp Images' # Temp Images
     fbf00eb2-4a16-40ca-96bb-3fadd2bf459c: Default # Default
 system:
   edition: pro
-  live: false
+  live: true
   name: $SYSTEM_NAME
   retryDuration: 30
-  schemaVersion: 4.0.0.5
+  schemaVersion: 4.0.0.7
   timeZone: $SYSTEM_TIMEZONE
 users:
   allowPublicRegistration: false
   deactivateByDefault: false
   defaultGroup: ''
-  photoSubpath: user_photos
-  photoVolumeUid: 5a0be839-14a2-465e-a504-bb63dd0281e9 # Images
+  photoSubpath: null
+  photoVolumeUid: 3b60e4f9-36bb-4456-bee5-67160b5a3108 # User Photos
   requireEmailVerification: true
   validateOnPublicRegistration: false
