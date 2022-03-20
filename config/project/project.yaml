@@ -1,7 +1,7 @@
 assets:
   tempSubpath: temp
   tempVolumeUid: 5a0be839-14a2-465e-a504-bb63dd0281e9 # Images
-dateModified: 1647513808
+dateModified: 1647514509
 elementSources:
   craft\elements\Asset:
     -
@@ -25,6 +25,11 @@ elementSources:
       type: native
     -
       key: 'volume:ed627edd-73bd-4b75-8684-f410bf4e4b9d' # Temp Images
+      tableAttributes:
+        - filename
+        - imageSize
+        - size
+        - uploader
       type: native
   craft\elements\Entry:
     -

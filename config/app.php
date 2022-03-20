@@ -25,5 +25,5 @@ return [
     'modules' => [
         'main' => MainModule::class,
     ],
-    //'bootstrap' => ['main'],
+    'bootstrap' => ['main'],
 ];

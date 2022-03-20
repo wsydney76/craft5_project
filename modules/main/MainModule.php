@@ -18,6 +18,11 @@ class MainModule extends Module
             $this->controllerNamespace = 'modules\\main\\controllers';
         }
 
+        // Prevent password managers like Bitdefender Wallet from falsely inserting credentials into user form
+        Craft::$app->view->hook('cp.users.edit.content', function(array &$context) {
+            return '<input type="text" name="dummy-first-name" value="wtf" style="display: none">';
+        });
+
         parent::init();
     }
 }
