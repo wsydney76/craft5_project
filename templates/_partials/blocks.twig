@@ -2,11 +2,15 @@
 
 {% set blocks = query.collect %}
 
-{% for block in blocks %}
-    <div class="my-8">
-        {% include "_blocks/#{block.type.handle}.twig" with {
-            block
-        } only %}
+{% if blocks.count %}
+    <div class="prose prose-lg max-w-screen-lg">
+        {% for block in blocks %}
+            <div class="my-8">
+                {% include "_blocks/#{block.type.handle}.twig" with {
+                    block
+                } only %}
+            </div>
+        {% endfor %}
     </div>
-{% endfor %}
+{% endif %}
 

@@ -3,13 +3,17 @@
 namespace craft\contentmigrations;
 
 use Craft;
-use craft\base\Field;
 use craft\db\Migration;
 use craft\elements\Asset;
-use craft\elements\conditions\assets\HasAltConditionRule;
-use craft\services\ProjectConfig;
-use craft\elements\conditions\assets\VolumeConditionRule;
 use craft\elements\conditions\assets\AssetCondition;
+use craft\elements\conditions\assets\HasAltConditionRule;
+use craft\elements\conditions\assets\VolumeConditionRule;
+use craft\elements\Entry;
+use craft\errors\InvalidFieldException;
+use craft\errors\SectionNotFoundException;
+use craft\errors\VolumeException;
+use craft\helpers\StringHelper;
+use craft\services\ProjectConfig;
 
 /**
  * m220324_093810_element_sources migration.
@@ -38,93 +42,148 @@ class m220324_093810_element_sources extends Migration
     protected function setAssetIndexes(): void
     {
 
-        $assetSources = [
-            'siteHeading' => ['type' => 'heading', 'heading' => 'Site Assets'],
-            'images' => ['type' => 'key', 'tableAttributes' => ['alt', 'imageSize', 'dateModified', 'link']],
-            'internalHeading' => ['type' => 'heading', 'heading' => 'Internal'],
-            'tempImages' => ['type' => 'key', 'tableAttributes' => ['filename', 'imageSize', 'dateModified', 'link']],
-            'userPhotos' => ['type' => 'key', 'tableAttributes' => ['filename', 'imageSize', 'dateModified', 'link']],
-            'qualityHeading' => ['type' => 'heading', 'heading' => 'Quality'],
-            'missingAlt' => [
-                'type' => 'condition',
-                'source' => [
-                    'condition' => [
-                        'class' => AssetCondition::class,
-                        'conditionRules' => [
-                            [
-                                'class' => VolumeConditionRule::class,
-                                'operator' => 'in',
-                                'uid' => '79f2feb4-b598-432c-b4bd-9c575c39ca05',
-                                'values' => [
-                                    Craft::$app->volumes->getVolumeByHandle('images')->uid
-                                ]
-                            ],
-                            [
-                                'class' => HasAltConditionRule::class,
-                                'uid' => 'ed2080f1-740a-4b76-b3f2-4f61febf437d',
-                                'value' => false
+        $assetSettings = [
+            [
+                'key' => $this->getVolumeKey('images'),
+                'tableAttributes' => [
+                    'alt',
+                    'imageSize',
+                    'dateModified',
+                    'link'
+                ],
+                'type' => 'native'
+            ],
+            [
+                'heading' => 'Internal',
+                'type' => 'heading'
+            ],
+            [
+                'key' => $this->getVolumeKey('tempImages'),
+                'tableAttributes' => [
+                    'alt',
+                    'imageSize',
+                    'dateModified',
+                    'link'
+                ],
+                'type' => 'native'
+            ],
+            [
+                'key' => $this->getVolumeKey('userPhotos'),
+                'tableAttributes' => [
+                    'alt',
+                    'imageSize',
+                    'dateModified',
+                    'link'
+                ],
+                'type' => 'native'
+            ],
+            [
+                'heading' => 'Quality',
+                'type' => 'heading'
+            ],
+            [
+                'condition' => [
+                    'class' => AssetCondition::class,
+                    'conditionRules' => [
+                        [
+                            'class' => VolumeConditionRule::class,
+                            'operator' => 'in',
+                            'uid' => $this->getUid(),
+                            'values' => [
+                                Craft::$app->volumes->getVolumeByHandle('images')->uid
                             ]
                         ],
-                        'elementType' => Asset::class,
-                        'fieldContext' => 'global'
+                        [
+                            'class' => HasAltConditionRule::class,
+                            'uid' => $this->getUid(),
+                            'value' => false
+                        ]
                     ],
-                    'key' => 'custom:8cbdeae2-e144-4ce6-978c-7e34c1475280',
-                    'label' => 'Missing alt text',
-                    'tableAttributes' => ['imageSize','dateModified','link'],
-                    'type' => 'custom'
-                ]
+                    'elementType' => Asset::class,
+                    'fieldContext' => 'global'
+                ],
+                'key' => 'custom:' . $this->getUid(),
+                'label' => 'Missing alt text',
+                'tableAttributes' => ['imageSize', 'dateModified', 'link'],
+                'type' => 'custom'
             ]
         ];
 
-        $assetSettings = [];
-
-        foreach ($assetSources as $handle => $source) {
-            if ($source['type'] == 'key') {
-                $volume = Craft::$app->volumes->getVolumeByHandle($handle);
-                if ($volume) {
-                    $assetSettings[] = [
-                        'key' => 'volume:' . $volume->uid,
-                        'tableAttributes' => $source['tableAttributes'],
-                        'type' => 'native'
-                    ];
-                }
-            }
-
-            if ($source['type'] == 'heading') {
-                $assetSettings[] = ['heading' => $source['heading'], 'type' => 'heading'];
-            }
-
-            if ($source['type'] == 'condition') {
-                $assetSettings[] = $source['source'];
-            }
-        }
-
-        Craft::$app->projectConfig->set(ProjectConfig::PATH_ELEMENT_SOURCES . '.craft\\elements\\Asset', $assetSettings);
+        Craft::$app->projectConfig->set(ProjectConfig::PATH_ELEMENT_SOURCES . '.' . Asset::class, $assetSettings);
     }
 
     protected function setElementIndexes(): void
     {
-        $sections = Craft::$app->sections->getAllSections();
-        $s = [];
-        foreach ($sections as $section) {
-            $s[$section->handle] = 'section:' . $section->uid;
-        }
-
-        $f = [];
-        $fields = Craft::$app->fields->getAllFields();
-        foreach ($fields as $field) {
-            /** @var Field $field */
-            $f[$field->handle] = 'field:' . $field->uid;
-        }
 
         $entrySettings = [
-            ['key' => '*', 'tableAttributes' => ['section', 'postDate', 'link'], 'type' => 'native'],
-            ['heading' => 'Site', 'type' => 'heading'],
-            ['key' => 'singles', 'tableAttributes' => ['drafts', $f['featuredImage'], 'link'], 'type' => 'native'],
-            ['key' => $s['page'], 'tableAttributes' => ['drafts', 'type', $f['featuredImage'], 'postDate', 'link'], 'type' => 'native'],
+            [
+                'key' => '*',
+                'tableAttributes' => [
+                    'section',
+                    'postDate',
+                    'link'
+                ],
+                'type' => 'native'
+            ],
+            [
+                'heading' => 'Site',
+                'type' => 'heading'
+            ],
+            [
+                'key' => 'singles',
+                'tableAttributes' => [
+                    'drafts',
+                    $this->getFieldKey('featuredImage'),
+                    'link'
+                ],
+                'type' => 'native'
+            ],
+            [
+                'key' => $this->getSectionKey('page'),
+                'tableAttributes' => [
+                    'drafts',
+                    'type',
+                    $this->getFieldKey('featuredImage'),
+                    'postDate',
+                    'link'
+                ],
+                'type' => 'native'
+            ],
         ];
 
-        Craft::$app->projectConfig->set(ProjectConfig::PATH_ELEMENT_SOURCES . '.craft\\elements\\Entry', $entrySettings);
+        Craft::$app->projectConfig->set(ProjectConfig::PATH_ELEMENT_SOURCES . '.' . Entry::class, $entrySettings);
+    }
+
+    protected function getSectionKey(string $handle): string
+    {
+        $section = Craft::$app->sections->getSectionByHandle($handle);
+        if (!$section) {
+            throw new SectionNotFoundException();
+        }
+        return "section:$section->uid";
+    }
+
+    protected function getFieldKey(string $handle): string
+    {
+        $field = Craft::$app->fields->getFieldByHandle($handle);
+        if (!$field) {
+            throw new InvalidFieldException($handle);
+        }
+        return "field:$field->uid";
+    }
+
+    protected function getVolumeKey(string $handle): string
+    {
+        $volume = Craft::$app->volumes->getVolumeByHandle($handle);
+        if (!$volume) {
+            throw new VolumeException();
+        }
+        return "volume:$volume->uid";
+    }
+
+    protected function getUid()
+    {
+        return StringHelper::UUID();
     }
 
 }
