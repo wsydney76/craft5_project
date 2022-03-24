@@ -54,30 +54,6 @@ class m220324_093810_element_sources extends Migration
                 'type' => 'native'
             ],
             [
-                'heading' => 'Internal',
-                'type' => 'heading'
-            ],
-            [
-                'key' => $this->getVolumeKey('tempImages'),
-                'tableAttributes' => [
-                    'alt',
-                    'imageSize',
-                    'dateModified',
-                    'link'
-                ],
-                'type' => 'native'
-            ],
-            [
-                'key' => $this->getVolumeKey('userPhotos'),
-                'tableAttributes' => [
-                    'alt',
-                    'imageSize',
-                    'dateModified',
-                    'link'
-                ],
-                'type' => 'native'
-            ],
-            [
                 'heading' => 'Quality',
                 'type' => 'heading'
             ],
@@ -106,6 +82,30 @@ class m220324_093810_element_sources extends Migration
                 'label' => 'Missing alt text',
                 'tableAttributes' => ['imageSize', 'dateModified', 'link'],
                 'type' => 'custom'
+            ],
+            [
+                'heading' => 'Internal',
+                'type' => 'heading'
+            ],
+            [
+                'key' => $this->getVolumeKey('tempImages'),
+                'tableAttributes' => [
+                    'alt',
+                    'imageSize',
+                    'dateModified',
+                    'link'
+                ],
+                'type' => 'native'
+            ],
+            [
+                'key' => $this->getVolumeKey('userPhotos'),
+                'tableAttributes' => [
+                    'alt',
+                    'imageSize',
+                    'dateModified',
+                    'link'
+                ],
+                'type' => 'native'
             ]
         ];
 
@@ -181,7 +181,7 @@ class m220324_093810_element_sources extends Migration
         return "volume:$volume->uid";
     }
 
-    protected function getUid()
+    protected function getUid(): string
     {
         return StringHelper::UUID();
     }
