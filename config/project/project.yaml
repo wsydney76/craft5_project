@@ -1,7 +1,7 @@
 assets:
   tempSubpath: temp
   tempVolumeUid: 5a0be839-14a2-465e-a504-bb63dd0281e9 # Images
-dateModified: 1647514509
+dateModified: 1647969781
 elementSources:
   craft\elements\Asset:
     -
@@ -49,8 +49,8 @@ elementSources:
         - drafts
         - type
         - 'field:7df417e8-1eea-46d8-85a7-2a20370a881e' # Featured Image
-        - postDate
         - author
+        - postDate
         - link
       type: native
 email:
