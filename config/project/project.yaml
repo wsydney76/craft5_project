@@ -1,12 +1,13 @@
 assets:
   tempSubpath: temp
   tempVolumeUid: 5a0be839-14a2-465e-a504-bb63dd0281e9 # Images
-dateModified: 1647969781
+dateModified: 1648139617
 elementSources:
   craft\elements\Asset:
     -
       key: 'volume:5a0be839-14a2-465e-a504-bb63dd0281e9' # Images
       tableAttributes:
+        - alt
         - imageSize
         - dateModified
         - link
@@ -15,33 +16,64 @@ elementSources:
       heading: Internal
       type: heading
     -
-      key: 'volume:3b60e4f9-36bb-4456-bee5-67160b5a3108' # User Photos
+      key: 'volume:ed627edd-73bd-4b75-8684-f410bf4e4b9d' # Temp Images
       tableAttributes:
-        - filename
-        - size
+        - alt
+        - imageSize
         - dateModified
-        - uploader
         - link
       type: native
     -
-      key: 'volume:ed627edd-73bd-4b75-8684-f410bf4e4b9d' # Temp Images
+      key: 'volume:3b60e4f9-36bb-4456-bee5-67160b5a3108' # User Photos
       tableAttributes:
-        - filename
+        - alt
         - imageSize
-        - size
-        - uploader
+        - dateModified
+        - link
       type: native
+    -
+      heading: Quality
+      type: heading
+    -
+      condition:
+        class: craft\elements\conditions\assets\AssetCondition
+        conditionRules:
+          -
+            class: craft\elements\conditions\assets\VolumeConditionRule
+            operator: in
+            uid: c9567d0f-5129-435b-9f00-aa93d06e8dda
+            values:
+              - 5a0be839-14a2-465e-a504-bb63dd0281e9 # Images
+          -
+            class: craft\elements\conditions\assets\HasAltConditionRule
+            uid: 9ed6139e-e4d3-49dd-b6a5-fa87e3f803db
+            value: false
+        elementType: craft\elements\Asset
+        fieldContext: global
+      key: 'custom:4f7e0eeb-048d-4263-bc8f-7e6a0371804c'
+      label: 'Missing alt text'
+      tableAttributes:
+        - imageSize
+        - dateModified
+        - link
+      type: custom
   craft\elements\Entry:
     -
       key: '*'
       tableAttributes:
         - section
         - postDate
-        - author
         - link
       type: native
     -
+      heading: Site
+      type: heading
+    -
       key: singles
+      tableAttributes:
+        - drafts
+        - 'field:7df417e8-1eea-46d8-85a7-2a20370a881e' # Featured Image
+        - link
       type: native
     -
       key: 'section:84b98802-2548-4aed-b67e-fc97f6ed9e30' # Page
@@ -49,7 +81,6 @@ elementSources:
         - drafts
         - type
         - 'field:7df417e8-1eea-46d8-85a7-2a20370a881e' # Featured Image
-        - author
         - postDate
         - link
       type: native
