@@ -1,45 +1,80 @@
 <?php
 
-namespace craft\contentmigrations;
+namespace modules\main\console\controllers;
 
 use Craft;
-use craft\db\Migration;
+use craft\console\Controller;
 use craft\elements\Asset;
 use craft\elements\conditions\assets\AssetCondition;
 use craft\elements\conditions\assets\HasAltConditionRule;
 use craft\elements\conditions\assets\VolumeConditionRule;
 use craft\elements\Entry;
+use craft\errors\BusyResourceException;
 use craft\errors\InvalidFieldException;
 use craft\errors\SectionNotFoundException;
+use craft\errors\StaleResourceException;
 use craft\errors\VolumeException;
 use craft\helpers\StringHelper;
 use craft\services\ProjectConfig;
+use DateTime;
+use Exception;
+use yii\base\ErrorException;
+use yii\base\InvalidConfigException;
+use yii\base\NotSupportedException;
+use yii\console\ExitCode;
+use yii\web\ServerErrorHttpException;
 
-/**
- * m220324_093810_element_sources migration.
- */
-class m220324_093810_element_sources extends Migration
+class InitController extends Controller
 {
-    /**
-     * @inheritdoc
-     */
-    public function safeUp(): bool
+
+    public $defaultAction = 'init';
+
+    public function actionInit(): int
     {
-        $this->setAssetIndexes();
-        $this->setElementIndexes();
-        return true;
+        $this->stdout("Fix empty postDate... ");
+        $this->actionFixEmptyPostDate();
+
+        $this->stdout("Set element sources... ");
+        $this->actionSetElementSources();
+
+        return ExitCode::OK;
+    }
+
+    // php craft main/init/fix-empty-post-date
+    public function actionFixEmptyPostDate(): int
+    {
+        $entries = Entry::find()->postDate(':empty:')->status(null)->all();
+        foreach ($entries as $entry) {
+            $entry->postDate = new DateTime();
+            if (!Craft::$app->elements->saveElement($entry)) {
+                Craft::error('Error saving ' . $entry->title, 'Starter');
+            }
+        }
+        $this->stdout("Done\n");
+        return ExitCode::OK;
+    }
+
+    // php craft main/init/set-element-sources
+    public function actionSetElementSources(): int
+    {
+        $this->setAssetsSources();
+        $this->setEntriesSources();
+
+        $this->stdout("Done\n");
+        return ExitCode::OK;
     }
 
     /**
-     * @inheritdoc
+     * @throws NotSupportedException
+     * @throws InvalidConfigException
+     * @throws ServerErrorHttpException
+     * @throws VolumeException
+     * @throws StaleResourceException
+     * @throws \yii\base\Exception
+     * @throws BusyResourceException
+     * @throws ErrorException
      */
-    public function safeDown(): bool
-    {
-        echo "There is nothing to revert.\n";
-        return true;
-    }
-
-    protected function setAssetIndexes(): void
+    protected function setAssetsSources(): void
     {
 
         $assetSettings = [
@@ -112,7 +147,7 @@ class m220324_093810_element_sources extends Migration
         Craft::$app->projectConfig->set(ProjectConfig::PATH_ELEMENT_SOURCES . '.' . Asset::class, $assetSettings);
     }
 
-    protected function setElementIndexes(): void
+    protected function setEntriesSources(): void
     {
 
         $entrySettings = [
@@ -181,7 +216,10 @@ class m220324_093810_element_sources extends Migration
         return "volume:$volume->uid";
     }
 
-    protected function getUid(): string
+    /**
+     * @throws Exception
+     */
+    protected function getUid()
     {
         return StringHelper::UUID();
     }

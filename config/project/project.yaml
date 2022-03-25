@@ -1,7 +1,7 @@
 assets:
   tempSubpath: temp
   tempVolumeUid: 5a0be839-14a2-465e-a504-bb63dd0281e9 # Images
-dateModified: 1648139617
+dateModified: 1648197691
 elementSources:
   craft\elements\Asset:
     -
@@ -12,6 +12,32 @@ elementSources:
         - dateModified
         - link
       type: native
+    -
+      heading: Quality
+      type: heading
+    -
+      condition:
+        class: craft\elements\conditions\assets\AssetCondition
+        conditionRules:
+          -
+            class: craft\elements\conditions\assets\VolumeConditionRule
+            operator: in
+            uid: 967e3344-55e5-482d-8de9-6f6c05c22564
+            values:
+              - 5a0be839-14a2-465e-a504-bb63dd0281e9 # Images
+          -
+            class: craft\elements\conditions\assets\HasAltConditionRule
+            uid: 59b377ce-4526-4669-86cd-01cb6da0013f
+            value: false
+        elementType: craft\elements\Asset
+        fieldContext: global
+      key: 'custom:2d667d9e-36cd-4462-acca-6c96f89cd297'
+      label: 'Missing alt text'
+      tableAttributes:
+        - imageSize
+        - dateModified
+        - link
+      type: custom
     -
       heading: Internal
       type: heading
@@ -31,32 +57,6 @@ elementSources:
         - dateModified
         - link
       type: native
-    -
-      heading: Quality
-      type: heading
-    -
-      condition:
-        class: craft\elements\conditions\assets\AssetCondition
-        conditionRules:
-          -
-            class: craft\elements\conditions\assets\VolumeConditionRule
-            operator: in
-            uid: c9567d0f-5129-435b-9f00-aa93d06e8dda
-            values:
-              - 5a0be839-14a2-465e-a504-bb63dd0281e9 # Images
-          -
-            class: craft\elements\conditions\assets\HasAltConditionRule
-            uid: 9ed6139e-e4d3-49dd-b6a5-fa87e3f803db
-            value: false
-        elementType: craft\elements\Asset
-        fieldContext: global
-      key: 'custom:4f7e0eeb-048d-4263-bc8f-7e6a0371804c'
-      label: 'Missing alt text'
-      tableAttributes:
-        - imageSize
-        - dateModified
-        - link
-      type: custom
   craft\elements\Entry:
     -
       key: '*'
