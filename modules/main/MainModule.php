@@ -3,6 +3,10 @@
 namespace modules\main;
 
 use Craft;
+use craft\base\Element;
+use craft\elements\Asset;
+use craft\events\RegisterElementTableAttributesEvent;
+use yii\base\Event;
 use yii\base\Module;
 
 class MainModule extends Module
@@ -21,6 +25,14 @@ class MainModule extends Module
         // Prevent password managers like Bitdefender Wallet from falsely inserting credentials into user form
         Craft::$app->view->hook('cp.users.edit.content', function(array &$context) {
             return '<input type="text" name="dummy-first-name" value="wtf" style="display: none">';
+        });
+
+        // Register element index column
+        Event::on(
+            Asset::class,
+            Element::EVENT_REGISTER_TABLE_ATTRIBUTES, function(RegisterElementTableAttributesEvent $event) {
+            $event->tableAttributes['alt'] = ['label' => Craft::t('app', 'Alternative Text')];
+            $event->tableAttributes['copyright'] = ['label' => Craft::t('site', 'Copyright')];
         });
 
         parent::init();
