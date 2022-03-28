@@ -680,12 +680,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/craftcms/cms.git",
-                "reference": "3760652d5a1905e457bd8db54aff418541318e3a"
+                "reference": "ac8d21401edcf4a4b48017c56a51c884a06e5de0"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/craftcms/cms/zipball/3760652d5a1905e457bd8db54aff418541318e3a",
-                "reference": "3760652d5a1905e457bd8db54aff418541318e3a",
+                "url": "https://api.github.com/repos/craftcms/cms/zipball/ac8d21401edcf4a4b48017c56a51c884a06e5de0",
+                "reference": "ac8d21401edcf4a4b48017c56a51c884a06e5de0",
                 "shasum": ""
             },
             "require": {
@@ -790,7 +790,7 @@
                 "rss": "https://github.com/craftcms/cms/releases.atom",
                 "source": "https://github.com/craftcms/cms"
             },
-            "time": "2022-03-26T15:14:53+00:00"
+            "time": "2022-03-29T08:27:22+00:00"
         },
         {
             "name": "craftcms/oauth2-craftid",
@@ -5797,16 +5797,16 @@
         },
         {
             "name": "voku/stringy",
-            "version": "6.5.2",
+            "version": "6.5.3",
             "source": {
                 "type": "git",
                 "url": "https://github.com/voku/Stringy.git",
-                "reference": "760438112f8696ba3d51a96896bc786d29a5f183"
+                "reference": "c453c88fbff298f042c836ef44306f8703b2d537"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/voku/Stringy/zipball/760438112f8696ba3d51a96896bc786d29a5f183",
-                "reference": "760438112f8696ba3d51a96896bc786d29a5f183",
+                "url": "https://api.github.com/repos/voku/Stringy/zipball/c453c88fbff298f042c836ef44306f8703b2d537",
+                "reference": "c453c88fbff298f042c836ef44306f8703b2d537",
                 "shasum": ""
             },
             "require": {
@@ -5888,7 +5888,7 @@
                     "type": "tidelift"
                 }
             ],
-            "time": "2022-01-30T05:46:50+00:00"
+            "time": "2022-03-28T14:52:20+00:00"
         },
         {
             "name": "voku/urlify",
