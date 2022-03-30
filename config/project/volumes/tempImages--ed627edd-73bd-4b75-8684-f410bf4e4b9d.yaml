@@ -29,11 +29,11 @@ fieldLayouts:
             width: 100
         name: Content
         uid: 42d432b0-8a0a-4d01-9180-8bad74641bf1
-fs: tempimages
+fs: $TEMP_IMAGES_FS
 handle: tempImages
 name: 'Temp Images'
 sortOrder: 2
 titleTranslationKeyFormat: null
 titleTranslationMethod: site
-transformFs: imagesTransforms
+transformFs: $IMAGE_TRANSFORM_FS
 transformSubpath: tempimages

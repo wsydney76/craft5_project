@@ -29,11 +29,11 @@ fieldLayouts:
             width: 100
         name: Content
         uid: 5f070eed-6f7a-42aa-96a6-961429e94f23
-fs: userPhotos
+fs: $USERPHOTOS_FS
 handle: userPhotos
 name: 'User Photos'
 sortOrder: 3
 titleTranslationKeyFormat: null
 titleTranslationMethod: site
-transformFs: imagesTransforms
+transformFs: $IMAGE_TRANSFORM_FS
 transformSubpath: userphotos
