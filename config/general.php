@@ -67,7 +67,11 @@ return [
             '@web' => Env::DEFAULT_SITE_URL,
             // Lets `./craft clear-caches all` clear CP resources cache
             '@webroot' => dirname(__DIR__) . '/web',
-        ]
+        ],
+
+        // Whether Craft should run pending queue jobs automatically when someone visits the control panel.
+        // Run php craft queue/listen if set to false
+        'runQueueAutomatically' => Env::RUN_QUEUE_AUTOMATICALLY,
     ],
 
     // Dev environment settings
