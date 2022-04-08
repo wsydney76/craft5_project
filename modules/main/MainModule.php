@@ -5,14 +5,9 @@ namespace modules\main;
 use Craft;
 use craft\base\Element;
 use craft\elements\Asset;
-use craft\elements\Entry;
-use craft\events\ModelEvent;
 use craft\events\RegisterElementTableAttributesEvent;
-use craft\helpers\ElementHelper;
-use craft\records\Element_SiteSettings;
 use yii\base\Event;
 use yii\base\Module;
-use function str_replace;
 
 class MainModule extends Module
 {
@@ -40,34 +35,6 @@ class MainModule extends Module
             $event->tableAttributes['copyright'] = ['label' => Craft::t('site', 'Copyright')];
         });
 
-        Event::on(
-            Entry::class,
-            Entry::EVENT_AFTER_SAVE, function(ModelEvent $event) {
-            $this->repairUri($event->sender);
-        });
-
         parent::init();
-    }
-
-    protected function repairUri($entry): void
-    {
-        if (ElementHelper::isDraftOrRevision($entry)) {
-            return;
-        }
-        if (!$entry->scenario == Entry::SCENARIO_LIVE) {
-            return;
-        }
-
-        $records = Element_SiteSettings::find()
-            ->where(['elementId' => $entry->id])
-            ->andWhere(['like', 'uri', '('])
-            ->all();
-
-        foreach ($records as $record) {
-            $newUri = str_replace('(', '', $record->uri);
-
-            $record->uri = $newUri;
-            $record->save();
-        }
     }
 }

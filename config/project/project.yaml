@@ -1,7 +1,6 @@
 assets:
-  tempSubpath: temp
-  tempVolumeUid: 5a0be839-14a2-465e-a504-bb63dd0281e9 # Images
-dateModified: 1648631059
+  tempVolumeUid: ed627edd-73bd-4b75-8684-f410bf4e4b9d # Temp Images
+dateModified: 1649409118
 elementSources:
   craft\elements\Asset:
     -
@@ -11,7 +10,6 @@ elementSources:
         - imageSize
         - dateModified
         - link
-        - url
       type: native
     -
       heading: Quality
@@ -23,16 +21,16 @@ elementSources:
           -
             class: craft\elements\conditions\assets\VolumeConditionRule
             operator: in
-            uid: a0d18f96-677b-42e9-8e35-1e1859f72fdd
+            uid: 33c081d0-579a-4c6d-9950-43c84499592b
             values:
               - 5a0be839-14a2-465e-a504-bb63dd0281e9 # Images
           -
             class: craft\elements\conditions\assets\HasAltConditionRule
-            uid: eda5842c-1fa2-4f18-9bdd-ea16f622eaf5
+            uid: f33b8296-1216-4c20-a4c6-109c806c719f
             value: false
         elementType: craft\elements\Asset
         fieldContext: global
-      key: 'custom:37c035b9-bb48-4184-836f-2246cac52416'
+      key: 'custom:efd59f5a-21a6-4d4b-beb7-8280f0e7deb2'
       label: 'Missing alt text'
       tableAttributes:
         - imageSize
@@ -100,30 +98,30 @@ email:
     username: $SMTP_USER
   transportType: craft\mail\transportadapters\Smtp
 fs:
-  images:
+  imagesTransforms_local:
     hasUrls: true
-    name: Images
-    settings:
-      path: '@webroot/files/images'
-    type: craft\fs\Local
-    url: '@web/files/images'
-  imagesTransforms:
-    hasUrls: true
-    name: 'Images Transforms'
+    name: 'Images Transforms Local'
     settings:
       path: '@webroot/assets/transforms'
     type: craft\fs\Local
     url: '@web/assets/transforms'
-  tempimages:
+  images_local:
     hasUrls: true
-    name: 'Temp Images'
+    name: 'Images Local'
+    settings:
+      path: '@webroot/files/images'
+    type: craft\fs\Local
+    url: '@web/files/images'
+  tempimages_local:
+    hasUrls: true
+    name: 'Temp Images Local'
     settings:
       path: '@webroot/files/temp'
     type: craft\fs\Local
     url: '@web/files/temp'
-  userPhotos:
+  userPhotos_local:
     hasUrls: true
-    name: 'User Photos'
+    name: 'User Photos Local'
     settings:
       path: '@webroot/files/userphotos'
     type: craft\fs\Local
@@ -159,7 +157,7 @@ system:
   live: true
   name: $SYSTEM_NAME
   retryDuration: 30
-  schemaVersion: 4.0.0.7
+  schemaVersion: 4.0.0.8
   timeZone: $SYSTEM_TIMEZONE
 users:
   allowPublicRegistration: false
