@@ -5,7 +5,10 @@ namespace modules\main;
 use Craft;
 use craft\base\Element;
 use craft\elements\Asset;
+use craft\events\ElementEvent;
 use craft\events\RegisterElementTableAttributesEvent;
+use craft\helpers\ElementHelper;
+use craft\services\Elements;
 use yii\base\Event;
 use yii\base\Module;
 
@@ -34,6 +37,17 @@ class MainModule extends Module
             $event->tableAttributes['alt'] = ['label' => Craft::t('app', 'Alternative Text')];
             $event->tableAttributes['copyright'] = ['label' => Craft::t('site', 'Copyright')];
         });
+
+        // Don't update search index for drafts
+        Event::on(
+            Elements::class,
+            Elements::EVENT_BEFORE_UPDATE_SEARCH_INDEX,
+            function(ElementEvent $event) {
+                if (ElementHelper::isDraft($event->element)) {
+                    $event->isValid = false;
+                }
+            }
+        );
 
         parent::init();
     }

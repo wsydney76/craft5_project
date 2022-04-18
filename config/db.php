@@ -26,4 +26,7 @@ return [
     'user' => Env::DB_USER,
     'password' => Env::DB_PASSWORD,
 
+    'enableLogging' => Env::DB_ENABLE_LOGGING,
+    'enableProfiling' => Env::DB_ENABLE_PROFILING
+
 ];
