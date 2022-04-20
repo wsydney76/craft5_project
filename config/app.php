@@ -19,20 +19,11 @@
 
 use config\Env;
 use modules\main\MainModule;
-use Psr\Log\LogLevel;
 
 return [
     'id' => Env::APP_ID,
     'modules' => [
         'main' => MainModule::class,
     ],
-    'bootstrap' => ['main'],
-    'components' => [
-        'log' => [
-            'monologTargetConfig' => [
-                // Remove `debug` messages in `devMode`
-                'level' => YII_DEBUG ? LogLevel::INFO : LogLevel::WARNING,
-            ],
-        ]
-    ]
+    'bootstrap' => ['main']
 ];

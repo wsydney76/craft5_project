@@ -24,9 +24,6 @@ return [
     'collation' => Env::DB_COLLATION,
 
     'user' => Env::DB_USER,
-    'password' => Env::DB_PASSWORD,
-
-    'enableLogging' => Env::DB_ENABLE_LOGGING,
-    'enableProfiling' => Env::DB_ENABLE_PROFILING
+    'password' => Env::DB_PASSWORD
 
 ];

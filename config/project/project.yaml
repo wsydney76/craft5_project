@@ -154,7 +154,7 @@ meta:
     fbf00eb2-4a16-40ca-96bb-3fadd2bf459c: Default # Default
 system:
   edition: pro
-  live: false
+  live: true
   name: $SYSTEM_NAME
   retryDuration: 30
   schemaVersion: 4.0.0.9
