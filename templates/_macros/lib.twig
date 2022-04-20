@@ -1,0 +1,8 @@
+{% macro img(image, transform = null, srcset = null) %}
+
+	{% set transform = transform ?? craft.app.config.custom.defaultTransform %}
+	{% set srcset = srcset ?? craft.app.config.custom.defaultSrcSet %}
+
+    {{ image.img(transform, srcset) }}
+
+{% endmacro %}

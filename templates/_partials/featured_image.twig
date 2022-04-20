@@ -1,6 +1,8 @@
+{% from '_macros/lib.twig' import img %}
+
 {% set image = entry.featuredImage.collect.first %}
 {% if image %}
     <div class="mb-8">
-        {{ image.img({width: 1024, height: 400, format: 'webp'}) }}
+        {{ img(image) }}
     </div>
 {% endif %}
