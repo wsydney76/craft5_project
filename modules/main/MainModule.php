@@ -35,7 +35,7 @@ class MainModule extends Module
             Asset::class,
             Element::EVENT_REGISTER_TABLE_ATTRIBUTES, function(RegisterElementTableAttributesEvent $event) {
             $event->tableAttributes['alt'] = ['label' => Craft::t('app', 'Alternative Text')];
-            $event->tableAttributes['copyright'] = ['label' => Craft::t('site', 'Copyright')];
+            // $event->tableAttributes['copyright'] = ['label' => Craft::t('site', 'Copyright')];
         });
 
         // Don't update search index for drafts

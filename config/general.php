@@ -29,6 +29,9 @@ return [
         // The secure key Craft will use for hashing and encrypting data
         'securityKey' => Env::SECURITY_KEY,
 
+        // When true, Craft will always return a successful response in the “forgot password” flow, making it difficult to enumerate users.
+        'preventUserEnumeration' => true,
+
         // Whether an X-Powered-By: Craft CMS header should be sent
         'sendPoweredByHeader' => false,
 
