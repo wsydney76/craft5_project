@@ -1,8 +1,6 @@
 {% macro img(image, config = []) %}
 
-    {% set transform = config.transform is defined ?
-        config.transform :
-        craft.app.config.custom.defaultTransform %}
+    {% set transform = config.transform ??craft.app.config.custom.defaultTransform %}
 
     {% set srcset = config.srcset is defined ?
         config.srcset :
@@ -11,6 +9,7 @@
     {% if transform.format is not defined %}
         {% set transform = transform|merge({format: craft.app.config.custom.defaultFormat}) %}
     {% endif %}
+
 
     {{ image.img(transform, srcset) }}
 
