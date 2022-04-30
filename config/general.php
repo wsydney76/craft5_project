@@ -9,10 +9,6 @@
  */
 
 use config\Env;
-use craft\helpers\App;
-
-// Set Variables for use in CP
-Env::setCpVars();
 
 return [
     // Global settings
