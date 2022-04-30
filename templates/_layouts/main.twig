@@ -1,38 +1,45 @@
 <!DOCTYPE html>
-<html lang="{{ craft.app.language[:2] }}">
+<html lang="{{ craft.app.language[:2] }}" style="overflow-y: scroll">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <title>{{ siteInfo.siteName ?: systemName }}</title>
-    <link rel="stylesheet" href="/assets/dist/styles/main.css">
+    <link rel="stylesheet" href="{{ url('assets/dist/styles/main.css') }}">
 </head>
 
-<body class="max-w-screen-lg mx-auto px-8">
+{% set bodyClasses = 'max-w-screen-lg mx-auto px-8' %}
+<body>
 
-<header class="mb-8 border-b border-gray-400 py-8">
-    <a class="text-3xl font-semibold" href="{{ siteUrl }}">{{ siteInfo.siteName ?: systemName }}</a>
-</header>
+<header class="py-8">
 
-<main>
+    <div class="{{ bodyClasses }} ">
+        <a class="text-3xl font-semibold" href="{{ siteUrl }}">{{ siteInfo.siteName ?: systemName }}</a>
+    </div>
 
     {% block featured %}
         {% include '_partials/featured_image.twig' %}
     {% endblock %}
+
+</header>
+
+
+
+
+<main class="{{ bodyClasses }}">
 
     {% block title %}
         <h1 class="mb-8 text-4xl font-semibold">{% block titleText %}{{ entry.title }}{% endblock %}</h1>
     {% endblock %}
 
     {% block content %}
-
         {% include '_partials/blocks.twig' with {
             query: entry.bodyContent
         } only %}
-
     {% endblock %}
+
 </main>
 
-<footer class="mt-8 border-t border-gray-400 py-8">
+<footer class="{{ bodyClasses }} mt-8 border-t border-gray-400 py-8">
     &copy; {{ siteInfo.copyright }} {{ now|date('Y') }}
 </footer>
 

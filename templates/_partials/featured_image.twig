@@ -2,10 +2,7 @@
 
 {% set image = entry.featuredImage.collect.first %}
 {% if image %}
-    <div class="mb-8">
-        {{ img(image, {
-            transform: {width: 1024, height: 300},
-            showCopyright: false
-        }) }}
-    </div>
+    <figure class="mb-8">
+        {{ img(image, craft.app.config.custom.featuredImageConfig) }}
+    </figure>
 {% endif %}

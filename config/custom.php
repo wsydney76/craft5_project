@@ -10,5 +10,12 @@ return [
         '640w',
         '360w'
     ],
-    'defaultFormat' => 'webp'
+    'defaultFormat' => 'webp',
+    'featuredImageConfig' => [
+        'transform' => [
+            'width' => 2500,
+            'height' => 500
+        ],
+        'srcset' => ['1580w', '1024w', '640w', '360w']
+    ]
 ];
