@@ -2,7 +2,7 @@
 
 {% set image = entry.featuredImage.collect.first %}
 {% if image %}
-    <figure class="mb-8">
+    <figure class="max-w-[2000px] mx-auto my-8">
         {{ img(image, craft.app.config.custom.featuredImageConfig) }}
     </figure>
 {% endif %}
