@@ -1,8 +1,10 @@
 {% from '_macros/lib.twig' import img %}
 
-{% set image = entry.featuredImage.collect.first %}
-{% if image %}
-    <figure class="max-w-[2000px] mx-auto my-8">
-        {{ img(image, craft.app.config.custom.featuredImageConfig) }}
-    </figure>
+{% if element.featuredImage %}
+    {% set image = element.featuredImage.collect.first %}
+    {% if image %}
+        <figure class="max-w-[2000px] mx-auto my-8">
+            {{ img(image, craft.app.config.custom.featuredImageConfig) }}
+        </figure>
+    {% endif %}
 {% endif %}

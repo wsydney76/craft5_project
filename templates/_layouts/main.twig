@@ -1,9 +1,10 @@
+{% set element = entry ?? category ?? tag -%}
 <!DOCTYPE html>
 <html lang="{{ craft.app.language[:2] }}" style="overflow-y: scroll">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <title>{{ siteInfo.siteName ?: systemName }}</title>
+    <title>{{ element.title }} | {{ siteInfo.siteName ?: systemName }}</title>
     <link rel="stylesheet" href="{{ url('assets/dist/styles/main.css') }}">
 </head>
 
@@ -23,18 +24,18 @@
 </header>
 
 
-
-
 <main class="{{ bodyClasses }}">
 
     {% block title %}
-        <h1 class="mb-8 text-4xl font-semibold">{% block titleText %}{{ entry.title }}{% endblock %}</h1>
+        <h1 class="mb-8 text-4xl font-semibold">{% block titleText %}{{ element.title }}{% endblock %}</h1>
     {% endblock %}
 
     {% block content %}
-        {% include '_partials/blocks.twig' with {
-            query: entry.bodyContent
-        } only %}
+        {% if element.bodyContent %}
+            {% include '_partials/blocks.twig' with {
+                query: element.bodyContent
+            } only %}
+        {% endif %}
     {% endblock %}
 
 </main>
