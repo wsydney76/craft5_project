@@ -16,7 +16,6 @@ use craft\errors\StaleResourceException;
 use craft\errors\VolumeException;
 use craft\helpers\StringHelper;
 use craft\services\ProjectConfig;
-use DateTime;
 use Exception;
 use yii\base\ErrorException;
 use yii\base\InvalidConfigException;
