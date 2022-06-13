@@ -1,6 +1,6 @@
 {% macro img(image, config = []) %}
 
-    {% set transform = config.transform ??craft.app.config.custom.defaultTransform %}
+    {% set transform = config.transform ?? craft.app.config.custom.defaultTransform %}
 
     {% set srcset = config.srcset is defined ?
         config.srcset :

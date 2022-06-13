@@ -14,7 +14,7 @@
 <header class="py-8">
 
     <div class="{{ bodyClasses }} ">
-        <a class="text-3xl font-semibold" href="{{ siteUrl }}">{{ siteInfo.siteName ?: systemName }}</a>
+        <a class="text-3xl font-semibold" href="{{ siteUrl('/') }}">{{ siteInfo.siteName ?: systemName }}</a>
     </div>
 
     {% block featured %}

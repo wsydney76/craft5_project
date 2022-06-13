@@ -3,10 +3,7 @@
 namespace modules\main;
 
 use Craft;
-use craft\base\Element;
-use craft\elements\Asset;
 use craft\events\ElementEvent;
-use craft\events\RegisterElementTableAttributesEvent;
 use craft\helpers\ElementHelper;
 use craft\services\Elements;
 use yii\base\Event;
@@ -30,13 +27,6 @@ class MainModule extends Module
             return '<input type="text" name="dummy-first-name" value="wtf" style="display: none">';
         });
 
-        // Register element index column
-        Event::on(
-            Asset::class,
-            Element::EVENT_REGISTER_TABLE_ATTRIBUTES, function(RegisterElementTableAttributesEvent $event) {
-            $event->tableAttributes['alt'] = ['label' => Craft::t('app', 'Alternative Text')];
-            // $event->tableAttributes['copyright'] = ['label' => Craft::t('site', 'Copyright')];
-        });
 
         // Don't update search index for drafts
         Event::on(
