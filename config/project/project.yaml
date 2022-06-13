@@ -1,6 +1,6 @@
 assets:
   tempVolumeUid: ed627edd-73bd-4b75-8684-f410bf4e4b9d # Temp Images
-dateModified: 1655114263
+dateModified: 1655138306
 elementSources:
   craft\elements\Asset:
     -
@@ -157,7 +157,7 @@ meta:
     ed627edd-73bd-4b75-8684-f410bf4e4b9d: 'Temp Images' # Temp Images
     fbf00eb2-4a16-40ca-96bb-3fadd2bf459c: Default # Default
 system:
-  edition: pro
+  edition: solo
   live: true
   name: $SYSTEM_NAME
   retryDuration: 30
