@@ -4,7 +4,11 @@
     {% set image = element.featuredImage.collect.first %}
     {% if image %}
         <figure class="max-w-[2000px] mx-auto my-8">
-            {{ img(image, craft.app.config.custom.featuredImageConfig) }}
+            {{ img(image, {
+                transform: {width: 2000, height: 500},
+                srcset: [1580, 1024, 640, 400],
+                attr: {loading: null}
+            }) }}
         </figure>
     {% endif %}
 {% endif %}
