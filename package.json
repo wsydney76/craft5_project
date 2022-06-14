@@ -10,9 +10,9 @@
     "build": "npx tailwindcss -i ./src/styles/main.css -o ./web/assets/dist/styles/main.css --minify"
   },
   "devDependencies": {
-    "autoprefixer": "^10.4.5",
-    "postcss": "^8.4.12",
-    "tailwindcss": "^3.0.24"
+    "autoprefixer": "^10.4.7",
+    "postcss": "^8.4.14",
+    "tailwindcss": "^3.1.2"
   },
   "dependencies": {
     "@tailwindcss/typography": "^0.5.2"
