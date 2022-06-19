@@ -18,7 +18,7 @@ file_put_contents($outputFile, str_replace(
     [
         $handle,
         ucfirst($handle),
-        bin2hex(random_bytes(24))
+        bin2hex(random_bytes(32))
     ],
     file_get_contents($inputFile)
 ));
