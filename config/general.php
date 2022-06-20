@@ -68,6 +68,10 @@ return [
             '@webroot' => dirname(__DIR__) . '/web',
         ],
 
+        // Whether Craft should run pending queue jobs automatically when someone visits the control panel.
+        // If disabled, an alternate queue worker must be set up separately
+
+        'runQueueAutomatically' => Env::RUN_QUEUE_AUTOMATICALLY
     ],
 
     // Dev environment settings
