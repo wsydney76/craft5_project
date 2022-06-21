@@ -31,6 +31,9 @@ return [
         // Whether an X-Powered-By: Craft CMS header should be sent
         'sendPoweredByHeader' => false,
 
+        // The template file extensions Craft will look for when matching a template path to a file on the front end.
+        'defaultTemplateExtensions' => ['twig'],
+
         // Whether to enable Craft's template {% cache %} tag on a global basis
         'enableTemplateCaching' => false,
 
