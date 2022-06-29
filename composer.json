@@ -4,7 +4,7 @@
   "version": "1.0.0",
   "license": "Unlicense",
   "require": {
-    "craftcms/cms": "4.1.x-dev"
+    "craftcms/cms": "4.1.0.2"
   },
   "autoload": {
     "psr-4": {
