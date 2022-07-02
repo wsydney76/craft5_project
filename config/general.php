@@ -8,7 +8,7 @@
  * @see \craft\config\GeneralConfig
  */
 
-use config\Env;
+use craft\helpers\App;
 
 return [
     // Global settings
@@ -23,7 +23,7 @@ return [
         'cpTrigger' => 'admin',
 
         // The secure key Craft will use for hashing and encrypting data
-        'securityKey' => Env::SECURITY_KEY,
+        'securityKey' => App::env('CRAFT_SECURITYKEY'),
 
         // When true, Craft will always return a successful response in the “forgot password” flow, making it difficult to enumerate users.
         'preventUserEnumeration' => true,
@@ -66,15 +66,11 @@ return [
 
         'aliases' => [
             // Prevent the @web alias from being set automatically (cache poisoning vulnerability)
-            '@web' => Env::DEFAULT_SITE_URL,
+            '@web' => App::env('CRAFT_DEFAULT_SITE_URL') ,
             // Lets `./craft clear-caches all` clear CP resources cache
             '@webroot' => dirname(__DIR__) . '/web',
         ],
 
-        // Whether Craft should run pending queue jobs automatically when someone visits the control panel.
-        // If disabled, an alternate queue worker must be set up separately
-
-        'runQueueAutomatically' => Env::RUN_QUEUE_AUTOMATICALLY
     ],
 
     // Dev environment settings

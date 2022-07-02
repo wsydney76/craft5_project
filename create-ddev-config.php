@@ -1,10 +1,10 @@
 <?php
-echo "Initializing a ddev project Env file with a given project handle. \n\n";
+echo "Initializing a ddev config.yaml file with a given project handle. \n\n";
 
 $handle = $argv[1] ?? readline('Project handle: ');
 
-$inputFile = './config/Env.php.ddev.example';
-$outputFile = './config/Env.php';
+$inputFile = './config/examples/config.yaml';
+$outputFile = './.ddev/config.yaml';
 
 file_put_contents($outputFile, str_replace(
     [

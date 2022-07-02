@@ -17,11 +17,11 @@
  * your config/ folder, alongside this one.
  */
 
-use config\Env;
+use craft\helpers\App;
 use modules\main\MainModule;
 
 return [
-    'id' => Env::APP_ID,
+    'id' => App::env('CRAFT_APP_ID') ?: 'Craft',
     'modules' => [
         'main' => MainModule::class,
     ],
