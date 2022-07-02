@@ -1,19 +1,30 @@
 #!/bin/bash
 
 # Add this file to dev folder. Run ./create and enter project name
+if [ -z $1 ]
+then
+    echo Project name missing
+    exit 1
+fi
 
-echo Project Name:
-read HANDLE
-git clone ./craft4_project $HANDLE &&
-cd $HANDLE &&
-mkdir .ddev
-php create-ddev-config.php $HANDLE &&
+if [ -d $1 ]
+then
+    echo $1 exists
+    exit 1
+fi
+
+echo Creating project $1
+
+git clone ./craft4_project $1 &&
+cd $1 &&
+ddev config --php-version=8.1 --http-port=81
+php create-ddev-config.php $1 &&
 ddev start &&
 ddev composer install --no-dev &&
 ddev php craft install --interactive=0 --username=admin --password=password --email=admin@example.com &&
 ddev exec npm install &&
 ddev describe &&
-cat <<EOF >> ./.ddev/config.yaml
+cat <<EOF >> ./.ddev/config.craft.yaml
 hooks:
   post-start:
     - exec: 'npm run dev'
