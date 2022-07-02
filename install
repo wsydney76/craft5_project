@@ -1,0 +1,15 @@
+#!/bin/bash
+
+echo Project Name:
+read HANDLE
+php setup-ddev.php $HANDLE
+ddev config --project-name=$HANDLE --project-type=php --php-version=8.1 --http-port=81
+ddev start
+ddev composer install --no-dev
+ddev php craft install --interactive=0 --username=admin --password=password --email=admin@example.com
+ddev exec npm install
+ddev describe
+
+
+# git config --global core.autocrlf false
+# git config --global core.eol lf
