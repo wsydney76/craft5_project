@@ -1,7 +1,7 @@
 {% macro img(image, config = []) %}
 
     {% set transform = config.transform ?? {width: 1024} %}
-    {% set srcset = config.srcset ?? [640, 400] %}
+    {% set srcset = config.srcset ?? [1024, 640, 400] %}
     {% set attr = config.attr ?? {loading: 'lazy'} %}
 
     {% if transform.format is not defined %}
