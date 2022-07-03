@@ -17,11 +17,12 @@ echo Creating project $1
 
 git clone ./craft4_project $1 &&
 cd $1 &&
-ddev config --php-version=8.1 --http-port=81
+ddev config --project-type=php --php-version=8.1 --http-port=81
 php ./setup/create-ddev-config.php $1 &&
 ddev start &&
 ddev composer install --no-dev &&
 ddev php craft install --interactive=0 --username=admin --password=password --email=admin@example.com &&
+echo Running npm install...
 ddev exec npm install &&
 ddev describe &&
 cat <<EOF >> ./.ddev/config.craft.yaml
@@ -29,4 +30,4 @@ hooks:
   post-start:
     - exec: 'npm run dev'
 EOF
-ddev exec npm run dev
+
