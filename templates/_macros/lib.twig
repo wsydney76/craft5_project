@@ -8,7 +8,6 @@
         {% set transform = transform|merge({format: 'webp'}) %}
     {% endif %}
 
-
     {{ image.img(transform, srcset)|attr(attr) }}
 
 {% endmacro %}

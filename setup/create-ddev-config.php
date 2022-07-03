@@ -1,9 +1,9 @@
 <?php
-echo "Initializing a ddev config.yaml file with a given project handle. \n\n";
+echo "Initializing a ddev config.craft.yaml file with a given project handle. \n\n";
 
 $handle = $argv[1] ?? readline('Project handle: ');
 
-$inputFile = './config/examples/config.craft.yaml';
+$inputFile = './setup/config.craft.yaml';
 $outputFile = './.ddev/config.craft.yaml';
 
 file_put_contents($outputFile, str_replace(
