@@ -10,12 +10,14 @@ file_put_contents($outputFile, str_replace(
     [
         '$HANDLE$',
         '$UC_HANDLE$',
-        '$SECURITY_KEY$'
+        '$SECURITY_KEY$',
+	    '$RANDOM$'
     ],
     [
         $handle,
         ucfirst($handle),
-        bin2hex(random_bytes(32))
+        bin2hex(random_bytes(32)),
+        bin2hex(random_bytes(8))
     ],
     file_get_contents($inputFile)
 ));

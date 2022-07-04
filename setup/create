@@ -25,9 +25,6 @@ ddev php craft install --interactive=0 --username=admin --password=password --em
 echo Running npm install...
 ddev exec npm install &&
 ddev describe &&
-cat <<EOF >> ./.ddev/config.craft.yaml
-hooks:
-  post-start:
-    - exec: 'npm run dev'
-EOF
+ddev launch
+
 

@@ -1,36 +1,37 @@
 {
-  "description": "Minimum preconfigured starter Craft 4",
-  "name": "wsydney76/craft4_project",
-  "version": "1.0.0",
-  "license": "Unlicense",
-  "require": {
-    "craftcms/cms": "4.1.0.2"
-  },
-  "autoload": {
-    "psr-4": {
-      "modules\\": "modules/",
-      "config\\": "config/"
-    }
-  },
-  "config": {
-    "sort-packages": true,
-    "optimize-autoloader": true,
-    "platform": {
-      "php": "8.0.2"
+    "description": "Minimum preconfigured starter Craft 4",
+    "name": "wsydney76/craft4_project",
+    "version": "1.0.0",
+    "license": "Unlicense",
+    "require": {
+        "craftcms/cms": "4.1.0.2",
+        "leowebguy/mix-manifest": "1.0.1"
     },
-    "allow-plugins": {
-      "yiisoft/yii2-composer": true,
-      "craftcms/plugin-installer": true
+    "autoload": {
+        "psr-4": {
+            "modules\\": "modules/",
+            "config\\": "config/"
+        }
+    },
+    "config": {
+        "sort-packages": true,
+        "optimize-autoloader": true,
+        "platform": {
+            "php": "8.0.2"
+        },
+        "allow-plugins": {
+            "yiisoft/yii2-composer": true,
+            "craftcms/plugin-installer": true
+        }
+    },
+    "scripts": {
+        "pre-update-cmd": [
+            "@php craft off --retry=30"
+        ],
+        "post-update-cmd": [
+            "@php craft clear-caches/all",
+            "@php craft migrate/all",
+            "@php craft on"
+        ]
     }
-  },
-  "scripts": {
-    "pre-update-cmd": [
-      "@php craft off --retry=30"
-    ],
-    "post-update-cmd": [
-      "@php craft clear-caches/all",
-      "@php craft migrate/all",
-      "@php craft on"
-    ]
-  }
 }

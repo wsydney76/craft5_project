@@ -1,6 +1,6 @@
 assets:
   tempVolumeUid: ed627edd-73bd-4b75-8684-f410bf4e4b9d # Temp Images
-dateModified: 1655138306
+dateModified: 1656948721
 elementSources:
   craft\elements\Asset:
     -
@@ -156,6 +156,11 @@ meta:
     eb6b24cc-83d7-416f-be4b-d002c7688b58: Copyright # Copyright
     ed627edd-73bd-4b75-8684-f410bf4e4b9d: 'Temp Images' # Temp Images
     fbf00eb2-4a16-40ca-96bb-3fadd2bf459c: Default # Default
+plugins:
+  mix-manifest:
+    edition: standard
+    enabled: true
+    schemaVersion: 1.0.0
 system:
   edition: solo
   live: true

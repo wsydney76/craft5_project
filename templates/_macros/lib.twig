@@ -8,6 +8,53 @@
         {% set transform = transform|merge({format: 'webp'}) %}
     {% endif %}
 
-    {{ image.img(transform, srcset)|attr(attr) }}
+
+    {% if craft.app.plugins.pluginEnabled('imager-x') %}
+
+        {% set imager = craft.imager %}
+
+        {% if transform.width is defined and transform.height is defined %}
+            {# noop #}
+        {% elseif transform.width is defined %}
+            {% set ratio = image.width / image.height %}
+            {% set transform = transform|merge({height: (transform.width / ratio)|round(0) }) %}
+        {% elseif transform.height is defined %}
+            {% set ratio = image.width / image.height %}
+            {% set transform = transform|merge({width: (transform.height * ratio)|round(0) }) %}
+        {% else %}
+            {% set transform = transform|merge({width: image.width, height: image.height }) %}
+        {% endif %}
+
+        {% set baseTransform = {
+            width: transform.width,
+            height: transform.height,
+            format: transform.format ?? 'webp',
+            mode: transform.mode ?? 'crop',
+            effects: {sharpen: true}
+        } %}
+
+        {% set ratio = transform.width / transform.height %}
+
+        {% set transforms = [baseTransform] %}
+        {% for responsiveWidth in srcset %}
+            {% if responsiveWidth < transform.width %}
+                {% set transforms = transforms|push(baseTransform|merge({width: responsiveWidth, height: (responsiveWidth / ratio)|round(0)})) %}
+            {% endif %}
+        {% endfor %}
+
+
+        {% set transformedImages = imager.transformImage(image, transforms) %}
+        {{ tag('img', {
+            src: imager.placeholder({ width: transform.height, height: transform.width, color: '#cccccc' }),
+            height: transform.height,
+            width: transform.width,
+            alt: image.alt ?: image.title,
+            srcset: imager.srcset(transformedImages),
+            loading: 'lazy'
+        })|attr(attr)}}
+
+    {% else %}
+        {{ image.img(transform, srcset)|attr(attr) }}
+    {% endif %}
 
 {% endmacro %}
