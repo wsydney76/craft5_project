@@ -14,7 +14,7 @@ require('laravel-mix-clean');
  */
 
 mix.setPublicPath('web')
-    // .js("src/js/app.js", "web/assets/dist/js")
+    .js("src/js/app.js", "web/assets/dist/js")
     .postCss("src/css/app.css", "web/assets/dist/css", [
         require("tailwindcss")
     ])
@@ -22,8 +22,7 @@ mix.setPublicPath('web')
     .version()
     .clean({
         cleanOnceBeforeBuildPatterns: ['assets/dist']
-    })
-;
+    });
 
 // New Alias plugin
 mix.alias({
