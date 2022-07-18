@@ -1,6 +1,6 @@
 assets:
   tempVolumeUid: ed627edd-73bd-4b75-8684-f410bf4e4b9d # Temp Images
-dateModified: 1656948721
+dateModified: 1658161331
 elementSources:
   craft\elements\Asset:
     -
@@ -158,6 +158,10 @@ meta:
     fbf00eb2-4a16-40ca-96bb-3fadd2bf459c: Default # Default
 plugins:
   mix-manifest:
+    edition: standard
+    enabled: true
+    schemaVersion: 1.0.0
+  quick-field:
     edition: standard
     enabled: true
     schemaVersion: 1.0.0
