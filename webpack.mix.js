@@ -18,8 +18,8 @@ mix.setPublicPath('web')
     .postCss("src/css/app.css", "web/assets/dist/css", [
         require("tailwindcss")
     ])
-    .disableSuccessNotifications()
     .version()
+    .disableSuccessNotifications()
     .clean({
         cleanOnceBeforeBuildPatterns: ['assets/dist']
     });
