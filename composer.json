@@ -5,6 +5,7 @@
     "license": "Unlicense",
     "require": {
         "craftcms/cms": "4.1.4.1",
+        "doublesecretagency/craft-cpcss": "2.5.0",
         "leowebguy/mix-manifest": "1.0.1",
         "spicyweb/craft-quick-field": "2.0.0"
     },
