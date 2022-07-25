@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "a8875266fda1c8156119c3eb5b4bfdc3",
+    "content-hash": "ee0b21b8a5e38f3009d7bf19b1720dc7",
     "packages": [
         {
             "name": "cebe/markdown",
@@ -1263,11 +1263,6 @@
         {
             "name": "illuminate/collections",
             "version": "v9.21.6",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/illuminate/collections.git",
-                "reference": "9b862a8e7c0da5b00af75b1422d3a29080ef7adb"
-            },
             "dist": {
                 "type": "zip",
                 "url": "https://api.github.com/repos/illuminate/collections/zipball/9b862a8e7c0da5b00af75b1422d3a29080ef7adb",
@@ -1297,7 +1292,6 @@
                     "Illuminate\\Support\\": ""
                 }
             },
-            "notification-url": "https://packagist.org/downloads/",
             "license": [
                 "MIT"
             ],
@@ -1309,20 +1303,11 @@
             ],
             "description": "The Illuminate Collections package.",
             "homepage": "https://laravel.com",
-            "support": {
-                "issues": "https://github.com/laravel/framework/issues",
-                "source": "https://github.com/laravel/framework"
-            },
             "time": "2022-07-18T13:54:30+00:00"
         },
         {
             "name": "illuminate/conditionable",
             "version": "v9.21.6",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/illuminate/conditionable.git",
-                "reference": "46b7beed47948bd2e67f523d0a76daa62775031e"
-            },
             "dist": {
                 "type": "zip",
                 "url": "https://api.github.com/repos/illuminate/conditionable/zipball/46b7beed47948bd2e67f523d0a76daa62775031e",
@@ -1343,7 +1328,6 @@
                     "Illuminate\\Support\\": ""
                 }
             },
-            "notification-url": "https://packagist.org/downloads/",
             "license": [
                 "MIT"
             ],
@@ -1355,20 +1339,11 @@
             ],
             "description": "The Illuminate Conditionable package.",
             "homepage": "https://laravel.com",
-            "support": {
-                "issues": "https://github.com/laravel/framework/issues",
-                "source": "https://github.com/laravel/framework"
-            },
             "time": "2022-05-31T14:47:50+00:00"
         },
         {
             "name": "illuminate/contracts",
             "version": "v9.21.6",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/illuminate/contracts.git",
-                "reference": "e014cf88ef46065b8b1f078893c01189b95ffb11"
-            },
             "dist": {
                 "type": "zip",
                 "url": "https://api.github.com/repos/illuminate/contracts/zipball/e014cf88ef46065b8b1f078893c01189b95ffb11",
@@ -1391,7 +1366,6 @@
                     "Illuminate\\Contracts\\": ""
                 }
             },
-            "notification-url": "https://packagist.org/downloads/",
             "license": [
                 "MIT"
             ],
@@ -1403,20 +1377,11 @@
             ],
             "description": "The Illuminate Contracts package.",
             "homepage": "https://laravel.com",
-            "support": {
-                "issues": "https://github.com/laravel/framework/issues",
-                "source": "https://github.com/laravel/framework"
-            },
             "time": "2022-06-07T19:28:00+00:00"
         },
         {
             "name": "illuminate/macroable",
             "version": "v9.21.6",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/illuminate/macroable.git",
-                "reference": "25a2c6dac2b7541ecbadef952702e84ae15f5354"
-            },
             "dist": {
                 "type": "zip",
                 "url": "https://api.github.com/repos/illuminate/macroable/zipball/25a2c6dac2b7541ecbadef952702e84ae15f5354",
@@ -1437,7 +1402,6 @@
                     "Illuminate\\Support\\": ""
                 }
             },
-            "notification-url": "https://packagist.org/downloads/",
             "license": [
                 "MIT"
             ],
@@ -1449,10 +1413,6 @@
             ],
             "description": "The Illuminate Macroable package.",
             "homepage": "https://laravel.com",
-            "support": {
-                "issues": "https://github.com/laravel/framework/issues",
-                "source": "https://github.com/laravel/framework"
-            },
             "time": "2022-02-01T14:44:21+00:00"
         },
         {
@@ -1722,11 +1682,11 @@
         },
         {
             "name": "monolog/monolog",
-            "version": "2.7.0",
+            "version": "2.8.0",
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/Seldaek/monolog/zipball/5579edf28aee1190a798bfa5be8bc16c563bd524",
-                "reference": "5579edf28aee1190a798bfa5be8bc16c563bd524",
+                "url": "https://api.github.com/repos/Seldaek/monolog/zipball/720488632c590286b88b80e62aa3d3d551ad4a50",
+                "reference": "720488632c590286b88b80e62aa3d3d551ad4a50",
                 "shasum": ""
             },
             "require": {
@@ -1749,7 +1709,6 @@
                 "graylog2/gelf-php": "Allow sending log messages to a GrayLog2 server",
                 "mongodb/mongodb": "Allow sending log messages to a MongoDB server (via library)",
                 "php-amqplib/php-amqplib": "Allow sending log messages to an AMQP server using php-amqplib",
-                "php-console/php-console": "Allow sending log messages to Google Chrome",
                 "rollbar/rollbar": "Allow sending log messages to Rollbar",
                 "ruflin/elastica": "Allow sending log messages to an Elastic Search server"
             },
@@ -1781,7 +1740,7 @@
                 "logging",
                 "psr-3"
             ],
-            "time": "2022-06-09T08:59:12+00:00"
+            "time": "2022-07-24T11:55:47+00:00"
         },
         {
             "name": "paragonie/random_compat",
@@ -2531,25 +2490,16 @@
         },
         {
             "name": "spicyweb/craft-quick-field",
-            "version": "2.0.0",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/spicywebau/craft-quick-field.git",
-                "reference": "8c6570ddbbaa5555f29741ec1e6f109e7444586d"
-            },
+            "version": "2.0.1",
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/spicywebau/craft-quick-field/zipball/8c6570ddbbaa5555f29741ec1e6f109e7444586d",
-                "reference": "8c6570ddbbaa5555f29741ec1e6f109e7444586d",
+                "url": "https://api.github.com/repos/spicywebau/craft-quick-field/zipball/8497510d7e1e852b60b4b0cf11dd88698d77cb0f",
+                "reference": "8497510d7e1e852b60b4b0cf11dd88698d77cb0f",
                 "shasum": ""
             },
             "require": {
                 "craftcms/cms": "^4.1.0",
                 "php": "^8.0.2"
-            },
-            "require-dev": {
-                "craftcms/ecs": "dev-main",
-                "craftcms/rector": "dev-main"
             },
             "type": "craft-plugin",
             "extra": {
@@ -2558,14 +2508,13 @@
                 "schemaVersion": "1.0.0",
                 "class": "spicyweb\\quickfield\\Plugin",
                 "changelogUrl": "https://github.com/spicywebau/craft-quick-field/blob/2.x/CHANGELOG.md",
-                "downloadUrl": "https://github.com/spicywebau/craft-quick-field/archive/refs/tags/2.0.0.zip"
+                "downloadUrl": "https://github.com/spicywebau/craft-quick-field/archive/refs/tags/2.0.1.zip"
             },
             "autoload": {
                 "psr-4": {
                     "spicyweb\\quickfield\\": "src/"
                 }
             },
-            "notification-url": "https://packagist.org/downloads/",
             "license": [
                 "MIT"
             ],
@@ -2582,12 +2531,12 @@
                 "plugin"
             ],
             "support": {
-                "docs": "https://github.com/spicywebau/craft-quick-field/blob/2.0.0/README.md",
                 "issues": "https://github.com/spicywebau/craft-quick-field/issues",
-                "rss": "https://github.com/spicywebau/craft-quick-field/commits/2.x.atom",
-                "source": "https://github.com/spicywebau/craft-quick-field"
+                "source": "https://github.com/spicywebau/craft-quick-field",
+                "docs": "https://github.com/spicywebau/craft-quick-field/blob/2.0.1/README.md",
+                "rss": "https://github.com/spicywebau/craft-quick-field/commits/2.x.atom"
             },
-            "time": "2022-07-16T13:37:32+00:00"
+            "time": "2022-07-23T09:47:13+00:00"
         },
         {
             "name": "symfony/console",
