@@ -1,6 +1,6 @@
 assets:
   tempVolumeUid: ed627edd-73bd-4b75-8684-f410bf4e4b9d # Temp Images
-dateModified: 1658512314
+dateModified: 1658763470
 elementSources:
   craft\elements\Asset:
     -
@@ -157,14 +157,6 @@ meta:
     ed627edd-73bd-4b75-8684-f410bf4e4b9d: 'Temp Images' # Temp Images
     fbf00eb2-4a16-40ca-96bb-3fadd2bf459c: Default # Default
 plugins:
-  cp-css:
-    edition: standard
-    enabled: true
-    schemaVersion: 2.0.0
-    settings:
-      additionalCss: "[data-icon]::before {\r\n\tcontent: attr(data-icon);\r\n}\r\n.icon::before, .menu ul.padded li a.sel::before, .menu .flex.padded.sel::before, .texticon::before, .element::before, #help::before, .secure::before, .insecure::before, .go::after, .required::after, #preview-btn::before, #share-btn::before, [data-icon]::before, [data-icon-after]::after {\r\n\tfont-family: \"Craft\";\r\n\tspeak: none;\r\n\t-webkit-font-feature-settings: \"liga\",\"dlig\";\r\n\t-ms-font-feature-settings: \"liga\",\"dlig\";\r\n\t-o-font-feature-settings: \"liga\",\"dlig\";\r\n\tfont-feature-settings: \"liga\",\"dlig\";\r\n\ttext-rendering: optimizeLegibility;\r\n\tfont-weight: normal;\r\n\tfont-variant: normal;\r\n\ttext-transform: none;\r\n\tline-height: 1;\r\n\tdirection: ltr;\r\n\t-webkit-font-smoothing: antialiased;\r\n\t-moz-osx-font-smoothing: grayscale;\r\n\tdisplay: inline-block;\r\n\ttext-align: center;\r\n\tfont-style: normal;\r\n\tvertical-align: middle;\r\n\tword-wrap: normal !important;\r\n\t-webkit-user-select: none;\r\n\tuser-select: none;\r\n\topacity: .8;\r\n}\r\nbody.ltr .meta > .field > .input > .datewrapper .text + div[data-icon], body.ltr .meta > .field > .input > .timewrapper .text + div[data-icon], body.ltr .meta > .field > .input > .datetimewrapper > .datewrapper .text + div[data-icon], body.ltr .meta > .field > .input > .datetimewrapper > .timewrapper .text + div[data-icon], body.ltr .meta > .flex-fields > .field > .input > .datewrapper .text + div[data-icon], body.ltr .meta > .flex-fields > .field > .input > .timewrapper .text + div[data-icon], body.ltr .meta > .flex-fields > .field > .input > .datetimewrapper > .datewrapper .text + div[data-icon], body.ltr .meta > .flex-fields > .field > .input > .datetimewrapper > .timewrapper .text + div[data-icon] {\r\n\tleft: 0;\r\n}\r\n.datewrapper .text:placeholder-shown + div[data-icon], .datewrapper .text:placeholder-shown + div[data-icon]::before, .datewrapper .text.empty-value + div[data-icon], .datewrapper .text.empty-value + div[data-icon]::before, .timewrapper .text:placeholder-shown + div[data-icon], .timewrapper .text:placeholder-shown + div[data-icon]::before, .timewrapper .text.empty-value + div[data-icon], .timewrapper .text.empty-value + div[data-icon]::before {\r\n\t-webkit-user-select: none;\r\n\tuser-select: none;\r\n\tpointer-events: none;\r\n\tz-index: 1;\r\n}\r\n.datewrapper .text:placeholder-shown + div[data-icon], .datewrapper .text.empty-value + div[data-icon], .timewrapper .text:placeholder-shown + div[data-icon], .timewrapper .text.empty-value + div[data-icon] {\r\n\tdisplay: block;\r\n\tposition: absolute;\r\n\ttop: calc(50% - 12px);\r\n\tz-index: 0;\r\n\tcolor: #606d7b;\r\n}\r\n.datewrapper .text + div[data-icon], .timewrapper .text + div[data-icon] {\r\n\tdisplay: none;\r\n}\r\n.sidebar nav li a .icon span[data-icon] {\r\n\tfont-size: 16px;\r\n}"
-      cacheBusting: true
-      cssFile: ''
   mix-manifest:
     edition: standard
     enabled: true
