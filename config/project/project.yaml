@@ -1,6 +1,6 @@
 assets:
   tempVolumeUid: ed627edd-73bd-4b75-8684-f410bf4e4b9d # Temp Images
-dateModified: 1658763470
+dateModified: 1658830505
 elementSources:
   craft\elements\Asset:
     -
@@ -152,6 +152,7 @@ meta:
     bd76fb6e-8765-41d3-8e8a-02e37e127c80: Common # Common
     c780bb7a-337c-46ba-95c4-c0dcbfcb457d: Home # Home
     c752550e-4c4a-4004-8229-7473dcf75450: 'Site Info' # Site Info
+    cc3fbab0-826f-4aed-b2aa-eeaecc2964bf: 'Alt Text' # Alt Text
     d50026f3-a236-4ae2-b00a-af55076acd17: Site # Site
     eb6b24cc-83d7-416f-be4b-d002c7688b58: Copyright # Copyright
     ed627edd-73bd-4b75-8684-f410bf4e4b9d: 'Temp Images' # Temp Images

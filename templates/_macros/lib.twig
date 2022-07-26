@@ -48,12 +48,13 @@
             src: imager.placeholder({ width: transform.height, height: transform.width, color: '#cccccc' }),
             height: transform.height,
             width: transform.width,
-            alt: image.alt ?: image.title,
+            alt: image.altText ?: image.title,
             srcset: imager.srcset(transformedImages),
             loading: 'lazy'
         })|attr(attr)}}
 
     {% else %}
+	    {% set attr = attr | merge({alt: image.altText ?: image.title}) %}
         {{ image.img(transform, srcset)|attr(attr) }}
     {% endif %}
 
