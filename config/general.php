@@ -8,98 +8,37 @@
  * @see \craft\config\GeneralConfig
  */
 
+use craft\config\GeneralConfig;
 use craft\helpers\App;
 
-return [
-    // Global settings
-    '*' => [
-        // Default Week Start Day (0 = Sunday, 1 = Monday...)
-        'defaultWeekStartDay' => 1,
+$isDev = App::env('CRAFT_ENVIRONMENT') === 'dev';
+$isProd = App::env('CRAFT_ENVIRONMENT') === 'production';
 
-        // Whether generated URLs should omit "index.php"
-        'omitScriptNameInUrls' => true,
+return
+	GeneralConfig::create()
+		->devMode($isDev)
+		->allowAdminChanges($isDev)
+		->defaultWeekStartDay(1)
+		->omitScriptNameInUrls(true)
+		->cpTrigger('admin')
+		->securityKey(App::env('CRAFT_SECURITYKEY'))
+		->preventUserEnumeration(true)
+		->sendPoweredByHeader(false)
+		->defaultTemplateExtensions(['twig'])
+		->enableTemplateCaching($isProd)
+		->maxRevisions(10)
+		->convertFilenamesToAscii(true)
+		->maxUploadFileSize('32M')
+		->limitAutoSlugsToAscii(true)
+		->generateTransformsBeforePageLoad(true)
+		->optimizeImageFilesize(false)
+		->revAssetUrls(true)
+		->useIframeResizer(true)
+		->disallowRobots(!$isProd)
+		->aliases([
+			// Prevent the @web alias from being set automatically (cache poisoning vulnerability)
+			'@web' => App::env('DEFAULT_SITE_URL'),
+			// Lets `./craft clear-caches all` clear CP resources cache
+			'@webroot' => dirname(__DIR__) . '/web',
+		]);
 
-        // Control Panel trigger word
-        'cpTrigger' => 'admin',
-
-        // The secure key Craft will use for hashing and encrypting data
-        'securityKey' => App::env('CRAFT_SECURITYKEY'),
-
-        // When true, Craft will always return a successful response in the “forgot password” flow, making it difficult to enumerate users.
-        'preventUserEnumeration' => true,
-
-        // Whether an X-Powered-By: Craft CMS header should be sent
-        'sendPoweredByHeader' => false,
-
-        // The template file extensions Craft will look for when matching a template path to a file on the front end.
-        'defaultTemplateExtensions' => ['twig'],
-
-        // Whether to enable Craft's template {% cache %} tag on a global basis
-        'enableTemplateCaching' => false,
-
-        // Max No. of revisions
-        'maxRevisions' => 10,
-
-        // Whether uploaded filenames with non-ASCII characters should be converted to ASCII
-        'convertFilenamesToAscii' => true,
-
-        // needs php.ini max upload size and max post size set accordingly
-        'maxUploadFileSize' => '32M',
-
-        //Whether non-ASCII characters in auto-generated slugs should be converted to ASCII
-        'limitAutoSlugsToAscii' => true,
-
-        // Whether images transforms should be generated before page load.
-        'generateTransformsBeforePageLoad' => true,
-
-        // Whether Craft should optimize images for reduced file sizes without noticeably reducing image quality.
-        'optimizeImageFilesize' => false,
-
-        // Whether asset URLs should be revved so browsers don’t load cached versions when they’re modified.
-        'revAssetUrls' => true,
-
-        // Whether iFrame Resizer should be used for Live Preview.
-        'useIframeResizer' => true,
-
-        // Whether front end requests should respond with X-Robots-Tag: none HTTP headers
-        'disallowRobots' => true,
-
-        'aliases' => [
-            // Prevent the @web alias from being set automatically (cache poisoning vulnerability)
-            '@web' => App::env('DEFAULT_SITE_URL') ,
-            // Lets `./craft clear-caches all` clear CP resources cache
-            '@webroot' => dirname(__DIR__) . '/web',
-        ],
-
-    ],
-
-    // Dev environment settings
-    'dev' => [
-        // Dev Mode (see https://craftcms.com/guides/what-dev-mode-does)
-        'devMode' => true,
-    ],
-
-    // Temporary Settings for installing or upgrading the site
-    'install' => [
-        'isSystemLive' => false,
-    ],
-
-    // Staging environment settings
-    'staging' => [
-        // Set this to `false` to prevent administrative changes from being made on staging
-        'allowAdminChanges' => false,
-    ],
-
-    // Production environment settings
-    'production' => [
-        // Set this to `false` to prevent administrative changes from being made on production
-        'allowAdminChanges' => false,
-
-        // Whether to enable Craft's template {% cache %} tag on a global basis
-        'enableTemplateCaching' => true,
-
-        // Whether front end requests should respond with X-Robots-Tag: none HTTP headers
-        'disallowRobots' => false,
-
-    ],
-];
