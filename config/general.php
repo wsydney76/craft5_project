@@ -26,7 +26,6 @@ return
 		->cpTrigger('admin')
 		->limitAutoSlugsToAscii(true)
 
-		->securityKey(App::env('CRAFT_SECURITYKEY'))
 		->preventUserEnumeration(true)
 		->sendPoweredByHeader(false)
 		->disallowRobots(!$isProd)
