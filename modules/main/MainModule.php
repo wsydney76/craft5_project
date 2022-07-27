@@ -33,7 +33,7 @@ class MainModule extends Module
             Elements::class,
             Elements::EVENT_BEFORE_UPDATE_SEARCH_INDEX,
             function(ElementEvent $event) {
-                if (ElementHelper::isDraft($event->element)) {
+                if (ElementHelper::isDraftOrRevision($event->element)) {
                     $event->isValid = false;
                 }
             }
