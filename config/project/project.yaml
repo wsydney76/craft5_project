@@ -1,6 +1,6 @@
 assets:
   tempVolumeUid: ed627edd-73bd-4b75-8684-f410bf4e4b9d # Temp Images
-dateModified: 1658903955
+dateModified: 1658906149
 elementSources:
   craft\elements\Asset:
     -
@@ -158,6 +158,14 @@ meta:
     ed627edd-73bd-4b75-8684-f410bf4e4b9d: 'Temp Images' # Temp Images
     fbf00eb2-4a16-40ca-96bb-3fadd2bf459c: Default # Default
 plugins:
+  cp-css:
+    edition: standard
+    enabled: true
+    schemaVersion: 2.0.0
+    settings:
+      additionalCss: "/* Set link color back to V3, increase contrast */\r\n:root {\r\n    --text-color: var(--gray-800);\r\n    --medium-dark-text-color: var(--gray-700);\r\n    --link-color: #0b69a3;\r\n}\r\n\r\n/* Increase font size */\r\n\r\nhtml, body {\r\n    font-size: 16px !important;\r\n}\r\n\r\ninput.text, textarea.text, .text > input, .text > textarea, table.editable textarea, .selectize-text > .selectize-control > .selectize-input {\r\n    font-size: 16px !important;\r\n}\r\n\r\n\r\n/* We are not at a funeral */\r\n#global-sidebar {\r\n    background-color: var(--blue-900) !important;\r\n}\r\n    \r\n/* Element index sidebar */\r\n.sidebar .heading span {\r\n    color: var(--blue-900) !important;\r\n    font-size: 13px !important;\r\n    letter-spacing: 1px !important\r\n}\r\n\r\n#sidebar nav li a.sel {\r\n    background-color: var(--gray-050) !important\r\n}\r\n\r\n#sidebar .heading {\r\n    cursor: pointer !important;\r\n}\r\n    \r\n\r\n\r\n/* 4.2 toasts */\r\n#notifications [data-type=\"error\"] {\r\n    background-color: #D61F2B;\r\n    color: white;\r\n}\r\n\r\n#notifications [data-type=\"success\"] {\r\n    background-color: #147D64;\r\n    color: white;\r\n}\r\n\r\n#notifications [data-type=\"notice\"] {\r\n    background-color: #147D64;\r\n    color: white;\r\n}\r\n\r\n#notifications .notification .notification-icon {\r\n    color: white;\r\n}\r\nbody.ltr #notifications {\r\n    bottom: initial;\r\n    top: 8px;\r\n    left: 50%;\r\n    transform: translateX(-50%);\r\n}\r\n#notifications .notification-details {\r\n    background-color: white;\r\n    padding: 4px;\r\n}"
+      cacheBusting: true
+      cssFile: ''
   mix-manifest:
     edition: standard
     enabled: true
