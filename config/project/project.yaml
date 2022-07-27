@@ -1,13 +1,13 @@
 assets:
   tempVolumeUid: ed627edd-73bd-4b75-8684-f410bf4e4b9d # Temp Images
-dateModified: 1658908424
+dateModified: 1658908561
 elementSources:
   craft\elements\Asset:
     -
       disabled: false
       key: 'volume:5a0be839-14a2-465e-a504-bb63dd0281e9' # Images
       tableAttributes:
-        - alt
+        - 'field:cc3fbab0-826f-4aed-b2aa-eeaecc2964bf' # Alt Text
         - imageSize
         - dateModified
         - link
@@ -16,17 +16,19 @@ elementSources:
       heading: Internal
       type: heading
     -
+      disabled: false
       key: 'volume:ed627edd-73bd-4b75-8684-f410bf4e4b9d' # Temp Images
       tableAttributes:
-        - alt
+        - 'field:cc3fbab0-826f-4aed-b2aa-eeaecc2964bf' # Alt Text
         - imageSize
         - dateModified
         - link
       type: native
     -
+      disabled: false
       key: 'volume:3b60e4f9-36bb-4456-bee5-67160b5a3108' # User Photos
       tableAttributes:
-        - alt
+        - 'field:cc3fbab0-826f-4aed-b2aa-eeaecc2964bf' # Alt Text
         - imageSize
         - dateModified
         - link
