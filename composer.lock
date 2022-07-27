@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "39bb1498be0319dd25e44fe72412b500",
+    "content-hash": "a917b9039efcbdff5d1f2b15210d2eb3",
     "packages": [
         {
             "name": "cebe/markdown",
@@ -2438,56 +2438,6 @@
                 "phar"
             ],
             "time": "2021-12-10T11:20:11+00:00"
-        },
-        {
-            "name": "spicyweb/craft-quick-field",
-            "version": "2.0.1",
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/spicywebau/craft-quick-field/zipball/8497510d7e1e852b60b4b0cf11dd88698d77cb0f",
-                "reference": "8497510d7e1e852b60b4b0cf11dd88698d77cb0f",
-                "shasum": ""
-            },
-            "require": {
-                "craftcms/cms": "^4.1.0",
-                "php": "^8.0.2"
-            },
-            "type": "craft-plugin",
-            "extra": {
-                "handle": "quick-field",
-                "name": "Quick Field",
-                "schemaVersion": "1.0.0",
-                "class": "spicyweb\\quickfield\\Plugin",
-                "changelogUrl": "https://github.com/spicywebau/craft-quick-field/blob/2.x/CHANGELOG.md",
-                "downloadUrl": "https://github.com/spicywebau/craft-quick-field/archive/refs/tags/2.0.1.zip"
-            },
-            "autoload": {
-                "psr-4": {
-                    "spicyweb\\quickfield\\": "src/"
-                }
-            },
-            "license": [
-                "MIT"
-            ],
-            "authors": [
-                {
-                    "name": "Spicy Web",
-                    "homepage": "https://spicyweb.com.au/"
-                }
-            ],
-            "description": "Create Craft CMS fields on the fly while designing field layouts",
-            "keywords": [
-                "cms",
-                "craftcms",
-                "plugin"
-            ],
-            "support": {
-                "issues": "https://github.com/spicywebau/craft-quick-field/issues",
-                "source": "https://github.com/spicywebau/craft-quick-field",
-                "docs": "https://github.com/spicywebau/craft-quick-field/blob/2.0.1/README.md",
-                "rss": "https://github.com/spicywebau/craft-quick-field/commits/2.x.atom"
-            },
-            "time": "2022-07-23T09:47:13+00:00"
         },
         {
             "name": "symfony/console",
