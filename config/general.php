@@ -18,23 +18,30 @@ return
 	GeneralConfig::create()
 		->devMode($isDev)
 		->allowAdminChanges($isDev)
+
+		->maxRevisions(10)
 		->defaultWeekStartDay(1)
+
 		->omitScriptNameInUrls(true)
 		->cpTrigger('admin')
+		->limitAutoSlugsToAscii(true)
+
 		->securityKey(App::env('CRAFT_SECURITYKEY'))
 		->preventUserEnumeration(true)
 		->sendPoweredByHeader(false)
+		->disallowRobots(!$isProd)
+
 		->defaultTemplateExtensions(['twig'])
 		->enableTemplateCaching($isProd)
-		->maxRevisions(10)
+
 		->convertFilenamesToAscii(true)
 		->maxUploadFileSize('32M')
-		->limitAutoSlugsToAscii(true)
 		->generateTransformsBeforePageLoad(true)
 		->optimizeImageFilesize(false)
 		->revAssetUrls(true)
+
 		->useIframeResizer(true)
-		->disallowRobots(!$isProd)
+
 		->aliases([
 			// Prevent the @web alias from being set automatically (cache poisoning vulnerability)
 			'@web' => App::env('DEFAULT_SITE_URL'),
