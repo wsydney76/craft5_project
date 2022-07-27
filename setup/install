@@ -16,6 +16,6 @@ ddev php craft install --interactive=0 --username=admin --password=password --em
 echo Installing npm dependencies...
 ddev exec npm install &&
 ddev describe &&
-ddev launch
+ddev launch admin
 
 
