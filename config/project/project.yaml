@@ -1,11 +1,8 @@
 assets:
   tempVolumeUid: ed627edd-73bd-4b75-8684-f410bf4e4b9d # Temp Images
-dateModified: 1658906149
+dateModified: 1658908424
 elementSources:
   craft\elements\Asset:
-    -
-      heading: Site
-      type: heading
     -
       disabled: false
       key: 'volume:5a0be839-14a2-465e-a504-bb63dd0281e9' # Images
@@ -15,32 +12,6 @@ elementSources:
         - dateModified
         - link
       type: native
-    -
-      heading: Quality
-      type: heading
-    -
-      condition:
-        class: craft\elements\conditions\assets\AssetCondition
-        conditionRules:
-          -
-            class: craft\elements\conditions\assets\VolumeConditionRule
-            operator: in
-            uid: 33c081d0-579a-4c6d-9950-43c84499592b
-            values:
-              - 5a0be839-14a2-465e-a504-bb63dd0281e9 # Images
-          -
-            class: craft\elements\conditions\assets\HasAltConditionRule
-            uid: f33b8296-1216-4c20-a4c6-109c806c719f
-            value: false
-        elementType: craft\elements\Asset
-        fieldContext: global
-      key: 'custom:efd59f5a-21a6-4d4b-beb7-8280f0e7deb2'
-      label: 'Missing alt text'
-      tableAttributes:
-        - imageSize
-        - dateModified
-        - link
-      type: custom
     -
       heading: Internal
       type: heading
