@@ -13,7 +13,7 @@ php ./setup/create-ddev-config.php $1 &&
 ddev start &&
 ddev composer install --no-dev &&
 ddev php craft install --interactive=0 --username=admin --password=password --email=admin@example.com &&
-echo Running npm install...
+echo Installing npm dependencies...
 ddev exec npm install &&
 ddev describe &&
 ddev launch
