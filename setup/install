@@ -15,6 +15,7 @@ ddev composer install --no-dev &&
 ddev php craft install --interactive=0 --username=admin --password=password --email=admin@example.com &&
 echo Installing npm dependencies...
 ddev exec npm install &&
+ddev exec npm run build &&
 ddev describe &&
 ddev launch
 
