@@ -18,7 +18,7 @@ This is a simple Craft CMS starter for use in DDEV with a minimum config, that c
 * Added config/redactor/Custom.json as a safe Redactor config
 * Added code to prevent password managers like Bitdefender Wallet from falsely inserting credentials into user form
 * Added code to prevent creating search index for drafts/revisions
-* Added frontend tooling that installs Tailwind CSS and Alpine JS via Laravel Mix
+* Added frontend tooling that installs Tailwind CSS and Alpine JS via Vite
 * Added custom css for the control panel
 
 ## Custom Config
