@@ -6,7 +6,7 @@
     "require": {
         "craftcms/cms": "4.2.1.1",
         "doublesecretagency/craft-cpcss": "2.5.0",
-        "leowebguy/mix-manifest": "1.0.1"
+        "nystudio107/craft-vite": "4.0.2"
     },
     "autoload": {
         "psr-4": {

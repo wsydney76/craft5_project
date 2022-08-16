@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <title>{{ element.title }} | {{ siteInfo.siteName ?: systemName }}</title>
-	<link rel="stylesheet" href="{{ mix('/assets/dist/css/app.css') }}"></link>
+    {{ craft.vite.script("/resources/js/app.js", false) }}
 </head>
 
 {% set bodyClasses = 'max-w-screen-lg mx-auto px-8' %}
@@ -44,7 +44,6 @@
     &copy; {{ siteInfo.copyright }} {{ now|date('Y') }}
 </footer>
 
-<script src="{{ mix('/assets/dist/js/app.js') }}"></script>
 
 </body>
 </html>
