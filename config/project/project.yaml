@@ -1,6 +1,6 @@
 assets:
   tempVolumeUid: ed627edd-73bd-4b75-8684-f410bf4e4b9d # Temp Images
-dateModified: 1660638429
+dateModified: 1660684759
 elementSources:
   craft\elements\Asset:
     -
@@ -109,11 +109,11 @@ fs:
 meta:
   __names__:
     3b60e4f9-36bb-4456-bee5-67160b5a3108: 'User Photos' # User Photos
-    3bb09a1c-cb36-438e-b8d5-0b35b0965f4e: $SYSTEM_NAME # $SYSTEM_NAME
+    3bb09a1c-cb36-438e-b8d5-0b35b0965f4e: Default # Default
     3e35a043-a62e-4ede-acd6-44dfb92d6914: 'Site Name' # Site Name
     4b050685-0425-4094-bde2-85e2eedd0e12: Text # Text
     5a0be839-14a2-465e-a504-bb63dd0281e9: Images # Images
-    5b0c38db-9ab4-47d8-b4a7-913710c08ca6: $SYSTEM_NAME # $SYSTEM_NAME
+    5b0c38db-9ab4-47d8-b4a7-913710c08ca6: Default # $SYSTEM_NAME
     7df417e8-1eea-46d8-85a7-2a20370a881e: 'Featured Image' # Featured Image
     9e2e3c4b-bd17-46b3-97f0-a4f6605b93d9: Text # Text
     81e6a0d6-13c5-47ad-a9e6-c2181276db9c: Text # Text
