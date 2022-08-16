@@ -6,7 +6,8 @@
     "require": {
         "craftcms/cms": "4.2.1.1",
         "doublesecretagency/craft-cpcss": "2.5.0",
-        "nystudio107/craft-vite": "4.0.2"
+        "nystudio107/craft-vite": "4.0.2",
+        "vlucas/phpdotenv": "^5.4"
     },
     "autoload": {
         "psr-4": {

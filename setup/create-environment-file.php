@@ -1,10 +1,18 @@
 <?php
-echo "Initializing a ddev config.craft.yaml file with a given project handle. \n\n";
+echo "Initializing an environment variables file with a given project handle. \n\n";
 
 $handle = $argv[1] ?? readline('Project handle: ');
 
-$inputFile = './setup/config.craft.yaml';
-$outputFile = './.ddev/config.craft.yaml';
+// Script must be run in project root directory
+
+
+// Uncomment if environment variables should be set by DDEV
+// $inputFile = './setup/config.craft.yaml';
+// $outputFile = './.ddev/config.craft.yaml';
+
+$inputFile = './setup/.env';
+$outputFile = './.env';
+
 
 file_put_contents($outputFile, str_replace(
     [
