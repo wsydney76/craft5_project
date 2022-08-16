@@ -8,14 +8,16 @@
     {{ craft.vite.script("/resources/js/app.js", false) }}
 </head>
 
-{% set bodyClasses = 'max-w-screen-lg mx-auto px-8' %}
-<body class="text-gray-700 bg-gray-50">
+
+<body class="max-w-screen-lg mx-auto bg-gray-50 px-8 text-gray-700">
 
 <header class="py-8">
 
-    <div class="{{ bodyClasses }} ">
+
+    <div class=" border-b border-gray-400 pb-8">
         <a class="text-3xl font-semibold" href="{{ siteUrl('/') }}">{{ siteInfo.siteName ?: systemName }}</a>
     </div>
+
 
     {% block featured %}
         {% include '_partials/featured_image.twig' %}
@@ -23,8 +25,7 @@
 
 </header>
 
-
-<main class="{{ bodyClasses }}">
+<main>
 
     {% block title %}
         <h1 class="mb-8 text-4xl font-semibold">{% block titleText %}{{ element.title }}{% endblock %}</h1>
@@ -40,10 +41,11 @@
 
 </main>
 
-<footer class="{{ bodyClasses }} mt-8 border-t border-gray-400 py-8">
-    &copy; {{ siteInfo.copyright }} {{ now|date('Y') }}
+<footer>
+    <div class="border-t border-gray-400 py-8">
+        &copy; {{ siteInfo.copyright }} {{ now|date('Y') }}
+    </div>
 </footer>
-
 
 </body>
 </html>

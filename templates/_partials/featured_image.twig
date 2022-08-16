@@ -3,10 +3,10 @@
 {% if element.featuredImage %}
     {% set image = element.featuredImage.collect.first %}
     {% if image %}
-        <figure class="max-w-[2000px] mx-auto my-8">
+        <figure class="pt-8">
             {{ img(image, {
-                transform: {width: 2000, height: 500},
-                srcset: [2000, 1580, 1024, 640, 400],
+                transform: {width: 960, height: 300},
+                srcset: [960, 640, 400],
                 attr: {loading: null}
             }) }}
         </figure>
