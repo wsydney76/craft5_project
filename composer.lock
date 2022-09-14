@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "291ac50550016c845d41523512ab12da",
+    "content-hash": "cb99b2f7beacb0a698b7db46b52d9d66",
     "packages": [
         {
             "name": "cebe/markdown",
@@ -440,11 +440,11 @@
         },
         {
             "name": "craftcms/cms",
-            "version": "4.2.3",
+            "version": "4.2.4",
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/craftcms/cms/zipball/2ee1ed6d8f413744b4c4e1455f5313a1103ef29c",
-                "reference": "2ee1ed6d8f413744b4c4e1455f5313a1103ef29c",
+                "url": "https://api.github.com/repos/craftcms/cms/zipball/d27e480afce05193d3ec253970b7807b011d752e",
+                "reference": "d27e480afce05193d3ec253970b7807b011d752e",
                 "shasum": ""
             },
             "require": {
@@ -535,7 +535,7 @@
                 "docs": "https://docs.craftcms.com/v3/",
                 "rss": "https://github.com/craftcms/cms/releases.atom"
             },
-            "time": "2022-08-26T15:05:57+00:00"
+            "time": "2022-09-13T18:52:36+00:00"
         },
         {
             "name": "craftcms/oauth2-craftid",
@@ -730,11 +730,11 @@
         },
         {
             "name": "doctrine/collections",
-            "version": "1.7.2",
+            "version": "1.7.3",
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/doctrine/collections/zipball/3fe77330f5591108bbf1315da7377a7e704ed8a0",
-                "reference": "3fe77330f5591108bbf1315da7377a7e704ed8a0",
+                "url": "https://api.github.com/repos/doctrine/collections/zipball/09dde3eb237756190f2de738d3c97cff10a8407b",
+                "reference": "09dde3eb237756190f2de738d3c97cff10a8407b",
                 "shasum": ""
             },
             "require": {
@@ -780,7 +780,7 @@
                 "iterators",
                 "php"
             ],
-            "time": "2022-08-27T16:08:58+00:00"
+            "time": "2022-09-01T19:34:23+00:00"
         },
         {
             "name": "doctrine/deprecations",
@@ -1368,11 +1368,11 @@
         },
         {
             "name": "illuminate/collections",
-            "version": "v9.27.0",
+            "version": "v9.30.0",
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/illuminate/collections/zipball/3bda212d2c245b3261cd9af690dfd47d9878cebf",
-                "reference": "3bda212d2c245b3261cd9af690dfd47d9878cebf",
+                "url": "https://api.github.com/repos/illuminate/collections/zipball/75c6da8dae581e37943ddc864a8fc6830fae9065",
+                "reference": "75c6da8dae581e37943ddc864a8fc6830fae9065",
                 "shasum": ""
             },
             "require": {
@@ -1409,11 +1409,11 @@
             ],
             "description": "The Illuminate Collections package.",
             "homepage": "https://laravel.com",
-            "time": "2022-08-22T14:29:59+00:00"
+            "time": "2022-09-12T13:46:55+00:00"
         },
         {
             "name": "illuminate/conditionable",
-            "version": "v9.27.0",
+            "version": "v9.30.0",
             "dist": {
                 "type": "zip",
                 "url": "https://api.github.com/repos/illuminate/conditionable/zipball/5b40f51ccb07e0e7b1ec5559d8db9e0e2dc51883",
@@ -1449,7 +1449,7 @@
         },
         {
             "name": "illuminate/contracts",
-            "version": "v9.27.0",
+            "version": "v9.30.0",
             "dist": {
                 "type": "zip",
                 "url": "https://api.github.com/repos/illuminate/contracts/zipball/0d1dd1a7e947072319f2e641cc50081219606502",
@@ -1487,7 +1487,7 @@
         },
         {
             "name": "illuminate/macroable",
-            "version": "v9.27.0",
+            "version": "v9.30.0",
             "dist": {
                 "type": "zip",
                 "url": "https://api.github.com/repos/illuminate/macroable/zipball/e3bfaf6401742a9c6abca61b9b10e998e5b6449a",
@@ -1787,16 +1787,11 @@
         },
         {
             "name": "nystudio107/craft-plugin-vite",
-            "version": "4.0.3",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/nystudio107/craft-plugin-vite.git",
-                "reference": "e6cdb409cd811bd311d92f55c03aa4eba4061607"
-            },
+            "version": "4.0.6",
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/nystudio107/craft-plugin-vite/zipball/e6cdb409cd811bd311d92f55c03aa4eba4061607",
-                "reference": "e6cdb409cd811bd311d92f55c03aa4eba4061607",
+                "url": "https://api.github.com/repos/nystudio107/craft-plugin-vite/zipball/9ec08d7072b727241842a059ca13978563f8d1ed",
+                "reference": "9ec08d7072b727241842a059ca13978563f8d1ed",
                 "shasum": ""
             },
             "require": {
@@ -1808,7 +1803,6 @@
                     "nystudio107\\pluginvite\\": "src/"
                 }
             },
-            "notification-url": "https://packagist.org/downloads/",
             "license": [
                 "MIT"
             ],
@@ -1826,29 +1820,17 @@
             ],
             "support": {
                 "docs": "https://github.com/nystudio107/craft-plugin-vite/blob/v1/README.md",
-                "issues": "https://github.com/nystudio107/craft-plugin-vite/issues",
-                "source": "https://github.com/nystudio107/craft-plugin-vite/tree/4.0.3"
+                "issues": "https://github.com/nystudio107/craft-plugin-vite/issues"
             },
-            "funding": [
-                {
-                    "url": "https://github.com/khalwat",
-                    "type": "github"
-                }
-            ],
-            "time": "2022-07-16T20:51:11+00:00"
+            "time": "2022-08-29T16:16:33+00:00"
         },
         {
             "name": "nystudio107/craft-vite",
-            "version": "4.0.2",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/nystudio107/craft-vite.git",
-                "reference": "82bf6aba239e8ee8982887da5a0cc5d28e2c6a60"
-            },
+            "version": "4.0.3",
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/nystudio107/craft-vite/zipball/82bf6aba239e8ee8982887da5a0cc5d28e2c6a60",
-                "reference": "82bf6aba239e8ee8982887da5a0cc5d28e2c6a60",
+                "url": "https://api.github.com/repos/nystudio107/craft-vite/zipball/afc75e8e1620e9e23866901af98fc266970a6997",
+                "reference": "afc75e8e1620e9e23866901af98fc266970a6997",
                 "shasum": ""
             },
             "require": {
@@ -1866,7 +1848,6 @@
                     "nystudio107\\vite\\": "src/"
                 }
             },
-            "notification-url": "https://packagist.org/downloads/",
             "license": [
                 "MIT"
             ],
@@ -1878,8 +1859,8 @@
             ],
             "description": "Allows the use of the Vite.js next generation frontend tooling with Craft CMS",
             "keywords": [
-                "Craft",
                 "cms",
+                "craft",
                 "craft-plugin",
                 "craftcms",
                 "vite"
@@ -1889,13 +1870,7 @@
                 "issues": "https://nystudio107.com/plugins/vite/support",
                 "source": "https://github.com/nystudio107/craft-vite"
             },
-            "funding": [
-                {
-                    "url": "https://github.com/khalwat",
-                    "type": "github"
-                }
-            ],
-            "time": "2022-07-16T21:02:11+00:00"
+            "time": "2022-09-09T05:48:47+00:00"
         },
         {
             "name": "paragonie/random_compat",
@@ -2682,11 +2657,11 @@
         },
         {
             "name": "seld/phar-utils",
-            "version": "1.2.0",
+            "version": "1.2.1",
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/Seldaek/phar-utils/zipball/9f3452c93ff423469c0d56450431562ca423dcee",
-                "reference": "9f3452c93ff423469c0d56450431562ca423dcee",
+                "url": "https://api.github.com/repos/Seldaek/phar-utils/zipball/ea2f4014f163c1be4c601b9b7bd6af81ba8d701c",
+                "reference": "ea2f4014f163c1be4c601b9b7bd6af81ba8d701c",
                 "shasum": ""
             },
             "require": {
@@ -2716,7 +2691,7 @@
             "keywords": [
                 "phar"
             ],
-            "time": "2021-12-10T11:20:11+00:00"
+            "time": "2022-08-31T10:31:18+00:00"
         },
         {
             "name": "symfony/console",
@@ -4255,11 +4230,11 @@
         },
         {
             "name": "voku/arrayy",
-            "version": "7.9.3",
+            "version": "7.9.4",
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/voku/Arrayy/zipball/41318bd1483a10f133c8214479b3580a3e936a86",
-                "reference": "41318bd1483a10f133c8214479b3580a3e936a86",
+                "url": "https://api.github.com/repos/voku/Arrayy/zipball/4a995937b91f15b95d9a170f803951069b2f0fa0",
+                "reference": "4a995937b91f15b95d9a170f803951069b2f0fa0",
                 "shasum": ""
             },
             "require": {
@@ -4298,7 +4273,7 @@
                 "utility",
                 "utils"
             ],
-            "time": "2022-07-06T00:50:30+00:00"
+            "time": "2022-09-06T20:07:10+00:00"
         },
         {
             "name": "voku/email-check",
@@ -4385,16 +4360,11 @@
         },
         {
             "name": "voku/portable-utf8",
-            "version": "6.0.6",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/voku/portable-utf8.git",
-                "reference": "51f9b0837c8428ed1413ff84d103b2c4700f2e26"
-            },
+            "version": "6.0.9",
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/voku/portable-utf8/zipball/51f9b0837c8428ed1413ff84d103b2c4700f2e26",
-                "reference": "51f9b0837c8428ed1413ff84d103b2c4700f2e26",
+                "url": "https://api.github.com/repos/voku/portable-utf8/zipball/eb2861c34203a9c2a7c275cba7014d6816604e89",
+                "reference": "eb2861c34203a9c2a7c275cba7014d6816604e89",
                 "shasum": ""
             },
             "require": {
@@ -4405,13 +4375,6 @@
                 "symfony/polyfill-mbstring": "~1.0",
                 "symfony/polyfill-php72": "~1.0",
                 "voku/portable-ascii": "~2.0.0"
-            },
-            "require-dev": {
-                "phpstan/phpstan": "1.8.*@dev",
-                "phpstan/phpstan-strict-rules": "1.4.*@dev",
-                "phpunit/phpunit": "~6.0 || ~7.0 || ~9.0",
-                "thecodingmachine/phpstan-strict-rules": "1.0.*@dev",
-                "voku/phpstan-rules": "3.1.*@dev"
             },
             "suggest": {
                 "ext-ctype": "Use Ctype for e.g. hexadecimal digit detection",
@@ -4430,7 +4393,6 @@
                     "voku\\": "src/voku/"
                 }
             },
-            "notification-url": "https://packagist.org/downloads/",
             "license": [
                 "(Apache-2.0 or GPL-2.0)"
             ],
@@ -4458,33 +4420,7 @@
                 "utf-8",
                 "utf8"
             ],
-            "support": {
-                "issues": "https://github.com/voku/portable-utf8/issues",
-                "source": "https://github.com/voku/portable-utf8/tree/6.0.6"
-            },
-            "funding": [
-                {
-                    "url": "https://www.paypal.me/moelleken",
-                    "type": "custom"
-                },
-                {
-                    "url": "https://github.com/voku",
-                    "type": "github"
-                },
-                {
-                    "url": "https://opencollective.com/portable-utf8",
-                    "type": "open_collective"
-                },
-                {
-                    "url": "https://www.patreon.com/voku",
-                    "type": "patreon"
-                },
-                {
-                    "url": "https://tidelift.com/funding/github/packagist/voku/portable-utf8",
-                    "type": "tidelift"
-                }
-            ],
-            "time": "2022-08-31T07:42:29+00:00"
+            "time": "2022-09-01T09:54:03+00:00"
         },
         {
             "name": "voku/stop-words",
@@ -4983,11 +4919,11 @@
         },
         {
             "name": "yiisoft/yii2-symfonymailer",
-            "version": "2.0.3",
+            "version": "2.0.4",
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/yiisoft/yii2-symfonymailer/zipball/77baddfd806005604624ec58e6b55b18f31eeaaf",
-                "reference": "77baddfd806005604624ec58e6b55b18f31eeaaf",
+                "url": "https://api.github.com/repos/yiisoft/yii2-symfonymailer/zipball/82f5902551a160633c4734b5096977ce76a809d9",
+                "reference": "82f5902551a160633c4734b5096977ce76a809d9",
                 "shasum": ""
             },
             "require": {
@@ -5024,7 +4960,7 @@
                 "symfonymailer",
                 "yii2"
             ],
-            "time": "2022-02-10T13:42:46+00:00"
+            "time": "2022-09-04T10:48:21+00:00"
         }
     ],
     "packages-dev": [],
