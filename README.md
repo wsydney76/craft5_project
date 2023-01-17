@@ -11,7 +11,6 @@ This is a simple Craft CMS starter for use in DDEV with a minimum config, that c
 
 * Added modules/_faux to enable autocompletion for some most frequently used variables in twig
 * Moves example module to modules/main
-* Added demo controllers
 * Set system timezone to Europe/Berlin
 * Added /web/cpresources, /node_modules to .gitignore
 * Added some settings to config/general.php
