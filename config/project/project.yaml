@@ -148,7 +148,7 @@ plugins:
     schemaVersion: 1.0.0
 system:
   edition: solo
-  live: false
+  live: true
   name: $SYSTEM_NAME
   retryDuration: 30
   schemaVersion: 4.4.0.4
