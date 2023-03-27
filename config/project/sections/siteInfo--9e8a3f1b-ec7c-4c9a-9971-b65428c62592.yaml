@@ -1,0 +1,12 @@
+defaultPlacement: end
+enableVersioning: true
+handle: siteInfo
+name: 'Site Info'
+propagationMethod: all
+siteSettings:
+  5b0c38db-9ab4-47d8-b4a7-913710c08ca6: # Default
+    enabledByDefault: true
+    hasUrls: false
+    template: null
+    uriFormat: null
+type: single

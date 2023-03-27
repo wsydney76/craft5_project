@@ -19,6 +19,8 @@ return
 		->devMode($isDev)
 		->allowAdminChanges($isDev)
 
+        ->preloadSingles(true)
+
 		->maxRevisions(10)
 		->defaultWeekStartDay(1)
 
