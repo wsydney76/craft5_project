@@ -1,6 +1,6 @@
 assets:
   tempVolumeUid: ed627edd-73bd-4b75-8684-f410bf4e4b9d # Temp Images
-dateModified: 1679924374
+dateModified: 1680252982
 elementSources:
   craft\elements\Asset:
     -
@@ -116,7 +116,7 @@ meta:
     5b0c38db-9ab4-47d8-b4a7-913710c08ca6: Default # Default
     7df417e8-1eea-46d8-85a7-2a20370a881e: 'Featured Image' # Featured Image
     9e2e3c4b-bd17-46b3-97f0-a4f6605b93d9: Text # Text
-    9e8a3f1b-ec7c-4c9a-9971-b65428c62592: 'Site Info' # Site Info
+    9e8a3f1b-ec7c-4c9a-9971-b65428c62592: 'Site Info - Global Settings' # Site Info - Global Settings
     81e6a0d6-13c5-47ad-a9e6-c2181276db9c: Text # Text
     84b98802-2548-4aed-b67e-fc97f6ed9e30: Page # Page
     169ccd00-9c12-4921-b187-8ef8ca2ad525: Assets # Assets
@@ -129,7 +129,7 @@ meta:
     bd76fb6e-8765-41d3-8e8a-02e37e127c80: Common # Common
     c780bb7a-337c-46ba-95c4-c0dcbfcb457d: Home # Home
     cc3fbab0-826f-4aed-b2aa-eeaecc2964bf: 'Alt Text' # Alt Text
-    d6f6663f-190b-40ff-b18b-36267fcf71f6: 'Site Info' # Site Info
+    d6f6663f-190b-40ff-b18b-36267fcf71f6: 'Site Info - Global Settings' # Site Info - Global Settings
     d50026f3-a236-4ae2-b00a-af55076acd17: Site # Site
     eb6b24cc-83d7-416f-be4b-d002c7688b58: Copyright # Copyright
     ed627edd-73bd-4b75-8684-f410bf4e4b9d: 'Temp Images' # Temp Images

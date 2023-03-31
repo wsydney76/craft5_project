@@ -1,7 +1,7 @@
 {% from '_macros/lib.twig' import img %}
 
-{% if element.featuredImage %}
-    {% set image = element.featuredImage.collect.first %}
+{% if entry.featuredImage %}
+    {% set image = entry.featuredImage.collect.first %}
     {% if image %}
         <figure class="pt-8">
             {{ img(image, {

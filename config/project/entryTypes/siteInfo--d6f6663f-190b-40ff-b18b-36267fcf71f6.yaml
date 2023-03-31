@@ -5,6 +5,32 @@ fieldLayouts:
         elementCondition: null
         elements:
           -
+            autocapitalize: true
+            autocomplete: false
+            autocorrect: true
+            class: null
+            disabled: false
+            elementCondition: null
+            id: null
+            instructions: null
+            label: null
+            max: null
+            min: null
+            name: null
+            orientation: null
+            placeholder: null
+            readonly: false
+            requirable: false
+            size: null
+            step: null
+            tip: null
+            title: null
+            type: craft\fieldlayoutelements\entries\EntryTitleField
+            uid: 79ecaac4-4f29-445b-ba4f-12004802eb33
+            userCondition: null
+            warning: null
+            width: 100
+          -
             elementCondition: null
             fieldUid: 3e35a043-a62e-4ede-acd6-44dfb92d6914 # Site Name
             instructions: null
@@ -33,8 +59,8 @@ fieldLayouts:
         userCondition: null
 handle: siteInfo
 hasTitleField: false
-name: 'Site Info'
-section: 9e8a3f1b-ec7c-4c9a-9971-b65428c62592 # Site Info
+name: 'Site Info - Global Settings'
+section: 9e8a3f1b-ec7c-4c9a-9971-b65428c62592 # Site Info - Global Settings
 sortOrder: 1
 titleFormat: '{section.name|raw}'
 titleTranslationKeyFormat: null

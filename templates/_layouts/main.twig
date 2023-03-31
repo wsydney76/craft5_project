@@ -1,15 +1,14 @@
-{% set element = entry ?? category ?? tag -%}
 <!DOCTYPE html>
 <html lang="{{ craft.app.language[:2] }}" style="overflow-y: scroll">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <title>{{ element.title }} | {{ siteInfo.siteName ?: systemName }}</title>
+    <title>{{ entry.title }} | {{ siteInfo.siteName ?: systemName }}</title>
     {{ craft.vite.script("/resources/js/app.js", false) }}
 </head>
 
 
-<body class="max-w-screen-lg mx-auto bg-gray-50 px-8 text-gray-700">
+<body class="max-w-screen-lg mx-auto bg-gray-50 px-8 text-gray-700" dir="{{ craft.app.locale.orientation }}">
 
 <header class="py-8">
 
@@ -28,13 +27,13 @@
 <main>
 
     {% block title %}
-        <h1 class="mb-8 text-4xl font-semibold">{% block titleText %}{{ element.title }}{% endblock %}</h1>
+        <h1 class="mb-8 text-4xl font-semibold">{% block titleText %}{{ entry.title }}{% endblock %}</h1>
     {% endblock %}
 
     {% block content %}
-        {% if element.bodyContent %}
+        {% if entry.bodyContent %}
             {% include '_partials/blocks.twig' with {
-                query: element.bodyContent
+                query: entry.bodyContent
             } only %}
         {% endif %}
     {% endblock %}

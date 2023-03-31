@@ -4,7 +4,7 @@ This is a simple Craft CMS starter for use in DDEV with a minimum config, that c
 
 ## Install
 
-* Clone this repository `git clone https://github.com/wsydney76/craft4_ddev_project <dir> && cd <dir>`
+* Clone this repository `git clone https://github.com/wsydney76/craft4-ddev-project <dir> && cd <dir>`
 * Run `bash setup/install`. This will create a user with the credentials `admin/password`.
 
 ## System
@@ -23,7 +23,7 @@ This is a simple Craft CMS starter for use in DDEV with a minimum config, that c
 ## Custom Config
 
 * Added Home/Page sections
-* Added SiteInfo globals
+* Added SiteInfo single.
 * Added a matrix field with blocktypes text, heading, image
 * Added volumes/file systems
 * Added simple twig templates that follow proven conventions
