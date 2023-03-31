@@ -1,6 +1,6 @@
 assets:
   tempVolumeUid: ed627edd-73bd-4b75-8684-f410bf4e4b9d # Temp Images
-dateModified: 1680252982
+dateModified: 1680261343
 elementSources:
   craft\elements\Asset:
     -
@@ -48,8 +48,13 @@ elementSources:
       heading: Site
       type: heading
     -
+      defaultSort:
+        - title
+        - asc
+      disabled: false
       key: singles
       tableAttributes:
+        - section
         - drafts
         - 'field:7df417e8-1eea-46d8-85a7-2a20370a881e' # Featured Image
         - link

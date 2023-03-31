@@ -1,12 +1,7 @@
-{% set entries = craft.entries
-    .section('not home')
-    .uri(':notempty:')
-    .orderBy('postDate desc')
-    .collect
-%}
+{% set entries = query.collect %}
 
 {% if entries.count %}
-    <h2 class="font-semibold text-2xl mb-4">Entries</h2>
+    <h2 class="font-semibold text-2xl mb-4">{{ heading }}</h2>
     <ul class="mb-8 list-disc ps-6">
        {% for entry in entries %}
        	    <li>{{ entry.link }} ({{ entry.section.name }})</li>

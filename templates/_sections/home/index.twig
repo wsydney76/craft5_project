@@ -3,5 +3,11 @@
 {% block content %}
 	{{ parent() }}
 
-    {% include '_sections/home/entries.twig' %}
+    {% include '_partials/entries-list.twig' with {
+        heading: 'Entries',
+        query: craft.entries
+            .section('not home')
+            .uri(':notempty:')
+            .orderBy('postDate desc')
+    } only %}
 {% endblock %}
