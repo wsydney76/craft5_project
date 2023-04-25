@@ -22,11 +22,17 @@ class MainModule extends Module
             $this->controllerNamespace = 'modules\\main\\controllers';
         }
 
-        // Prevent password managers like Bitdefender Wallet from falsely inserting credentials into user form
-        Craft::$app->view->hook('cp.users.edit.content', function(array &$context) {
-            return '<input type="text" name="dummy-first-name" value="wtf" style="display: none">';
-        });
 
+        parent::init();
+
+        // Defer most setup tasks until Craft is fully initialized
+        Craft::$app->onInit(function() {
+            $this->attachEventHandlers();
+        });
+    }
+
+    private function attachEventHandlers(): void
+    {
 
         // Don't update search index for drafts
         Event::on(
@@ -39,6 +45,10 @@ class MainModule extends Module
             }
         );
 
-        parent::init();
+        // Prevent password managers like Bitdefender Wallet from falsely inserting credentials into user form
+        Craft::$app->view->hook('cp.users.edit.content', function(array &$context) {
+            return '<input type="text" name="dummy-first-name" value="wtf" style="display: none">';
+        });
+
     }
 }
