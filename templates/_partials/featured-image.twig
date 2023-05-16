@@ -1,14 +1,12 @@
 {% from '_macros/lib.twig' import img %}
 
-{% if entry.featuredImage %}
-    {% set image = entry.featuredImage.collect.first %}
-    {% if image %}
-        <figure class="pt-8">
-            {{ img(image, {
-                transform: {width: 960, height: 300},
-                srcset: [960, 640, 400],
-                attr: {loading: null}
-            }) }}
-        </figure>
-    {% endif %}
+{% if featuredImage %}
+    <figure class="pt-8">
+        {{ img(featuredImage, {
+            transform: {width: 960, height: 300},
+            srcset: [960, 640, 400],
+            attr: {loading: null}
+        }) }}
+    </figure>
+
 {% endif %}

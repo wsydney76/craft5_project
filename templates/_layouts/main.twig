@@ -1,9 +1,10 @@
+{%- set title = entry is defined ? entry.title : title -%}
 <!DOCTYPE html>
 <html lang="{{ craft.app.language[:2] }}" style="overflow-y: scroll">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <title>{{ entry.title }} | {{ siteInfo.siteName ?: systemName }}</title>
+    <title>{{ title }} | {{ siteInfo.siteName ?: systemName }}</title>
     {{ craft.vite.script("/resources/js/app.js", false) }}
 </head>
 
@@ -17,9 +18,15 @@
         <a class="text-3xl font-semibold" href="{{ siteUrl('/') }}">{{ siteInfo.siteName ?: systemName }}</a>
     </div>
 
-
     {% block featured %}
-        {% include '_partials/featured-image.twig' %}
+        {% if entry is defined and entry.featuredImage %}
+            {% set featuredImage = entry.featuredImage.one %}
+        {% endif %}
+
+        {% if featuredImage is defined %}
+            {% include '_partials/featured-image.twig' with {featuredImage} %}
+        {% endif %}
+
     {% endblock %}
 
 </header>
@@ -27,7 +34,7 @@
 <main>
 
     {% block title %}
-        <h1 class="mb-8 text-4xl font-semibold">{% block titleText %}{{ entry.title }}{% endblock %}</h1>
+        <h1 class="mb-8 text-4xl font-semibold">{% block titleText %}{{ title }}{% endblock %}</h1>
     {% endblock %}
 
     {% block content %}
