@@ -38,7 +38,7 @@
     {% endblock %}
 
     {% block content %}
-        {% if entry.bodyContent %}
+        {% if entry is defined and entry.bodyContent %}
             {% include '_partials/blocks.twig' with {
                 query: entry.bodyContent
             } only %}
@@ -47,7 +47,7 @@
 
 </main>
 
-<footer>
+<footer class="mt-8">
     <div class="border-t border-gray-400 py-8">
         &copy; {{ siteInfo.copyright }} {{ now|date('Y') }}
     </div>
