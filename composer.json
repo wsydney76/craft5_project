@@ -4,7 +4,7 @@
   "version": "2.0.0",
   "license": "Unlicense",
   "require": {
-    "craftcms/cms": "4.4.16",
+    "craftcms/cms": "4.4.16.1",
     "doublesecretagency/craft-cpcss": "2.6.0",
     "nystudio107/craft-vite": "4.0.6",
     "vlucas/phpdotenv": "^5.4"
