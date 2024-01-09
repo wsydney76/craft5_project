@@ -2,7 +2,32 @@
 
 {% set image = block.image.collect.first %}
 {% if image %}
+
+    {% set aspectRatio = block.aspectRatio.value ?? '16/9' %}
+    {% set crop = block.crop is defined ? block.crop : true %}
+
+    {% set width = 1024 %}
+
+    {% set transform = {
+        width,
+        mode: crop ? 'crop' : 'letterbox'}
+    %}
+
+    {% if aspectRatio != 'auto' %}
+        {% set ratio = aspectRatio|split('/') %}
+        {% set transform = transform|merge({
+            height: ceil(width / ratio[0] * ratio[1])
+        }) %}
+    {% endif %}
+
     <figure>
-        {{ img(image) }}
+        {{ img(image, {
+            transform
+        }) }}
+        {% if block.caption %}
+            <figcaption>
+                {{ block.caption }}
+            </figcaption>
+        {% endif %}
     </figure>
 {% endif %}

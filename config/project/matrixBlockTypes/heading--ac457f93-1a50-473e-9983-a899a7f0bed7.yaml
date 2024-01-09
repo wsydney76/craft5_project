@@ -16,7 +16,19 @@ fieldLayouts:
             uid: a5f31ac1-d94c-4311-82fa-1ef9ce42f581
             userCondition: null
             warning: null
-            width: 100
+            width: 75
+          -
+            elementCondition: null
+            fieldUid: bdcd25ce-f3a8-48ae-ba57-0c83960a3fcd # Heading Level
+            instructions: null
+            label: null
+            required: true
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: f6856c6d-b5d4-43ce-ab12-c9e47511a9b5
+            userCondition: null
+            warning: null
+            width: 25
         name: Content
         uid: be6789a7-64de-4d8d-a3a8-38a75763af9b
         userCondition: null
@@ -41,6 +53,53 @@ fields:
     translationKeyFormat: null
     translationMethod: none
     type: craft\fields\PlainText
+  bdcd25ce-f3a8-48ae-ba57-0c83960a3fcd: # Heading Level
+    columnSuffix: cxvrpcyh
+    contentColumnType: string(2)
+    fieldGroup: null
+    handle: headingLevel
+    instructions: null
+    name: 'Heading Level'
+    searchable: false
+    settings:
+      columnType: null
+      options:
+        -
+          __assoc__:
+            -
+              - label
+              - H2
+            -
+              - value
+              - h2
+            -
+              - default
+              - '1'
+        -
+          __assoc__:
+            -
+              - label
+              - h3
+            -
+              - value
+              - h3
+            -
+              - default
+              - ''
+        -
+          __assoc__:
+            -
+              - label
+              - h4
+            -
+              - value
+              - h4
+            -
+              - default
+              - ''
+    translationKeyFormat: null
+    translationMethod: none
+    type: craft\fields\Dropdown
 handle: heading
 name: Heading
 sortOrder: 1

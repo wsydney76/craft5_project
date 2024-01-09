@@ -16,11 +16,67 @@ fieldLayouts:
             uid: c9b2074e-9c0c-42ca-912b-da62df8b651a
             userCondition: null
             warning: null
+            width: 25
+          -
+            elementCondition: null
+            fieldUid: a777a2b0-9e58-4e2e-b198-fdbeb8f10302 # Aspect Ratio
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 3583c35d-cbcb-43d4-9ca9-6e52dd0d9e5f
+            userCondition: null
+            warning: null
+            width: 25
+          -
+            elementCondition: null
+            fieldUid: 8151138b-dc5d-40bf-b17d-831ab2d41eab # Crop
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: d135a0f8-be3a-4b3f-9a32-02f86b6412c7
+            userCondition: null
+            warning: null
+            width: 25
+          -
+            elementCondition: null
+            fieldUid: 04b07dc7-0ca3-4192-9581-fbbeecca3532 # Caption
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: bbf9ea57-4f83-4e02-84a1-b9aca785c3c0
+            userCondition: null
+            warning: null
             width: 100
         name: Content
         uid: c7f52bda-4083-406b-982c-63def615500a
         userCondition: null
 fields:
+  04b07dc7-0ca3-4192-9581-fbbeecca3532: # Caption
+    columnSuffix: nnbowfgm
+    contentColumnType: string
+    fieldGroup: null
+    handle: caption
+    instructions: null
+    name: Caption
+    searchable: true
+    settings:
+      byteLimit: 250
+      charLimit: null
+      code: false
+      columnType: string
+      initialRows: 4
+      multiline: false
+      placeholder: null
+      uiMode: normal
+    translationKeyFormat: null
+    translationMethod: none
+    type: craft\fields\PlainText
   735b5e6e-8026-4de4-8e32-14e03d975565: # Image
     columnSuffix: null
     contentColumnType: string
@@ -91,6 +147,145 @@ fields:
     translationKeyFormat: null
     translationMethod: site
     type: craft\fields\Assets
+  8151138b-dc5d-40bf-b17d-831ab2d41eab: # Crop
+    columnSuffix: ubjbhpop
+    contentColumnType: boolean
+    fieldGroup: null
+    handle: crop
+    instructions: null
+    name: Crop
+    searchable: false
+    settings:
+      default: true
+      offLabel: null
+      onLabel: null
+    translationKeyFormat: null
+    translationMethod: none
+    type: craft\fields\Lightswitch
+  a777a2b0-9e58-4e2e-b198-fdbeb8f10302: # Aspect Ratio
+    columnSuffix: ygcxpixb
+    contentColumnType: string(4)
+    fieldGroup: null
+    handle: aspectRatio
+    instructions: null
+    name: 'Aspect Ratio'
+    searchable: false
+    settings:
+      columnType: null
+      options:
+        -
+          __assoc__:
+            -
+              - label
+              - Auto
+            -
+              - value
+              - auto
+            -
+              - default
+              - ''
+        -
+          __assoc__:
+            -
+              - label
+              - '1:1'
+            -
+              - value
+              - 1/1
+            -
+              - default
+              - ''
+        -
+          __assoc__:
+            -
+              - label
+              - 16/9
+            -
+              - value
+              - 16/9
+            -
+              - default
+              - '1'
+        -
+          __assoc__:
+            -
+              - label
+              - 10/8
+            -
+              - value
+              - 10/8
+            -
+              - default
+              - ''
+        -
+          __assoc__:
+            -
+              - label
+              - 21/9
+            -
+              - value
+              - 21/9
+            -
+              - default
+              - ''
+        -
+          __assoc__:
+            -
+              - label
+              - 7/5
+            -
+              - value
+              - 7/5
+            -
+              - default
+              - ''
+        -
+          __assoc__:
+            -
+              - label
+              - 4/3
+            -
+              - value
+              - 4/3
+            -
+              - default
+              - ''
+        -
+          __assoc__:
+            -
+              - label
+              - 5/3
+            -
+              - value
+              - 5/3
+            -
+              - default
+              - ''
+        -
+          __assoc__:
+            -
+              - label
+              - 3/2
+            -
+              - value
+              - 3/2
+            -
+              - default
+              - ''
+        -
+          __assoc__:
+            -
+              - label
+              - 3/1
+            -
+              - value
+              - 3/1
+            -
+              - default
+              - ''
+    translationKeyFormat: null
+    translationMethod: none
+    type: craft\fields\Dropdown
 handle: image
 name: Image
 sortOrder: 3

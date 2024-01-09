@@ -24,7 +24,7 @@ This is a simple Craft CMS starter for use in DDEV with a minimum config, that c
 
 * Added Home/Page sections
 * Added SiteInfo single.
-* Added a matrix field with blocktypes text, heading, image
+* Added a matrix field with blocktypes text, heading, image, quote
 * Added volumes/file systems
 * Added simple twig templates that follow proven conventions
 * Added img macro for advanced image handling, prepared for Imager-X plugin

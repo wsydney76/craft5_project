@@ -1,0 +1,10 @@
+<blockquote>
+    <p>
+        {{ block.text|nl2br }}
+    </p>
+    {% if block.source %}
+        <cite>
+            {{ block.source }}
+        </cite>
+    {% endif %}
+</blockquote>

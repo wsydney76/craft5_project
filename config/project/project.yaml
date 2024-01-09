@@ -1,6 +1,6 @@
 assets:
   tempVolumeUid: ed627edd-73bd-4b75-8684-f410bf4e4b9d # Temp Images
-dateModified: 1704796980
+dateModified: 1704799966
 elementSources:
   craft\elements\Asset:
     -
@@ -117,21 +117,28 @@ meta:
     3bb09a1c-cb36-438e-b8d5-0b35b0965f4e: Default # Default
     3e35a043-a62e-4ede-acd6-44dfb92d6914: 'Site Name' # Site Name
     4b050685-0425-4094-bde2-85e2eedd0e12: Text # Text
+    04b07dc7-0ca3-4192-9581-fbbeecca3532: Caption # Caption
     5a0be839-14a2-465e-a504-bb63dd0281e9: Images # Images
     5b0c38db-9ab4-47d8-b4a7-913710c08ca6: Default # Default
     7df417e8-1eea-46d8-85a7-2a20370a881e: 'Featured Image' # Featured Image
+    9a7f3681-7d39-4416-9908-0889bfe1095c: Text # Text
     9e2e3c4b-bd17-46b3-97f0-a4f6605b93d9: Text # Text
     9e8a3f1b-ec7c-4c9a-9971-b65428c62592: 'Site Info - Global Settings' # Site Info - Global Settings
+    052baf80-92b9-4d9d-889d-9326c028789b: Quote # Quote
     81e6a0d6-13c5-47ad-a9e6-c2181276db9c: Text # Text
     84b98802-2548-4aed-b67e-fc97f6ed9e30: Page # Page
     169ccd00-9c12-4921-b187-8ef8ca2ad525: Assets # Assets
+    356de61f-e243-4f75-aad1-ebc3dd307616: Source # Source
     735b5e6e-8026-4de4-8e32-14e03d975565: Image # Image
     6856c92d-c593-4425-8886-27e609d74667: Home # Home
+    8151138b-dc5d-40bf-b17d-831ab2d41eab: Crop # Crop
     69164545-5879-454d-a57e-f703ca431331: Image # Image
     85898001-9c9c-4d46-abf9-a928e44f0d48: 'Body Content' # Body Content
+    a777a2b0-9e58-4e2e-b198-fdbeb8f10302: 'Aspect Ratio' # Aspect Ratio
     abefa0bd-6b36-4b4f-a9de-a4304e7b66a3: 'Public Schema' # Public Schema
     ac457f93-1a50-473e-9983-a899a7f0bed7: Heading # Heading
     bd76fb6e-8765-41d3-8e8a-02e37e127c80: Common # Common
+    bdcd25ce-f3a8-48ae-ba57-0c83960a3fcd: 'Heading Level' # Heading Level
     c780bb7a-337c-46ba-95c4-c0dcbfcb457d: Home # Home
     cc3fbab0-826f-4aed-b2aa-eeaecc2964bf: 'Alt Text' # Alt Text
     d6f6663f-190b-40ff-b18b-36267fcf71f6: 'Site Info - Global Settings' # Site Info - Global Settings
