@@ -53,8 +53,8 @@ settings:
               -
                 - maxValue
                 - ''
-  selectionLabel: null
-  showCardsInGrid: false
+  selectionLabel: 'Select an image'
+  showCardsInGrid: true
   showSiteMenu: true
   showUnpermittedFiles: false
   showUnpermittedVolumes: false
@@ -62,7 +62,7 @@ settings:
     - 'volume:5a0be839-14a2-465e-a504-bb63dd0281e9' # Images
   targetSiteId: null
   validateRelatedElements: false
-  viewMode: large
+  viewMode: cards
 translationKeyFormat: null
 translationMethod: site
 type: craft\fields\Assets

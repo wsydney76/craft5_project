@@ -1,4 +1,4 @@
-color: null
+color: red
 fieldLayouts:
   6a9bd8fb-02fb-47b3-aab3-cc85d6b04484:
     tabs:
@@ -38,7 +38,7 @@ fieldLayouts:
             elementCondition: null
             fieldUid: 59d53e5e-fc0b-4e78-9566-c7cb7342cefe # Multi Line Text
             handle: text
-            includeInCards: false
+            includeInCards: true
             instructions: null
             label: Text
             providesThumbs: false
@@ -53,7 +53,7 @@ fieldLayouts:
             elementCondition: null
             fieldUid: 68d329ca-2314-4981-bf9f-96c6353f1e07 # Single Line Text
             handle: source
-            includeInCards: false
+            includeInCards: true
             instructions: null
             label: Source
             providesThumbs: false

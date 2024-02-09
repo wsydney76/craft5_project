@@ -1,10 +1,10 @@
 {% from '_macros/lib.twig' import img %}
 
-{% set image = block.image.collect.first %}
+{% set image = entry.image.collect.first %}
 {% if image %}
 
-    {% set aspectRatio = block.aspectRatio.value ?? '16/9' %}
-    {% set crop = block.crop is defined ? block.crop : true %}
+    {% set aspectRatio = entry.aspectRatio.value ?? '16/9' %}
+    {% set crop = entry.crop is defined ? entry.crop : true %}
 
     {% set width = 1024 %}
 
@@ -24,9 +24,9 @@
         {{ img(image, {
             transform
         }) }}
-        {% if block.caption %}
+        {% if entry.caption %}
             <figcaption>
-                {{ block.caption }}
+                {{ entry.caption }}
             </figcaption>
         {% endif %}
     </figure>

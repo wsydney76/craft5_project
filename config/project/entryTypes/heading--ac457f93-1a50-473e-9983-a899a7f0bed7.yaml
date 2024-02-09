@@ -1,4 +1,4 @@
-color: null
+color: green
 fieldLayouts:
   22cc67d9-e2e7-4e8d-b385-a1bc4c43835e:
     tabs:
@@ -48,7 +48,7 @@ fieldLayouts:
             uid: 0890bafe-01df-4861-b2a2-10eb2ba54970
             userCondition: null
             warning: null
-            width: 100
+            width: 75
           -
             elementCondition: null
             fieldUid: bdcd25ce-f3a8-48ae-ba57-0c83960a3fcd # Heading Level

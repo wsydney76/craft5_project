@@ -19,30 +19,30 @@ return
 		->devMode($isDev)
 		->allowAdminChanges($isDev)
 
-        ->preloadSingles(true)
+        ->preloadSingles()
 
 		->maxRevisions(10)
 		->defaultWeekStartDay(1)
 
-		->omitScriptNameInUrls(true)
+		->omitScriptNameInUrls()
 		->cpTrigger('admin')
-		->limitAutoSlugsToAscii(true)
+		->limitAutoSlugsToAscii()
 
-		->preventUserEnumeration(true)
+		->preventUserEnumeration()
 		->sendPoweredByHeader(false)
 		->disallowRobots(!$isProd)
 
 		->defaultTemplateExtensions(['twig'])
 		->enableTemplateCaching($isProd)
 
-		->convertFilenamesToAscii(true)
+		->convertFilenamesToAscii()
 		->maxUploadFileSize('32M')
-		->generateTransformsBeforePageLoad(true)
+		->generateTransformsBeforePageLoad()
 		->optimizeImageFilesize(false)
-		->revAssetUrls(true)
+		->revAssetUrls()
         ->tempAssetUploadFs('tempimages_local')
 
-		->useIframeResizer(true)
+		// ->useIframeResizer(true)
 
 		->aliases([
 			// Prevent the @web alias from being set automatically (cache poisoning vulnerability)

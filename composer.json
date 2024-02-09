@@ -1,7 +1,7 @@
 {
   "description": "Minimum preconfigured starter for Craft 4",
   "name": "wsydney76/craft4_project",
-  "version": "23.0.0",
+  "version": "3.0.0",
   "license": "Unlicense",
   "require": {
     "craftcms/cms": "^5.0.0-beta.1",

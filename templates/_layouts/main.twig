@@ -34,7 +34,12 @@
 <main>
 
     {% block title %}
-        <h1 class="mb-8 text-4xl font-semibold">{% block titleText %}{{ title }}{% endblock %}</h1>
+        <h1 class="mb-8 text-4xl font-bold">{% block titleText %}{{ title }}{% endblock %}</h1>
+        {% if entry.teaser %}
+            <div class="my-8 text-lg font-semibold">
+                {{ entry.teaser }}
+            </div>
+        {% endif %}
     {% endblock %}
 
     {% block content %}

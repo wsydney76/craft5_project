@@ -54,11 +54,11 @@ class FauxTwigExtension extends AbstractExtension implements GlobalsInterface
 
             // Craft Elements
             'image' => new Asset(),
-            'block' => new MatrixBlock(),
+            'block' => new Entry(),
 
 
             // Global Set
-            'siteInfo' => new GlobalSet(),
+            'siteInfo' => new Entry(),
 
             // Collections (Query results)
             'entries' => new Collection(),
@@ -72,7 +72,7 @@ class FauxTwigExtension extends AbstractExtension implements GlobalsInterface
             // Plugin variables
             // Use workaround if autocompletion for craft.xxx does not work
             // set imager = craft.imager
-            'imager' => new ImagerVariable()
+            // 'imager' => new ImagerVariable()
 
         ];
     }
