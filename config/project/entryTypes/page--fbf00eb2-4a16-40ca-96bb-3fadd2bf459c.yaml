@@ -1,6 +1,6 @@
 color: null
 fieldLayouts:
-  b610ba0f-3699-420d-a62a-49b631e09bc2:
+  35aac453-6959-4771-9712-cb98f5a45da0:
     tabs:
       -
         elementCondition: null
@@ -30,13 +30,43 @@ fieldLayouts:
             tip: null
             title: null
             type: craft\fieldlayoutelements\entries\EntryTitleField
-            uid: 79ecaac4-4f29-445b-ba4f-12004802eb33
+            uid: 23e88f1c-1490-4ee0-9514-ebc54e2dfce1
             userCondition: null
             warning: null
             width: 100
           -
             elementCondition: null
-            fieldUid: 3e35a043-a62e-4ede-acd6-44dfb92d6914 # Site Name
+            fieldUid: 7df417e8-1eea-46d8-85a7-2a20370a881e # Featured Image
+            handle: null
+            includeInCards: false
+            instructions: null
+            label: null
+            providesThumbs: true
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: f72d2e7e-3cde-4edf-82c4-0a50169808d4
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            elementCondition: null
+            fieldUid: 68d329ca-2314-4981-bf9f-96c6353f1e07 # Single Line Text
+            handle: teaser
+            includeInCards: true
+            instructions: null
+            label: Teaser
+            providesThumbs: false
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 1183b2b3-5ede-47eb-9c12-f6c5f125bd2f
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            elementCondition: null
+            fieldUid: 85898001-9c9c-4d46-abf9-a928e44f0d48 # Body Content
             handle: null
             includeInCards: false
             instructions: null
@@ -45,36 +75,21 @@ fieldLayouts:
             required: false
             tip: null
             type: craft\fieldlayoutelements\CustomField
-            uid: 0b7b855c-3f2f-4d39-8ef0-e5fccd7a2685
-            userCondition: null
-            warning: null
-            width: 100
-          -
-            elementCondition: null
-            fieldUid: eb6b24cc-83d7-416f-be4b-d002c7688b58 # Copyright
-            handle: null
-            includeInCards: false
-            instructions: null
-            label: null
-            providesThumbs: false
-            required: false
-            tip: null
-            type: craft\fieldlayoutelements\CustomField
-            uid: c5b5269f-b571-4e25-af4c-6cdfdc2fbf56
+            uid: b3749e2b-fda8-411d-b55e-306b27632de2
             userCondition: null
             warning: null
             width: 100
         name: Content
-        uid: bc563acf-2bf0-4e70-ad0b-0d9aff9906c7
+        uid: 805db790-0bd9-4591-905d-34133e531ece
         userCondition: null
-handle: siteInfo
-hasTitleField: false
-icon: gear
-name: 'Site Info - Global Settings'
+handle: page
+hasTitleField: true
+icon: file
+name: Page
 showSlugField: true
-showStatusField: false
+showStatusField: true
 slugTranslationKeyFormat: null
 slugTranslationMethod: site
-titleFormat: '{section.name|raw}'
+titleFormat: ''
 titleTranslationKeyFormat: null
 titleTranslationMethod: site

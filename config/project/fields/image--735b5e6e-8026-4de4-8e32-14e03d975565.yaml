@@ -1,8 +1,7 @@
 columnSuffix: null
-contentColumnType: string
-handle: featuredImage
+handle: image
 instructions: null
-name: 'Featured Image'
+name: Image
 searchable: false
 settings:
   allowSelfRelations: false
@@ -44,10 +43,10 @@ settings:
                 - craft\elements\conditions\assets\WidthConditionRule
               -
                 - uid
-                - bcd4f2f0-39b4-4ad0-bc1b-1b4b30b07c51
+                - c2f227f4-49cc-4b5a-ab14-43a864cbfaea
               -
                 - operator
-                - '>'
+                - '>='
               -
                 - value
                 - '800'
@@ -55,7 +54,8 @@ settings:
                 - maxValue
                 - ''
   selectionLabel: null
-  showSiteMenu: false
+  showCardsInGrid: false
+  showSiteMenu: true
   showUnpermittedFiles: false
   showUnpermittedVolumes: false
   sources:

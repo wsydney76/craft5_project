@@ -7,7 +7,7 @@ fieldLayouts:
         elements:
           -
             elementCondition: null
-            fieldUid: 4b050685-0425-4094-bde2-85e2eedd0e12 # Text
+            fieldUid: 4b050685-0425-4094-bde2-85e2eedd0e12
             instructions: null
             label: null
             required: true
@@ -33,7 +33,7 @@ fieldLayouts:
         uid: be6789a7-64de-4d8d-a3a8-38a75763af9b
         userCondition: null
 fields:
-  4b050685-0425-4094-bde2-85e2eedd0e12: # Text
+  4b050685-0425-4094-bde2-85e2eedd0e12:
     columnSuffix: null
     contentColumnType: string
     fieldGroup: null

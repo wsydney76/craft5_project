@@ -1,19 +1,10 @@
 defaultPlacement: end
 enableVersioning: true
+entryTypes:
+  - fbf00eb2-4a16-40ca-96bb-3fadd2bf459c # Page
 handle: home
+maxAuthors: 1
 name: Home
-previewTargets:
-  -
-    __assoc__:
-      -
-        - label
-        - 'Primary entry page'
-      -
-        - urlFormat
-        - '{url}'
-      -
-        - refresh
-        - '1'
 propagationMethod: all
 siteSettings:
   5b0c38db-9ab4-47d8-b4a7-913710c08ca6: # Default

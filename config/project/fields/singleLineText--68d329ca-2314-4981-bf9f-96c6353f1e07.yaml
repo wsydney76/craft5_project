@@ -1,17 +1,14 @@
-columnSuffix: jbzvoxct
-contentColumnType: string
-fieldGroup: 169ccd00-9c12-4921-b187-8ef8ca2ad525 # Assets
-handle: altText
+columnSuffix: null
+handle: singleLineText
 instructions: null
-name: 'Alt Text'
+name: 'Single Line Text'
 searchable: true
 settings:
   byteLimit: 255
   charLimit: null
   code: false
-  columnType: string
-  initialRows: 1
-  multiline: true
+  initialRows: 4
+  multiline: false
   placeholder: null
   uiMode: normal
 translationKeyFormat: null

@@ -1,16 +1,14 @@
-columnSuffix: wcgkvvuu
-contentColumnType: string(240)
-handle: copyright
+columnSuffix: null
+handle: multiLineText
 instructions: null
-name: Copyright
-searchable: false
+name: 'Multi Line Text'
+searchable: true
 settings:
   byteLimit: null
-  charLimit: 60
+  charLimit: null
   code: false
-  columnType: null
-  initialRows: 4
-  multiline: false
+  initialRows: 2
+  multiline: true
   placeholder: null
   uiMode: normal
 translationKeyFormat: null

@@ -40,6 +40,7 @@ return
 		->generateTransformsBeforePageLoad(true)
 		->optimizeImageFilesize(false)
 		->revAssetUrls(true)
+        ->tempAssetUploadFs('tempimages_local')
 
 		->useIframeResizer(true)
 

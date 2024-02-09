@@ -1,4 +1,4 @@
-# Craft 4 Simple Starter
+# Craft 5 Simple Starter
 
 This is a simple Craft CMS starter for use in DDEV with a minimum config, that can be useful as a starting point:
 

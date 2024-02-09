@@ -1,5 +1,6 @@
+color: null
 fieldLayouts:
-  741edb78-e490-4426-a3ca-1f7033331ddf:
+  322df68d-3b25-4b3f-bcb5-730cfbbcbfbc:
     tabs:
       -
         elementCondition: null
@@ -28,45 +29,37 @@ fieldLayouts:
             step: null
             tip: null
             title: null
-            type: craft\fieldlayoutelements\assets\AssetTitleField
-            uid: 722dd964-b9a0-4b55-b413-f2954c98c88c
+            type: craft\fieldlayoutelements\entries\EntryTitleField
+            uid: eaa6d8a4-c4ec-4254-8a3d-be29c5b3855f
             userCondition: null
             warning: null
             width: 100
           -
-            attribute: alt
-            class: null
-            cols: null
-            disabled: false
             elementCondition: null
-            id: null
-            includeInCards: false
+            fieldUid: 59d53e5e-fc0b-4e78-9566-c7cb7342cefe # Multi Line Text
+            handle: text
+            includeInCards: true
             instructions: null
-            label: null
-            name: null
-            orientation: null
-            placeholder: null
+            label: Text
             providesThumbs: false
-            readonly: false
-            requirable: true
-            required: false
-            rows: null
+            required: true
             tip: null
-            title: null
-            type: craft\fieldlayoutelements\assets\AltField
-            uid: 6703edc9-4e9d-4faf-8a5c-ca1a4868ed99
+            type: craft\fieldlayoutelements\CustomField
+            uid: c41b96ab-4f8d-4e36-9497-d94b60b6f3d1
             userCondition: null
             warning: null
             width: 100
         name: Content
-        uid: 22529198-b0c8-440f-aa3e-f169a9e3f551
+        uid: 567dfff7-4e6b-43d6-bb7b-a486901aa8d8
         userCondition: null
-fs: $IMAGES_FS
-handle: images
-name: Images
-sortOrder: 1
-subpath: ''
+handle: text
+hasTitleField: false
+icon: paragraph
+name: Text
+showSlugField: true
+showStatusField: true
+slugTranslationKeyFormat: null
+slugTranslationMethod: site
+titleFormat: ''
 titleTranslationKeyFormat: null
 titleTranslationMethod: site
-transformFs: $IMAGE_TRANSFORM_FS
-transformSubpath: images
