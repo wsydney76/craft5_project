@@ -6,12 +6,11 @@
     {% set aspectRatio = entry.aspectRatio.value ?? '16/9' %}
     {% set crop = entry.crop is defined ? entry.crop : true %}
 
-    {% set width = 1024 %}
+    {% set width = 900 %}
 
     {% set transform = {
         width,
-        mode: crop ? 'crop' : 'letterbox'}
-    %}
+        mode: crop ? 'crop' : 'letterbox'} %}
 
     {% if aspectRatio != 'auto' %}
         {% set ratio = aspectRatio|split('/') %}
@@ -24,10 +23,11 @@
         {{ img(image, {
             transform
         }) }}
-        {% if entry.caption %}
-            <figcaption>
-                {{ entry.caption }}
-            </figcaption>
-        {% endif %}
+
+        {% include '_partials/image-figcaption.twig' with {
+            caption: entry.caption,
+            copyright: image.copyright
+        } only %}
+
     </figure>
 {% endif %}

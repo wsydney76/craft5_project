@@ -40,7 +40,7 @@ fieldLayouts:
             disabled: false
             elementCondition: null
             id: null
-            includeInCards: false
+            includeInCards: true
             instructions: null
             label: null
             name: null
@@ -55,6 +55,21 @@ fieldLayouts:
             title: null
             type: craft\fieldlayoutelements\assets\AltField
             uid: 6703edc9-4e9d-4faf-8a5c-ca1a4868ed99
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            elementCondition: null
+            fieldUid: 68d329ca-2314-4981-bf9f-96c6353f1e07 # Single Line Text
+            handle: copyright
+            includeInCards: true
+            instructions: null
+            label: Copyright
+            providesThumbs: false
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: bf86fc8c-2b09-45bf-b07b-ee321159ab17
             userCondition: null
             warning: null
             width: 100

@@ -1,0 +1,15 @@
+defaultPlacement: end
+enableVersioning: true
+entryTypes:
+  - fbf00eb2-4a16-40ca-96bb-3fadd2bf459c # Page
+handle: post
+maxAuthors: 1
+name: Post
+propagationMethod: all
+siteSettings:
+  5b0c38db-9ab4-47d8-b4a7-913710c08ca6: # Default
+    enabledByDefault: true
+    hasUrls: true
+    template: _sections/post
+    uriFormat: 'post/{slug}'
+type: channel

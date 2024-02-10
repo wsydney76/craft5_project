@@ -37,29 +37,29 @@ settings:
           - 16/9
         -
           - default
+          - ''
+    -
+      __assoc__:
+        -
+          - label
+          - 10/8
+        -
+          - value
+          - 10/8
+        -
+          - default
+          - ''
+    -
+      __assoc__:
+        -
+          - label
+          - 21/9
+        -
+          - value
+          - 21/9
+        -
+          - default
           - '1'
-    -
-      __assoc__:
-        -
-          - label
-          - 10/8
-        -
-          - value
-          - 10/8
-        -
-          - default
-          - ''
-    -
-      __assoc__:
-        -
-          - label
-          - 21/9
-        -
-          - value
-          - 21/9
-        -
-          - default
-          - ''
     -
       __assoc__:
         -

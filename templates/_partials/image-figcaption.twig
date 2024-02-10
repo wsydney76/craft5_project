@@ -1,0 +1,15 @@
+{% set caption = caption ?? '' %}
+{% set copyright = copyright ?? '' %}
+
+{% if caption or copyright %}
+    <figcaption class="flex justify-between">
+        <div>
+            {{ caption }}
+        </div>
+        <div>
+            {% if copyright %}
+                &copy; {{ copyright }}
+            {% endif %}
+        </div>
+    </figcaption>
+{% endif %}

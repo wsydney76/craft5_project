@@ -9,7 +9,7 @@
 </head>
 
 
-<body class="max-w-screen-lg mx-auto bg-gray-50 px-8 text-gray-700" dir="{{ craft.app.locale.orientation }}">
+<body class="max-w-screen-ml mx-auto bg-gray-50 px-8 text-gray-700" dir="{{ craft.app.locale.orientation }}">
 
 <header class="py-8">
 
@@ -19,11 +19,10 @@
     </div>
 
     {% block featured %}
-        {% if entry is defined and entry.featuredImage %}
-            {% set featuredImage = entry.featuredImage.one %}
-        {% endif %}
 
-        {% if featuredImage is defined %}
+        {% set featuredImage = entry.featuredImage.one ?? siteInfo.featuredImage.one %}
+
+        {% if featuredImage %}
             {% include '_partials/featured-image.twig' with {featuredImage} %}
         {% endif %}
 
@@ -34,7 +33,7 @@
 <main>
 
     {% block title %}
-        <h1 class="mb-8 text-4xl font-bold">{% block titleText %}{{ title }}{% endblock %}</h1>
+        <h1 class="mb-8 text-4xl font-bold text-gray-900">{% block titleText %}{{ title }}{% endblock %}</h1>
         {% if entry.teaser %}
             <div class="my-8 text-lg font-semibold">
                 {{ entry.teaser }}

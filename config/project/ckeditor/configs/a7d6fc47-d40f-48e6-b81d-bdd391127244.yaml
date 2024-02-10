@@ -1,0 +1,22 @@
+css: ".ck.ck-content {\r\n  font-size: 16px;\r\n  line-height: 1.75;\r\n}\r\n.ck.ck-content h2 {\r\n  font-size: 24px;\r\n  line-height: 1.333;\r\n}\r\n.ck.ck-content h3 {\r\n  font-size: 20px;\r\n  line-height: 1.6;\r\n}\r\n\r\n/* This is the example from https://github.com/craftcms/ckeditor */\r\n.ck.ck-content p.note {\r\n    border-left: 4px solid #1e40af;\r\n    padding-left: 1rem;\r\n    color: #1e40af;\r\n}\r\n\r\n.ck.ck-content p.note--warning {\r\n    border-left-color: #991b1b;\r\n    color: #991b1b;\r\n}"
+headingLevels:
+  - 2
+  - 3
+js: "return {\r\n  alignment: {\r\n    options: [\r\n      'left',\r\n      'right',\r\n      'center',\r\n    ],\r\n  },\r\n  style: {\r\n    definitions: [\r\n      {\r\n        name: 'Tip',\r\n        element: 'p',\r\n        classes: ['note']\r\n      },\r\n      {\r\n        name: 'Warning',\r\n        element: 'p',\r\n        classes: ['note', 'note--warning']\r\n      },\r\n    ]\r\n  }\r\n}"
+name: Content
+toolbar:
+  - heading
+  - style
+  - bulletedList
+  - outdent
+  - indent
+  - alignment
+  - '|'
+  - undo
+  - redo
+  - '|'
+  - bold
+  - italic
+  - link
+  - '|'
+  - createEntry

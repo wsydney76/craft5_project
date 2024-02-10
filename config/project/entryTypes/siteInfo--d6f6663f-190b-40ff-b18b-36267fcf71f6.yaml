@@ -38,7 +38,7 @@ fieldLayouts:
             elementCondition: null
             fieldUid: 3e35a043-a62e-4ede-acd6-44dfb92d6914 # Site Name
             handle: null
-            includeInCards: false
+            includeInCards: true
             instructions: null
             label: null
             providesThumbs: false
@@ -51,9 +51,24 @@ fieldLayouts:
             width: 100
           -
             elementCondition: null
-            fieldUid: eb6b24cc-83d7-416f-be4b-d002c7688b58 # Copyright
+            fieldUid: 7df417e8-1eea-46d8-85a7-2a20370a881e # Featured Image
             handle: null
             includeInCards: false
+            instructions: 'Will be used as fallback.'
+            label: null
+            providesThumbs: true
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 239d435f-130b-45b2-ac77-ac67a932f66a
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            elementCondition: null
+            fieldUid: eb6b24cc-83d7-416f-be4b-d002c7688b58 # Copyright
+            handle: null
+            includeInCards: true
             instructions: null
             label: null
             providesThumbs: false

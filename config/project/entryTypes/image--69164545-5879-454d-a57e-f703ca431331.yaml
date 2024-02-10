@@ -1,4 +1,4 @@
-color: orange
+color: sky
 fieldLayouts:
   73ac25bc-ace9-4aa6-ba1d-9211b5c06027:
     tabs:
@@ -50,12 +50,18 @@ fieldLayouts:
             warning: null
             width: 100
           -
-            elementCondition: null
-            type: craft\fieldlayoutelements\LineBreak
-            uid: a4b1e2ad-e433-401b-94c5-ee048d748586
-            userCondition: null
-          -
-            elementCondition: null
+            elementCondition:
+              class: craft\elements\conditions\entries\EntryCondition
+              conditionRules:
+                -
+                  class: craft\fields\conditions\RelationalFieldConditionRule
+                  elementId: null
+                  fieldUid: 735b5e6e-8026-4de4-8e32-14e03d975565 # Image
+                  layoutElementUid: c9b2074e-9c0c-42ca-912b-da62df8b651a
+                  operator: notempty
+                  uid: d9503954-8ebb-42e5-9b40-67d0612e6cb2
+              elementType: craft\elements\Entry
+              fieldContext: global
             fieldUid: 68d329ca-2314-4981-bf9f-96c6353f1e07 # Single Line Text
             handle: caption
             includeInCards: true
@@ -69,6 +75,23 @@ fieldLayouts:
             userCondition: null
             warning: null
             width: 50
+        name: Content
+        uid: c7f52bda-4083-406b-982c-63def615500a
+        userCondition: null
+      -
+        elementCondition:
+          class: craft\elements\conditions\entries\EntryCondition
+          conditionRules:
+            -
+              class: craft\fields\conditions\RelationalFieldConditionRule
+              elementId: null
+              fieldUid: 735b5e6e-8026-4de4-8e32-14e03d975565 # Image
+              layoutElementUid: c9b2074e-9c0c-42ca-912b-da62df8b651a
+              operator: notempty
+              uid: 4d945754-d5bc-4f76-ac9e-3c469b8cc65c
+          elementType: craft\elements\Entry
+          fieldContext: global
+        elements:
           -
             elementCondition: null
             fieldUid: a777a2b0-9e58-4e2e-b198-fdbeb8f10302 # Aspect Ratio
@@ -99,8 +122,8 @@ fieldLayouts:
             userCondition: null
             warning: null
             width: 25
-        name: Content
-        uid: c7f52bda-4083-406b-982c-63def615500a
+        name: Style
+        uid: 1000334f-a8dc-41d7-b0a9-bf33d1aa9489
         userCondition: null
 handle: image
 hasTitleField: false

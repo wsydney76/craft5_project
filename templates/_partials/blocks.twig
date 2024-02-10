@@ -1,3 +1,5 @@
-<div class="prose prose-lg max-w-screen-lg">
-    {{ query.render }}
-</div>
+{% embed '_layouts/embeds/prose.twig' %}
+    {% block content %}
+        {{ query.render }}
+    {% endblock %}
+{% endembed %}

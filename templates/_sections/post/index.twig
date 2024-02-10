@@ -1,0 +1,7 @@
+{% extends "_layouts/main.twig" %}
+
+{% block content %}
+    {% include '_partials/rich-text.twig' with {
+    	text: entry.richText
+    } only %}
+{% endblock %}

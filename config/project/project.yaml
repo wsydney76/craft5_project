@@ -1,6 +1,6 @@
 assets:
-  tempVolumeUid: ed627edd-73bd-4b75-8684-f410bf4e4b9d # Temp Images
-dateModified: 1707492011
+  tempVolumeUid: ed627edd-73bd-4b75-8684-f410bf4e4b9d
+dateModified: 1707561057
 elementSources:
   craft\elements\Asset:
     -
@@ -20,15 +20,6 @@ elementSources:
       type: heading
     -
       disabled: false
-      key: 'volume:ed627edd-73bd-4b75-8684-f410bf4e4b9d' # Temp Images
-      tableAttributes:
-        - 'field:cc3fbab0-826f-4aed-b2aa-eeaecc2964bf'
-        - imageSize
-        - dateModified
-        - link
-      type: native
-    -
-      disabled: false
       key: 'volume:3b60e4f9-36bb-4456-bee5-67160b5a3108' # User Photos
       tableAttributes:
         - 'field:cc3fbab0-826f-4aed-b2aa-eeaecc2964bf'
@@ -36,8 +27,24 @@ elementSources:
         - dateModified
         - link
       type: native
+    -
+      defaultSort:
+        - dateCreated
+        - desc
+      disabled: false
+      key: 'folder:7999a49f-fbaa-4c53-a57b-4a46435f2f66'
+      tableAttributes:
+        - filename
+        - size
+        - dateModified
+        - link
+      type: native
   craft\elements\Entry:
     -
+      defaultSort:
+        - postDate
+        - desc
+      disabled: false
       key: '*'
       tableAttributes:
         - section
@@ -60,12 +67,27 @@ elementSources:
         - link
       type: native
     -
+      defaultSort:
+        - structure
+        - asc
+      disabled: false
       key: 'section:84b98802-2548-4aed-b67e-fc97f6ed9e30' # Page
       tableAttributes:
+        - 'field:e12cc90f-c692-4cac-8ff8-5fef33141ea4' # Teaser
         - drafts
-        - type
-        - 'field:7df417e8-1eea-46d8-85a7-2a20370a881e' # Featured Image
         - postDate
+        - link
+      type: native
+    -
+      defaultSort:
+        - postDate
+        - desc
+      disabled: false
+      key: 'section:a859ed7a-b179-4cb5-a9a1-6d2582b19eab' # Post
+      tableAttributes:
+        - 'field:e12cc90f-c692-4cac-8ff8-5fef33141ea4' # Teaser
+        - postDate
+        - drafts
         - link
       type: native
 email:
@@ -120,6 +142,7 @@ meta:
     5b0c38db-9ab4-47d8-b4a7-913710c08ca6: Default # Default
     7df417e8-1eea-46d8-85a7-2a20370a881e: 'Featured Image' # Featured Image
     9e8a3f1b-ec7c-4c9a-9971-b65428c62592: 'Site Info - Global Settings' # Site Info - Global Settings
+    23b6659b-71e0-4166-95a8-4efb2bf76f40: 'Rich Text' # Rich Text
     052baf80-92b9-4d9d-889d-9326c028789b: Quote # Quote
     59d53e5e-fc0b-4e78-9566-c7cb7342cefe: 'Multi Line Text' # Multi Line Text
     68d329ca-2314-4981-bf9f-96c6353f1e07: 'Single Line Text' # Single Line Text
@@ -127,18 +150,25 @@ meta:
     84b98802-2548-4aed-b67e-fc97f6ed9e30: Page # Page
     735b5e6e-8026-4de4-8e32-14e03d975565: Image # Image
     6856c92d-c593-4425-8886-27e609d74667: Home # Home
+    361600de-ae62-4df9-a886-ceefdec01b9d: Simple # Simple
     8151138b-dc5d-40bf-b17d-831ab2d41eab: Crop # Crop
     69164545-5879-454d-a57e-f703ca431331: Image # Image
     85898001-9c9c-4d46-abf9-a928e44f0d48: 'Body Content' # Body Content
+    a7d6fc47-d40f-48e6-b81d-bdd391127244: Content # Content
     a777a2b0-9e58-4e2e-b198-fdbeb8f10302: 'Aspect Ratio' # Aspect Ratio
+    a859ed7a-b179-4cb5-a9a1-6d2582b19eab: Post # Post
     abefa0bd-6b36-4b4f-a9de-a4304e7b66a3: 'Public Schema' # Public Schema
     ac457f93-1a50-473e-9983-a899a7f0bed7: Heading # Heading
     bdcd25ce-f3a8-48ae-ba57-0c83960a3fcd: 'Heading Level' # Heading Level
     d6f6663f-190b-40ff-b18b-36267fcf71f6: 'Site Info - Global Settings' # Site Info - Global Settings
+    e12cc90f-c692-4cac-8ff8-5fef33141ea4: Teaser # Teaser
     eb6b24cc-83d7-416f-be4b-d002c7688b58: Copyright # Copyright
-    ed627edd-73bd-4b75-8684-f410bf4e4b9d: 'Temp Images' # Temp Images
     fbf00eb2-4a16-40ca-96bb-3fadd2bf459c: Page # Page
 plugins:
+  ckeditor:
+    edition: standard
+    enabled: true
+    schemaVersion: 3.0.0.0
   vite:
     edition: standard
     enabled: true

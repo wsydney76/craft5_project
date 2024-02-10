@@ -3,10 +3,13 @@
 {% if featuredImage %}
     <figure class="pt-8">
         {{ img(featuredImage, {
-            transform: {width: 960, height: 300},
-            srcset: [960, 640, 400],
+            transform: {width: 900, height: 300},
+            srcset: [900, 640, 400],
             attr: {loading: null}
         }) }}
+        {% include '_partials/image-figcaption.twig' with {
+            copyright: featuredImage.copyright
+        } only %}
     </figure>
 
 {% endif %}

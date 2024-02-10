@@ -1,0 +1,20 @@
+{% embed '_layouts/embeds/prose.twig' with
+    {extraClasses: 'ck ck-content', text} only %}
+    {% block content %}
+        {{ text }}
+    {% endblock %}
+{% endembed %}
+
+{# This is the example from https://github.com/craftcms/ckeditor, with higher contrast colors #}
+{% css %}
+.ck.ck-content p.note {
+    border-left: 4px solid #1e40af;
+    padding-left: 1rem;
+    color: #1e40af;
+}
+
+.ck.ck-content p.note--warning {
+    border-left-color: #991b1b;
+    color: #991b1b;
+}
+{% endcss %}
