@@ -9,14 +9,16 @@
 </head>
 
 
-<body class="max-w-screen-ml mx-auto bg-gray-50 px-8 text-gray-700" dir="{{ craft.app.locale.orientation }}">
+<body class="bg-gray-50 text-gray-700 px-8" dir="{{ craft.app.locale.orientation }}">
 
-<header class="py-8">
+<header class="max-w-screen-lg mx-auto">
 
-
-    <div class=" border-b border-gray-400 pb-8">
+    <nav class="my-8 flex justify-between items-center">
         <a class="text-3xl font-semibold" href="{{ siteUrl('/') }}">{{ siteInfo.siteName ?: systemName }}</a>
-    </div>
+        <div>
+            Navigation placeholder!
+        </div>
+    </nav>
 
     {% block featured %}
 
@@ -30,10 +32,10 @@
 
 </header>
 
-<main>
+<main class="my-8 max-w-screen-md mx-auto">
 
     {% block title %}
-        <h1 class="mb-8 text-4xl font-bold text-gray-900">{% block titleText %}{{ title }}{% endblock %}</h1>
+        <h1 class="text-4xl font-bold text-gray-900">{% block titleText %}{{ title }}{% endblock %}</h1>
         {% if entry.teaser %}
             <div class="my-8 text-lg font-semibold">
                 {{ entry.teaser }}
@@ -43,17 +45,26 @@
 
     {% block content %}
         {% if entry is defined and entry.bodyContent %}
-            {% include '_partials/blocks.twig' with {
-                query: entry.bodyContent
-            } only %}
+            <div class="my-8">
+                {% include '_partials/blocks.twig' with {
+                    query: entry.bodyContent
+                } only %}
+            </div>
         {% endif %}
     {% endblock %}
 
 </main>
 
-<footer class="mt-8">
-    <div class="border-t border-gray-400 py-8">
-        &copy; {{ siteInfo.copyright }} {{ now|date('Y') }}
+<footer class="mt-8 max-w-screen-lg mx-auto">
+    <div class="border-t border-gray-400 py-4 flex justify-between">
+        <div>
+            &copy; {{ siteInfo.copyright }} {{ now|date('Y') }}
+        </div>
+        <div>
+            {% if entry is defined %}
+                <a href="{{ entry.cpEditUrl }}">Edit</a>
+            {% endif %}
+        </div>
     </div>
 </footer>
 

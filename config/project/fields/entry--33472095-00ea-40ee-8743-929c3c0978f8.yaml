@@ -1,0 +1,50 @@
+columnSuffix: null
+handle: entry
+instructions: null
+name: Entry
+searchable: false
+settings:
+  allowSelfRelations: false
+  branchLimit: null
+  localizeRelations: false
+  maintainHierarchy: false
+  maxRelations: 1
+  minRelations: null
+  selectionCondition:
+    __assoc__:
+      -
+        - elementType
+        - craft\elements\Entry
+      -
+        - fieldContext
+        - global
+      -
+        - class
+        - craft\elements\conditions\entries\EntryCondition
+      -
+        - conditionRules
+        -
+          -
+            __assoc__:
+              -
+                - class
+                - craft\elements\conditions\UriConditionRule
+              -
+                - uid
+                - 6d96a640-41e6-4ffe-93fd-4383198d2931
+              -
+                - operator
+                - notempty
+              -
+                - value
+                - ''
+  selectionLabel: 'Select an entry'
+  showCardsInGrid: false
+  showSiteMenu: true
+  sources: '*'
+  targetSiteId: null
+  validateRelatedElements: false
+  viewMode: cards
+translationKeyFormat: null
+translationMethod: site
+type: craft\fields\Entries

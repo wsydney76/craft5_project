@@ -1,0 +1,8 @@
+{% set target = entry.target.eagerly().one %}
+{% if target %}
+    {% include '_layouts/partials/button.twig' with {
+        type: 'link',
+        url: target.url,
+        caption: entry.caption ?: target.title
+    } only %}
+{% endif %}

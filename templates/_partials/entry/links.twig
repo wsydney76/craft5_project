@@ -1,0 +1,11 @@
+{% set links = entry.links.all %}
+
+{% if links %}
+    <div class="flex flex-wrap space-x-4">
+        {% for link in links %}
+        	{% include '_partials/entry/link.twig' with {
+        		entry: link
+        	} only %}
+        {% endfor %}
+    </div>    
+{% endif %}

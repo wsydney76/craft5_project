@@ -1,10 +1,10 @@
 {% from '_macros/lib.twig' import img %}
 
 {% if featuredImage %}
-    <figure class="pt-8">
+    <figure>
         {{ img(featuredImage, {
-            transform: {width: 900, height: 300},
-            srcset: [900, 640, 400],
+            transform: {width: 1024, height: 300},
+            srcset: [1024, 640, 400],
             attr: {loading: null}
         }) }}
         {% include '_partials/image-figcaption.twig' with {

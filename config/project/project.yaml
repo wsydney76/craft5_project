@@ -1,6 +1,6 @@
 assets:
   tempVolumeUid: ed627edd-73bd-4b75-8684-f410bf4e4b9d
-dateModified: 1707561057
+dateModified: 1707599688
 elementSources:
   craft\elements\Asset:
     -
@@ -138,6 +138,8 @@ meta:
     3b60e4f9-36bb-4456-bee5-67160b5a3108: 'User Photos' # User Photos
     3bb09a1c-cb36-438e-b8d5-0b35b0965f4e: Default # Default
     3e35a043-a62e-4ede-acd6-44dfb92d6914: 'Site Name' # Site Name
+    4b6d493a-c09d-4b27-9c1f-a685129e7f3c: Links # Links
+    4e0d112b-0725-424f-a1e9-c088e67a2a70: Link # Link
     5a0be839-14a2-465e-a504-bb63dd0281e9: Images # Images
     5b0c38db-9ab4-47d8-b4a7-913710c08ca6: Default # Default
     7df417e8-1eea-46d8-85a7-2a20370a881e: 'Featured Image' # Featured Image
@@ -152,6 +154,7 @@ meta:
     6856c92d-c593-4425-8886-27e609d74667: Home # Home
     361600de-ae62-4df9-a886-ceefdec01b9d: Simple # Simple
     8151138b-dc5d-40bf-b17d-831ab2d41eab: Crop # Crop
+    33472095-00ea-40ee-8743-929c3c0978f8: Entry # Entry
     69164545-5879-454d-a57e-f703ca431331: Image # Image
     85898001-9c9c-4d46-abf9-a928e44f0d48: 'Body Content' # Body Content
     a7d6fc47-d40f-48e6-b81d-bdd391127244: Content # Content
@@ -159,6 +162,7 @@ meta:
     a859ed7a-b179-4cb5-a9a1-6d2582b19eab: Post # Post
     abefa0bd-6b36-4b4f-a9de-a4304e7b66a3: 'Public Schema' # Public Schema
     ac457f93-1a50-473e-9983-a899a7f0bed7: Heading # Heading
+    b97a349c-479f-4667-8c4d-44c01c61abcb: Links # Links
     bdcd25ce-f3a8-48ae-ba57-0c83960a3fcd: 'Heading Level' # Heading Level
     d6f6663f-190b-40ff-b18b-36267fcf71f6: 'Site Info - Global Settings' # Site Info - Global Settings
     e12cc90f-c692-4cac-8ff8-5fef33141ea4: Teaser # Teaser

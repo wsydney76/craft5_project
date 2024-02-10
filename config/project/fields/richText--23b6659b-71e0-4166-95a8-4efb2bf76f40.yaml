@@ -12,6 +12,8 @@ settings:
   entryTypes:
     - 69164545-5879-454d-a57e-f703ca431331 # Image
     - 052baf80-92b9-4d9d-889d-9326c028789b # Quote
+    - 4b6d493a-c09d-4b27-9c1f-a685129e7f3c # Links
+    - 4e0d112b-0725-424f-a1e9-c088e67a2a70 # Link
   purifierConfig: null
   purifyHtml: true
   showUnpermittedFiles: false
