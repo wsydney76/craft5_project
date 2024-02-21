@@ -7,7 +7,7 @@ fieldLayouts:
         elements:
           -
             elementCondition: null
-            fieldUid: 9a7f3681-7d39-4416-9908-0889bfe1095c
+            fieldUid: 9a7f3681-7d39-4416-9908-0889bfe1095c # Text
             instructions: null
             label: null
             required: true
@@ -19,7 +19,7 @@ fieldLayouts:
             width: 100
           -
             elementCondition: null
-            fieldUid: 356de61f-e243-4f75-aad1-ebc3dd307616
+            fieldUid: 356de61f-e243-4f75-aad1-ebc3dd307616 # Source
             instructions: null
             label: null
             required: false
@@ -33,7 +33,7 @@ fieldLayouts:
         uid: 23b55a9d-c172-47e2-9dbc-1ccf3383b65e
         userCondition: null
 fields:
-  9a7f3681-7d39-4416-9908-0889bfe1095c:
+  9a7f3681-7d39-4416-9908-0889bfe1095c: # Text
     columnSuffix: aildfahn
     contentColumnType: text
     fieldGroup: null
@@ -53,7 +53,7 @@ fields:
     translationKeyFormat: null
     translationMethod: none
     type: craft\fields\PlainText
-  356de61f-e243-4f75-aad1-ebc3dd307616:
+  356de61f-e243-4f75-aad1-ebc3dd307616: # Source
     columnSuffix: fpyolrdt
     contentColumnType: string
     fieldGroup: null

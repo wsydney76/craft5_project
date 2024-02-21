@@ -4,8 +4,8 @@
   "version": "3.0.0",
   "license": "Unlicense",
   "require": {
-    "craftcms/ckeditor": "4.0.0-beta.4",
-    "craftcms/cms": "^5.0.0-beta.1",
+    "craftcms/ckeditor": "^4.0.0-beta.6",
+    "craftcms/cms": "5.0.x-dev as 5.0.0-beta.2",
     "nystudio107/craft-vite": "^5.0.0-beta.2",
     "vlucas/phpdotenv": "^5.6"
   },

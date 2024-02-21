@@ -3,6 +3,7 @@ enableVersioning: true
 entryTypes:
   - fbf00eb2-4a16-40ca-96bb-3fadd2bf459c # Page
 handle: page
+maxAuthors: 1
 name: Page
 previewTargets:
   -
@@ -11,11 +12,11 @@ previewTargets:
         - label
         - 'Primary entry page'
       -
-        - urlFormat
-        - '{url}'
-      -
         - refresh
         - '1'
+      -
+        - urlFormat
+        - '{url}'
 propagationMethod: all
 siteSettings:
   5b0c38db-9ab4-47d8-b4a7-913710c08ca6: # Default

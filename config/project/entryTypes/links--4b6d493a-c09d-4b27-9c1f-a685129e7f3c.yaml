@@ -1,4 +1,4 @@
-color: orange
+color: sky
 fieldLayouts:
   587b822b-090b-4e5d-9ed1-e68b54484d13:
     tabs:
@@ -60,6 +60,6 @@ showSlugField: false
 showStatusField: false
 slugTranslationKeyFormat: null
 slugTranslationMethod: site
-titleFormat: ''
+titleFormat: null
 titleTranslationKeyFormat: null
 titleTranslationMethod: site

@@ -3,6 +3,7 @@ enableVersioning: true
 entryTypes:
   - d6f6663f-190b-40ff-b18b-36267fcf71f6 # Site Info - Global Settings
 handle: siteInfo
+maxAuthors: 1
 name: 'Site Info - Global Settings'
 propagationMethod: all
 siteSettings:

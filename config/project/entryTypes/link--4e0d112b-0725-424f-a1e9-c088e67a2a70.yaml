@@ -1,4 +1,4 @@
-color: yellow
+color: blue
 fieldLayouts:
   1841eaec-2449-41a7-b9b4-fd94a8e3498f:
     tabs:
@@ -75,6 +75,6 @@ showSlugField: false
 showStatusField: false
 slugTranslationKeyFormat: null
 slugTranslationMethod: site
-titleFormat: ''
+titleFormat: null
 titleTranslationKeyFormat: null
 titleTranslationMethod: site

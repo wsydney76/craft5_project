@@ -1,6 +1,6 @@
 assets:
   tempVolumeUid: ed627edd-73bd-4b75-8684-f410bf4e4b9d
-dateModified: 1707599688
+dateModified: 1708510744
 elementSources:
   craft\elements\Asset:
     -
@@ -138,11 +138,15 @@ meta:
     3b60e4f9-36bb-4456-bee5-67160b5a3108: 'User Photos' # User Photos
     3bb09a1c-cb36-438e-b8d5-0b35b0965f4e: Default # Default
     3e35a043-a62e-4ede-acd6-44dfb92d6914: 'Site Name' # Site Name
+    4b050685-0425-4094-bde2-85e2eedd0e12: Text # Text
+    04b07dc7-0ca3-4192-9581-fbbeecca3532: Caption # Caption
     4b6d493a-c09d-4b27-9c1f-a685129e7f3c: Links # Links
     4e0d112b-0725-424f-a1e9-c088e67a2a70: Link # Link
     5a0be839-14a2-465e-a504-bb63dd0281e9: Images # Images
     5b0c38db-9ab4-47d8-b4a7-913710c08ca6: Default # Default
     7df417e8-1eea-46d8-85a7-2a20370a881e: 'Featured Image' # Featured Image
+    9a7f3681-7d39-4416-9908-0889bfe1095c: Text # Text
+    9e2e3c4b-bd17-46b3-97f0-a4f6605b93d9: Text # Text
     9e8a3f1b-ec7c-4c9a-9971-b65428c62592: 'Site Info - Global Settings' # Site Info - Global Settings
     23b6659b-71e0-4166-95a8-4efb2bf76f40: 'Rich Text' # Rich Text
     052baf80-92b9-4d9d-889d-9326c028789b: Quote # Quote
@@ -150,6 +154,7 @@ meta:
     68d329ca-2314-4981-bf9f-96c6353f1e07: 'Single Line Text' # Single Line Text
     81e6a0d6-13c5-47ad-a9e6-c2181276db9c: Text # Text
     84b98802-2548-4aed-b67e-fc97f6ed9e30: Page # Page
+    356de61f-e243-4f75-aad1-ebc3dd307616: Source # Source
     735b5e6e-8026-4de4-8e32-14e03d975565: Image # Image
     6856c92d-c593-4425-8886-27e609d74667: Home # Home
     361600de-ae62-4df9-a886-ceefdec01b9d: Simple # Simple
@@ -184,11 +189,3 @@ system:
   retryDuration: 30
   schemaVersion: 5.0.0.19
   timeZone: $SYSTEM_TIMEZONE
-users:
-  allowPublicRegistration: false
-  deactivateByDefault: false
-  defaultGroup: ''
-  photoSubpath: null
-  photoVolumeUid: 3b60e4f9-36bb-4456-bee5-67160b5a3108 # User Photos
-  requireEmailVerification: true
-  validateOnPublicRegistration: false

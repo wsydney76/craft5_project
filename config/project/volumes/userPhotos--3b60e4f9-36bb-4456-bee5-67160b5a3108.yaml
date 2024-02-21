@@ -12,6 +12,7 @@ fieldLayouts:
             disabled: false
             elementCondition: null
             id: null
+            includeInCards: false
             inputType: null
             instructions: null
             label: null
@@ -20,6 +21,7 @@ fieldLayouts:
             name: null
             orientation: null
             placeholder: null
+            providesThumbs: false
             readonly: false
             requirable: false
             size: null
@@ -31,18 +33,6 @@ fieldLayouts:
             userCondition: null
             warning: null
             width: 100
-          -
-            elementCondition: null
-            fieldUid: cc3fbab0-826f-4aed-b2aa-eeaecc2964bf
-            instructions: null
-            label: null
-            required: false
-            tip: null
-            type: craft\fieldlayoutelements\CustomField
-            uid: 2079d6da-e600-4648-8d49-3fee8cfe11da
-            userCondition: null
-            warning: null
-            width: 100
         name: Content
         uid: 5f070eed-6f7a-42aa-96a6-961429e94f23
         userCondition: null
@@ -50,6 +40,7 @@ fs: $USERPHOTOS_FS
 handle: userPhotos
 name: 'User Photos'
 sortOrder: 3
+subpath: ''
 titleTranslationKeyFormat: null
 titleTranslationMethod: site
 transformFs: $IMAGE_TRANSFORM_FS
