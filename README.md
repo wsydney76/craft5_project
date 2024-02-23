@@ -4,7 +4,7 @@ This is a simple Craft CMS starter for use in DDEV with a minimum config, that c
 
 **Demo project only, not intended for production use.**
 
-## Install
+## Install with DDEV
 
 * Clone this repository and `cd` into it.
 * Run `bash setup/install`. This will create a user with the credentials `admin/password`.
@@ -36,6 +36,7 @@ This is a simple Craft CMS starter for use in DDEV with a minimum config, that c
 
 * Colors and icons for entry types (risk of developing eye cancer)
 * Reusable 'page' entry type with conditional fields
+* Using field instances (like `singleLineText`)
 * Cards for assets fields
 * Uses a simple matrix content builder for 'page' sections
 * * Matrix in Matrix (Links type)
