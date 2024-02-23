@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "3d5ee05cef61f6fe3e056f898fce8007",
+    "content-hash": "7fd498661a3ba74df03856527fd4c161",
     "packages": [
         {
             "name": "bacon/bacon-qr-code",
@@ -233,11 +233,11 @@
         },
         {
             "name": "craftcms/ckeditor",
-            "version": "4.0.0-beta.6",
+            "version": "4.0.0-beta.7",
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/craftcms/ckeditor/zipball/587c03c7be2802008738aa43cd09060387cb5e12",
-                "reference": "587c03c7be2802008738aa43cd09060387cb5e12",
+                "url": "https://api.github.com/repos/craftcms/ckeditor/zipball/6a4109772efeca715463c56de0f85ece572dced3",
+                "reference": "6a4109772efeca715463c56de0f85ece572dced3",
                 "shasum": ""
             },
             "require": {
@@ -281,7 +281,7 @@
                 "docs": "https://github.com/craftcms/ckeditor/blob/master/README.md",
                 "rss": "https://github.com/craftcms/ckeditor/commits/master.atom"
             },
-            "time": "2024-02-15T21:01:09+00:00"
+            "time": "2024-02-22T00:05:43+00:00"
         },
         {
             "name": "craftcms/cms",
@@ -289,12 +289,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/craftcms/cms.git",
-                "reference": "5cce1114c4a2b362936ab823d03840c3e6eb7092"
+                "reference": "aef0ab977215d7a9a94acd40ee586027339c35ce"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/craftcms/cms/zipball/5cce1114c4a2b362936ab823d03840c3e6eb7092",
-                "reference": "5cce1114c4a2b362936ab823d03840c3e6eb7092",
+                "url": "https://api.github.com/repos/craftcms/cms/zipball/aef0ab977215d7a9a94acd40ee586027339c35ce",
+                "reference": "aef0ab977215d7a9a94acd40ee586027339c35ce",
                 "shasum": ""
             },
             "require": {
@@ -403,7 +403,7 @@
                 "rss": "https://github.com/craftcms/cms/releases.atom",
                 "source": "https://github.com/craftcms/cms"
             },
-            "time": "2024-02-21T05:04:26+00:00"
+            "time": "2024-02-22T21:56:27+00:00"
         },
         {
             "name": "craftcms/html-field",
@@ -1190,7 +1190,7 @@
         },
         {
             "name": "illuminate/collections",
-            "version": "v10.45.0",
+            "version": "v10.45.1",
             "dist": {
                 "type": "zip",
                 "url": "https://api.github.com/repos/illuminate/collections/zipball/04c24117515ab9b701e4b28506d3f3c15d14bd5f",
@@ -1235,7 +1235,7 @@
         },
         {
             "name": "illuminate/conditionable",
-            "version": "v10.45.0",
+            "version": "v10.45.1",
             "dist": {
                 "type": "zip",
                 "url": "https://api.github.com/repos/illuminate/conditionable/zipball/d0958e4741fc9d6f516a552060fd1b829a85e009",
@@ -1271,7 +1271,7 @@
         },
         {
             "name": "illuminate/contracts",
-            "version": "v10.45.0",
+            "version": "v10.45.1",
             "dist": {
                 "type": "zip",
                 "url": "https://api.github.com/repos/illuminate/contracts/zipball/8d7152c4a1f5d9cf7da3e8b71f23e4556f6138ac",
@@ -1309,7 +1309,7 @@
         },
         {
             "name": "illuminate/macroable",
-            "version": "v10.45.0",
+            "version": "v10.45.1",
             "dist": {
                 "type": "zip",
                 "url": "https://api.github.com/repos/illuminate/macroable/zipball/dff667a46ac37b634dcf68909d9d41e94dc97c27",
@@ -1841,18 +1841,33 @@
         },
         {
             "name": "phpdocumentor/type-resolver",
-            "version": "1.8.1",
+            "version": "1.8.2",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/phpDocumentor/TypeResolver.git",
+                "reference": "153ae662783729388a584b4361f2545e4d841e3c"
+            },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/phpDocumentor/TypeResolver/zipball/bc3dc91a5e9b14aa06d1d9e90647c5c5a2cc5353",
-                "reference": "bc3dc91a5e9b14aa06d1d9e90647c5c5a2cc5353",
+                "url": "https://api.github.com/repos/phpDocumentor/TypeResolver/zipball/153ae662783729388a584b4361f2545e4d841e3c",
+                "reference": "153ae662783729388a584b4361f2545e4d841e3c",
                 "shasum": ""
             },
             "require": {
                 "doctrine/deprecations": "^1.0",
-                "php": "^7.4 || ^8.0",
+                "php": "^7.3 || ^8.0",
                 "phpdocumentor/reflection-common": "^2.0",
                 "phpstan/phpdoc-parser": "^1.13"
+            },
+            "require-dev": {
+                "ext-tokenizer": "*",
+                "phpbench/phpbench": "^1.2",
+                "phpstan/extension-installer": "^1.1",
+                "phpstan/phpstan": "^1.8",
+                "phpstan/phpstan-phpunit": "^1.1",
+                "phpunit/phpunit": "^9.5",
+                "rector/rector": "^0.13.9",
+                "vimeo/psalm": "^4.25"
             },
             "type": "library",
             "extra": {
@@ -1865,6 +1880,7 @@
                     "phpDocumentor\\Reflection\\": "src"
                 }
             },
+            "notification-url": "https://packagist.org/downloads/",
             "license": [
                 "MIT"
             ],
@@ -1875,7 +1891,11 @@
                 }
             ],
             "description": "A PSR-5 based resolver of Class names, Types and Structural Element Names",
-            "time": "2024-01-18T19:15:27+00:00"
+            "support": {
+                "issues": "https://github.com/phpDocumentor/TypeResolver/issues",
+                "source": "https://github.com/phpDocumentor/TypeResolver/tree/1.8.2"
+            },
+            "time": "2024-02-23T11:10:43+00:00"
         },
         {
             "name": "phpoption/phpoption",
@@ -1930,15 +1950,31 @@
         },
         {
             "name": "phpstan/phpdoc-parser",
-            "version": "1.25.0",
+            "version": "1.26.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/phpstan/phpdoc-parser.git",
+                "reference": "231e3186624c03d7e7c890ec662b81e6b0405227"
+            },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/phpstan/phpdoc-parser/zipball/bd84b629c8de41aa2ae82c067c955e06f1b00240",
-                "reference": "bd84b629c8de41aa2ae82c067c955e06f1b00240",
+                "url": "https://api.github.com/repos/phpstan/phpdoc-parser/zipball/231e3186624c03d7e7c890ec662b81e6b0405227",
+                "reference": "231e3186624c03d7e7c890ec662b81e6b0405227",
                 "shasum": ""
             },
             "require": {
                 "php": "^7.2 || ^8.0"
+            },
+            "require-dev": {
+                "doctrine/annotations": "^2.0",
+                "nikic/php-parser": "^4.15",
+                "php-parallel-lint/php-parallel-lint": "^1.2",
+                "phpstan/extension-installer": "^1.0",
+                "phpstan/phpstan": "^1.5",
+                "phpstan/phpstan-phpunit": "^1.1",
+                "phpstan/phpstan-strict-rules": "^1.0",
+                "phpunit/phpunit": "^9.5",
+                "symfony/process": "^5.2"
             },
             "type": "library",
             "autoload": {
@@ -1948,11 +1984,16 @@
                     ]
                 }
             },
+            "notification-url": "https://packagist.org/downloads/",
             "license": [
                 "MIT"
             ],
             "description": "PHPDoc parser with support for nullable, intersection and generic types",
-            "time": "2024-01-04T17:06:16+00:00"
+            "support": {
+                "issues": "https://github.com/phpstan/phpdoc-parser/issues",
+                "source": "https://github.com/phpstan/phpdoc-parser/tree/1.26.0"
+            },
+            "time": "2024-02-23T16:05:55+00:00"
         },
         {
             "name": "pixelandtonic/imagine",
@@ -5439,8 +5480,8 @@
         {
             "package": "craftcms/cms",
             "version": "5.0.9999999.9999999-dev",
-            "alias": "5.0.0-beta.2",
-            "alias_normalized": "5.0.0.0-beta2"
+            "alias": "5.0.0-beta.3",
+            "alias_normalized": "5.0.0.0-beta3"
         }
     ],
     "minimum-stability": "dev",

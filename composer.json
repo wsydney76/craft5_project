@@ -1,11 +1,11 @@
 {
-  "description": "Minimum preconfigured starter for Craft 4",
-  "name": "wsydney76/craft4_project",
+  "description": "Minimum preconfigured starter for Craft 5",
+  "name": "wsydney76/craft5_project",
   "version": "3.0.0",
   "license": "Unlicense",
   "require": {
     "craftcms/ckeditor": "^4.0.0-beta.6",
-    "craftcms/cms": "5.0.x-dev as 5.0.0-beta.2",
+    "craftcms/cms": "5.0.x-dev as 5.0.0-beta.3",
     "nystudio107/craft-vite": "^5.0.0-beta.2",
     "vlucas/phpdotenv": "^5.6"
   },
