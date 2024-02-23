@@ -7,7 +7,7 @@ This is a simple Craft CMS starter for use in DDEV with a minimum config, that c
 ## Install with DDEV
 
 * Clone this repository and `cd` into it.
-* Run `bash setup/install`. This will create a user with the credentials `admin/password`.
+* Run `bash setup/install <projectname>`. This will create a user with the credentials `admin/password`.
 
 ## System
 
