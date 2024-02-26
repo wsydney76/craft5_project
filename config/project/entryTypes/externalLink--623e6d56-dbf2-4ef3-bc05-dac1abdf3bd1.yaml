@@ -1,6 +1,6 @@
-color: blue
+color: purple
 fieldLayouts:
-  1841eaec-2449-41a7-b9b4-fd94a8e3498f:
+  63634c0e-8e5a-46b9-88b4-01badbf9cb7c:
     tabs:
       -
         elementCondition: null
@@ -30,22 +30,22 @@ fieldLayouts:
             tip: null
             title: null
             type: craft\fieldlayoutelements\entries\EntryTitleField
-            uid: 2aa25558-fb9f-4750-90b8-aee9c4421bd6
+            uid: 9470e457-d996-4637-9b8c-6fb010f0e9f0
             userCondition: null
             warning: null
             width: 100
           -
             elementCondition: null
-            fieldUid: 33472095-00ea-40ee-8743-929c3c0978f8 # Entry
-            handle: target
+            fieldUid: 965f7691-85e4-4299-9bbb-1496c625b05f # External URL
+            handle: null
             includeInCards: true
             instructions: null
-            label: Target
+            label: null
             providesThumbs: false
             required: true
             tip: null
             type: craft\fieldlayoutelements\CustomField
-            uid: 7039b565-404f-4581-8eac-5a93fdbb569b
+            uid: 13cfa343-5ed1-4d7d-b600-49cc1e288def
             userCondition: null
             warning: null
             width: 50
@@ -54,27 +54,42 @@ fieldLayouts:
             fieldUid: 68d329ca-2314-4981-bf9f-96c6353f1e07 # Single Line Text
             handle: caption
             includeInCards: true
-            instructions: 'Leave blank to use the entry''s title'
+            instructions: null
             label: Caption
+            providesThumbs: false
+            required: true
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 900cf75e-4936-4594-916b-ff287e025556
+            userCondition: null
+            warning: null
+            width: 25
+          -
+            elementCondition: null
+            fieldUid: b05c2a99-b877-4c2f-9682-2a010afca4d3 # Open in new Tab
+            handle: null
+            includeInCards: false
+            instructions: null
+            label: null
             providesThumbs: false
             required: false
             tip: null
             type: craft\fieldlayoutelements\CustomField
-            uid: 889cbe3f-1cc4-4810-ac44-553bb981f893
+            uid: f3a6b942-39c4-431e-a852-db29c311c496
             userCondition: null
             warning: null
-            width: 50
+            width: 25
         name: Content
-        uid: 35581e7d-7435-457c-8b60-e2ff810a6599
+        uid: adc0b868-56f2-4a72-b425-dad228412d35
         userCondition: null
-handle: link
+handle: externalLink
 hasTitleField: false
-icon: bullseye-arrow
-name: Link
+icon: up-right-from-square
+name: 'External Link'
 showSlugField: false
 showStatusField: false
 slugTranslationKeyFormat: null
 slugTranslationMethod: site
-titleFormat: null
+titleFormat: ''
 titleTranslationKeyFormat: null
 titleTranslationMethod: site

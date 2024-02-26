@@ -1,6 +1,6 @@
 assets:
   tempVolumeUid: ed627edd-73bd-4b75-8684-f410bf4e4b9d
-dateModified: 1708727896
+dateModified: 1708908975
 elementSources:
   craft\elements\Asset:
     -
@@ -141,7 +141,7 @@ meta:
     4b050685-0425-4094-bde2-85e2eedd0e12: Text # Text
     04b07dc7-0ca3-4192-9581-fbbeecca3532: Caption # Caption
     4b6d493a-c09d-4b27-9c1f-a685129e7f3c: Links # Links
-    4e0d112b-0725-424f-a1e9-c088e67a2a70: Link # Link
+    4e0d112b-0725-424f-a1e9-c088e67a2a70: 'Internal Link' # Internal Link
     5a0be839-14a2-465e-a504-bb63dd0281e9: Images # Images
     5b0c38db-9ab4-47d8-b4a7-913710c08ca6: Default # Default
     7df417e8-1eea-46d8-85a7-2a20370a881e: 'Featured Image' # Featured Image
@@ -155,7 +155,9 @@ meta:
     81e6a0d6-13c5-47ad-a9e6-c2181276db9c: Text # Text
     84b98802-2548-4aed-b67e-fc97f6ed9e30: Page # Page
     356de61f-e243-4f75-aad1-ebc3dd307616: Source # Source
+    623e6d56-dbf2-4ef3-bc05-dac1abdf3bd1: 'External Link' # External Link
     735b5e6e-8026-4de4-8e32-14e03d975565: Image # Image
+    965f7691-85e4-4299-9bbb-1496c625b05f: 'External URL' # External URL
     6856c92d-c593-4425-8886-27e609d74667: Home # Home
     361600de-ae62-4df9-a886-ceefdec01b9d: Simple # Simple
     8151138b-dc5d-40bf-b17d-831ab2d41eab: Crop # Crop
@@ -167,6 +169,7 @@ meta:
     a859ed7a-b179-4cb5-a9a1-6d2582b19eab: Post # Post
     abefa0bd-6b36-4b4f-a9de-a4304e7b66a3: 'Public Schema' # Public Schema
     ac457f93-1a50-473e-9983-a899a7f0bed7: Heading # Heading
+    b05c2a99-b877-4c2f-9682-2a010afca4d3: 'Open in new Tab' # Open in new Tab
     b97a349c-479f-4667-8c4d-44c01c61abcb: Links # Links
     bdcd25ce-f3a8-48ae-ba57-0c83960a3fcd: 'Heading Level' # Heading Level
     d6f6663f-190b-40ff-b18b-36267fcf71f6: 'Site Info - Global Settings' # Site Info - Global Settings

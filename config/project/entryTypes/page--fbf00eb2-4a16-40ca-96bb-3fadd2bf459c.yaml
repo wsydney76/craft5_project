@@ -1,4 +1,4 @@
-color: null
+color: orange
 fieldLayouts:
   35aac453-6959-4771-9712-cb98f5a45da0:
     tabs:
@@ -125,6 +125,6 @@ showSlugField: true
 showStatusField: true
 slugTranslationKeyFormat: null
 slugTranslationMethod: site
-titleFormat: null
+titleFormat: ''
 titleTranslationKeyFormat: null
 titleTranslationMethod: site

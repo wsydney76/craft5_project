@@ -5,7 +5,8 @@ name: Links
 searchable: true
 settings:
   entryTypes:
-    - 4e0d112b-0725-424f-a1e9-c088e67a2a70 # Link
+    - 4e0d112b-0725-424f-a1e9-c088e67a2a70 # Internal Link
+    - 623e6d56-dbf2-4ef3-bc05-dac1abdf3bd1 # External Link
   includeTableView: false
   maxEntries: null
   minEntries: null

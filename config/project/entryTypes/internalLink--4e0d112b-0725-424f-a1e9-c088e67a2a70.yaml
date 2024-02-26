@@ -1,6 +1,6 @@
-color: sky
+color: cyan
 fieldLayouts:
-  587b822b-090b-4e5d-9ed1-e68b54484d13:
+  1841eaec-2449-41a7-b9b4-fd94a8e3498f:
     tabs:
       -
         elementCondition: null
@@ -30,40 +30,47 @@ fieldLayouts:
             tip: null
             title: null
             type: craft\fieldlayoutelements\entries\EntryTitleField
-            uid: e52a0624-12fc-4314-a5af-537f9cac7b6d
+            uid: 2aa25558-fb9f-4750-90b8-aee9c4421bd6
             userCondition: null
             warning: null
             width: 100
           -
-            dismissible: true
             elementCondition: null
-            style: warning
-            tip: 'How not to use colors. Sorry.'
-            type: craft\fieldlayoutelements\Tip
-            uid: ccb5f2b7-2fd4-4def-b6c2-1fe4d315757f
+            fieldUid: 33472095-00ea-40ee-8743-929c3c0978f8 # Entry
+            handle: target
+            includeInCards: true
+            instructions: null
+            label: 'Target Entry'
+            providesThumbs: false
+            required: true
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 7039b565-404f-4581-8eac-5a93fdbb569b
             userCondition: null
+            warning: null
+            width: 50
           -
             elementCondition: null
-            fieldUid: b97a349c-479f-4667-8c4d-44c01c61abcb # Links
-            handle: null
-            includeInCards: false
-            instructions: null
-            label: null
+            fieldUid: 68d329ca-2314-4981-bf9f-96c6353f1e07 # Single Line Text
+            handle: caption
+            includeInCards: true
+            instructions: 'Leave blank to use the entry''s title'
+            label: Caption
             providesThumbs: false
             required: false
             tip: null
             type: craft\fieldlayoutelements\CustomField
-            uid: 42ed96f3-dba9-4b58-92aa-f614bf074c30
+            uid: 889cbe3f-1cc4-4810-ac44-553bb981f893
             userCondition: null
             warning: null
-            width: 100
+            width: 25
         name: Content
-        uid: 75e38067-3cba-422d-9032-4554e108fc45
+        uid: 35581e7d-7435-457c-8b60-e2ff810a6599
         userCondition: null
-handle: links
+handle: internalLink
 hasTitleField: false
-icon: link
-name: Links
+icon: bullseye-arrow
+name: 'Internal Link'
 showSlugField: false
 showStatusField: false
 slugTranslationKeyFormat: null
